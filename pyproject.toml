@@ -1,0 +1,18 @@
+[project]
+name = "BirdOSPFLinkDBApi"
+version = "1.0"
+dependencies = [
+    "python-dotenv",
+    "pytz",
+    "python-dateutil"
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest >= 6",
+    "coverage",
+    "freezegun"
+]
+
+[project.scripts]
+parse-bird-link-db = "bird_parser:main.main"
