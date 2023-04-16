@@ -1,0 +1,6088 @@
+BIRD 1.6.8 ready.
+
+area 0.0.0.0
+
+	router 10.10.10.10
+		distance 61
+		network 10.70.76.0/24 metric 10
+		external 10.10.10.10/32 metric 1
+		external 10.10.10.11/32 metric 1
+
+	router 10.68.29.50
+		distance 51
+		router 10.69.7.31 metric 10
+		stubnet 10.69.29.50/32 metric 0
+		stubnet 10.68.29.50/32 metric 0
+		external 10.70.174.0/24 metric 20
+
+	router 10.68.73.125
+		distance 136
+		router 10.69.73.25 metric 10
+		router 10.69.52.83 metric 30
+		router 10.69.73.25 metric 30
+		stubnet 10.69.73.125/32 metric 0
+		stubnet 10.68.73.125/32 metric 0
+
+	router 10.69.0.3
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.2.168 metric 10
+		stubnet 10.69.0.3/32 metric 0
+		stubnet 10.68.0.3/32 metric 0
+		external 10.96.0.192/26 metric 20
+
+	router 10.69.0.10
+		distance 32
+		router 10.69.19.34 metric 1
+		router 10.70.102.6 metric 1
+		stubnet 10.70.253.38/31 metric 1
+		stubnet 10.70.103.0/24 metric 1
+		stubnet 10.70.102.0/30 metric 1
+		stubnet 10.70.102.4/30 metric 1
+		stubnet 10.69.0.10/32 metric 0
+
+	router 10.69.0.18
+		distance 46
+		router 10.69.44.59 metric 10
+		router 10.69.48.91 metric 100
+		router 10.69.45.6 metric 100
+		router 10.69.44.59 metric 100
+		router 10.69.44.2 metric 100
+		stubnet 10.69.0.18/32 metric 0
+		stubnet 10.68.0.18/32 metric 0
+		external 10.96.4.128/26 metric 20
+
+	router 10.69.0.48
+		distance 36
+		router 10.69.3.20 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.3.20 metric 100
+		stubnet 10.69.0.48/32 metric 0
+		stubnet 10.68.0.48/32 metric 0
+		external 10.96.12.0/26 metric 20
+		external 199.167.59.91/32 metric 20
+
+	router 10.69.1.15
+		distance 46
+		router 10.69.71.3 metric 10
+		router 10.69.4.43 metric 10
+		router 10.69.57.12 metric 10
+		router 10.69.10.84 metric 10
+		router 10.69.71.3 metric 100
+		router 10.69.4.43 metric 100
+		router 10.69.57.12 metric 100
+		stubnet 10.69.1.15/32 metric 0
+		stubnet 10.68.1.15/32 metric 0
+		external 10.96.28.192/26 metric 20
+
+	router 10.69.1.16
+		distance 38
+		router 10.69.2.56 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.2.56 metric 100
+		stubnet 10.69.1.16/32 metric 0
+		stubnet 10.68.1.16/32 metric 0
+		external 10.96.29.0/26 metric 20
+
+	router 10.69.1.35
+		distance 56
+		router 10.69.8.98 metric 10
+		router 10.70.89.133 metric 41
+		stubnet 10.69.1.35/32 metric 10
+		stubnet 10.70.251.30/32 metric 41
+		external 10.70.251.28/30 metric 1
+		external 10.70.253.49/32 metric 1
+		external 10.96.33.192/26 metric 1
+		external 199.170.132.4/32 metric 1
+
+	router 10.69.1.37
+		distance 76
+		router 10.69.4.95 metric 10
+		router 10.69.1.56 metric 100
+		router 10.69.4.95 metric 100
+		router 10.69.3.37 metric 100
+		stubnet 10.69.1.37/32 metric 0
+		stubnet 10.68.1.37/32 metric 0
+		external 10.96.34.64/26 metric 20
+
+	router 10.69.1.38
+		distance 51
+		router 10.69.41.181 metric 10
+		router 10.69.7.31 metric 10
+		router 10.69.41.81 metric 100
+		router 10.69.60.4 metric 100
+		router 10.69.3.11 metric 100
+		router 10.69.44.41 metric 100
+		stubnet 10.69.1.38/32 metric 0
+		stubnet 10.68.1.38/32 metric 0
+		external 10.96.34.128/26 metric 20
+
+	router 10.69.1.41
+		distance 51
+		router 10.69.7.31 metric 10
+		router 10.69.47.45 metric 100
+		router 10.69.35.78 metric 100
+		router 10.69.29.94 metric 100
+		router 10.69.30.16 metric 100
+		stubnet 10.69.1.41/32 metric 0
+		stubnet 10.68.1.41/32 metric 0
+		external 10.96.35.64/26 metric 20
+
+	router 10.69.1.45
+		distance 60
+		router 10.69.3.83 metric 10
+		stubnet 10.68.1.45/32 metric 0
+		stubnet 10.69.1.45/32 metric 0
+		external 10.96.36.64/26 metric 20
+
+	router 10.69.1.46
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.2.70 metric 100
+		stubnet 10.69.1.46/32 metric 0
+		stubnet 10.68.1.46/32 metric 0
+		external 10.96.36.128/26 metric 20
+
+	router 10.69.1.47
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.1.47/32 metric 0
+		stubnet 10.68.1.47/32 metric 0
+		external 10.96.36.192/26 metric 20
+
+	router 10.69.1.48
+		distance 56
+		router 10.70.251.26 metric 10
+		router 10.69.78.0 metric 10
+		stubnet 10.69.1.48/32 metric 0
+		stubnet 10.68.1.48/32 metric 0
+		external 10.96.37.0/26 metric 20
+
+	router 10.69.1.49
+		distance 48
+		router 10.69.50.14 metric 10
+		router 10.69.33.96 metric 100
+		router 10.69.2.54 metric 100
+		stubnet 10.69.1.49/32 metric 0
+		stubnet 10.68.1.49/32 metric 0
+		external 10.96.37.64/26 metric 20
+
+	router 10.69.1.50
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.4.51 metric 100
+		router 10.69.35.31 metric 100
+		router 10.69.14.40 metric 100
+		router 10.69.2.49 metric 100
+		router 10.69.79.41 metric 100
+		router 10.69.30.37 metric 100
+		stubnet 10.69.1.50/32 metric 0
+		stubnet 10.68.1.50/32 metric 0
+		external 10.96.37.128/26 metric 20
+
+	router 10.69.1.51
+		distance 71
+		router 10.69.18.48 metric 10
+		router 10.69.35.31 metric 100
+		router 10.69.14.40 metric 100
+		router 10.70.175.1 metric 100
+		router 10.69.18.48 metric 100
+		stubnet 10.69.1.51/32 metric 0
+		stubnet 10.68.1.51/32 metric 0
+		external 10.96.37.192/26 metric 20
+
+	router 10.69.1.54
+		distance 36
+		router 10.69.4.186 metric 10
+		router 10.69.34.61 metric 10
+		stubnet 10.69.1.54/32 metric 0
+		stubnet 10.68.1.54/32 metric 0
+		external 10.96.38.128/26 metric 20
+
+	router 10.69.1.55
+		distance 33
+		router 10.69.27.16 metric 10
+		router 10.69.2.20 metric 10
+		router 10.69.3.96 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.2.19 metric 10
+		router 10.69.71.19 metric 100
+		router 10.69.27.16 metric 100
+		router 10.69.22.3 metric 100
+		stubnet 10.69.1.55/32 metric 0
+		stubnet 10.68.1.55/32 metric 0
+		external 10.96.38.192/26 metric 20
+
+	router 10.69.1.56
+		distance 66
+		router 10.69.57.12 metric 10
+		router 10.69.1.37 metric 100
+		router 10.69.4.95 metric 100
+		router 10.69.3.37 metric 100
+		stubnet 10.69.1.56/32 metric 0
+		stubnet 10.68.1.56/32 metric 0
+		external 10.96.39.0/26 metric 20
+
+	router 10.69.1.58
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.1.58/32 metric 0
+		stubnet 10.68.1.58/32 metric 0
+		external 10.96.39.128/26 metric 20
+
+	router 10.69.1.59
+		distance 33
+		router 10.69.2.92 metric 80
+		router 10.69.1.159 metric 80
+		router 10.69.59.16 metric 80
+		router 10.69.2.92 metric 100
+		router 10.69.4.73 metric 100
+		router 10.69.32.33 metric 100
+		router 10.69.24.82 metric 100
+		stubnet 10.69.1.59/32 metric 0
+		stubnet 10.68.1.59/32 metric 0
+		external 10.96.39.192/26 metric 20
+
+	router 10.69.1.60
+		distance 60
+		router 10.69.22.74 metric 10
+		router 10.69.22.74 metric 100
+		stubnet 10.69.1.60/32 metric 0
+		stubnet 10.68.1.60/32 metric 0
+		external 10.96.40.0/26 metric 20
+
+	router 10.69.1.63
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.2.70 metric 100
+		stubnet 10.69.1.63/32 metric 0
+		stubnet 10.68.1.63/32 metric 0
+		external 10.96.40.192/26 metric 20
+
+	router 10.69.1.65
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.2.74 metric 100
+		router 10.69.3.87 metric 100
+		stubnet 10.69.1.65/32 metric 0
+		stubnet 10.68.1.65/32 metric 0
+		external 10.96.41.64/26 metric 20
+		external 199.170.132.92/32 metric 20
+
+	router 10.69.1.66
+		distance 66
+		router 10.69.2.95 metric 10
+		router 10.69.2.95 metric 100
+		router 10.69.55.81 metric 100
+		stubnet 10.69.1.66/32 metric 0
+		stubnet 10.68.1.66/32 metric 0
+		external 10.96.41.128/26 metric 20
+
+	router 10.69.1.68
+		distance 41
+		router 10.69.19.34 metric 10
+		stubnet 10.69.1.68/32 metric 0
+		stubnet 10.68.1.68/32 metric 0
+		external 10.96.42.0/26 metric 20
+
+	router 10.69.1.69
+		distance 86
+		router 10.69.36.6 metric 10
+		router 10.69.59.33 metric 100
+		router 10.69.36.6 metric 100
+		stubnet 10.69.1.69/32 metric 0
+		stubnet 10.68.1.69/32 metric 0
+		external 10.96.42.64/26 metric 20
+
+	router 10.69.1.74
+		distance 46
+		router 10.69.73.98 metric 10
+		router 10.69.74.65 metric 100
+		router 10.69.79.76 metric 100
+		router 10.69.72.50 metric 100
+		router 10.69.79.85 metric 100
+		router 10.69.2.10 metric 100
+		router 10.69.73.98 metric 100
+		router 10.69.78.94 metric 100
+		router 10.69.2.19 metric 100
+		router 10.69.79.59 metric 100
+		stubnet 10.69.1.74/32 metric 0
+		stubnet 10.68.1.74/32 metric 0
+		external 10.96.43.128/26 metric 20
+
+	router 10.69.1.75
+		distance 26
+		router 10.69.66.23 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.66.22 metric 100
+		router 10.69.66.23 metric 100
+		router 10.69.33.0 metric 100
+		router 10.69.2.85 metric 100
+		router 10.69.4.98 metric 100
+		router 10.69.4.94 metric 100
+		stubnet 10.69.1.75/32 metric 0
+		stubnet 10.68.1.75/32 metric 0
+		external 10.96.43.192/26 metric 20
+
+	router 10.69.1.76
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.44.62 metric 100
+		stubnet 10.69.1.76/32 metric 0
+		stubnet 10.68.1.76/32 metric 0
+		external 10.96.44.0/26 metric 20
+
+	router 10.69.1.77
+		distance 36
+		router 10.70.177.5 metric 1
+		router 10.69.1.85 metric 200
+		router 10.69.34.61 metric 10
+		router 10.70.251.22 metric 10
+		stubnet 10.70.177.1/32 metric 0
+		stubnet 10.68.1.77/32 metric 0
+		stubnet 10.69.1.77/32 metric 0
+		external 10.70.177.128/25 metric 20
+		external 10.96.44.64/26 metric 20
+		external 199.170.132.82/32 metric 20
+
+	router 10.69.1.78
+		distance 70
+		router 10.69.77.89 metric 10
+		router 10.69.41.16 metric 100
+		router 10.69.60.71 metric 100
+		router 10.69.77.89 metric 100
+		router 10.69.2.69 metric 100
+		stubnet 10.69.1.78/32 metric 0
+		stubnet 10.68.1.78/32 metric 0
+		external 10.96.44.128/26 metric 20
+
+	router 10.69.1.80
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.2.74 metric 100
+		stubnet 10.69.1.80/32 metric 0
+		stubnet 10.68.1.80/32 metric 0
+		external 10.96.45.0/26 metric 20
+
+	router 10.69.1.81
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.1.81/32 metric 0
+		stubnet 10.68.1.81/32 metric 0
+		external 10.96.45.64/26 metric 20
+
+	router 10.69.1.84
+		distance 48
+		router 10.69.50.14 metric 10
+		router 10.69.6.72 metric 100
+		router 10.69.21.1 metric 100
+		router 10.69.1.88 metric 100
+		stubnet 10.69.1.84/32 metric 0
+		stubnet 10.68.1.84/32 metric 0
+		external 10.96.46.0/26 metric 20
+
+	router 10.69.1.85
+		distance 36
+		router 10.69.34.61 metric 50
+		router 10.69.1.77 metric 200
+		stubnet 10.69.1.85/32 metric 0
+		stubnet 10.68.1.85/32 metric 0
+		external 10.96.46.64/26 metric 20
+
+	router 10.69.1.86
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.1.86/32 metric 0
+		stubnet 10.68.1.86/32 metric 0
+		external 10.96.46.128/26 metric 20
+
+	router 10.69.1.87
+		distance 33
+		router 10.69.2.21 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.2.21 metric 100
+		router 10.69.26.47 metric 100
+		router 10.69.2.92 metric 100
+		stubnet 10.69.1.87/32 metric 0
+		stubnet 10.68.1.87/32 metric 0
+		external 10.96.46.192/26 metric 20
+
+	router 10.69.1.88
+		distance 48
+		router 10.69.4.21 metric 10
+		router 10.69.50.90 metric 10
+		router 10.69.2.75 metric 10
+		router 10.69.50.14 metric 10
+		router 10.69.2.75 metric 100
+		router 10.69.4.21 metric 100
+		router 10.69.50.90 metric 100
+		router 10.69.1.84 metric 100
+		stubnet 10.69.1.88/32 metric 0
+		stubnet 10.68.1.88/32 metric 0
+		external 10.96.47.0/26 metric 20
+
+	router 10.69.1.89
+		distance 38
+		router 10.69.4.40 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.4.40 metric 100
+		stubnet 10.69.1.89/32 metric 0
+		stubnet 10.68.1.89/32 metric 0
+		external 10.96.47.64/26 metric 20
+
+	router 10.69.1.90
+		distance 48
+		router 10.69.74.89 metric 10
+		router 10.69.3.47 metric 10
+		router 10.69.3.47 metric 100
+		stubnet 10.69.1.90/32 metric 0
+		stubnet 10.68.1.90/32 metric 0
+		external 10.96.47.128/26 metric 20
+
+	router 10.69.1.93
+		distance 53
+		router 10.69.27.16 metric 10
+		router 10.69.27.16 metric 100
+		stubnet 10.69.1.93/32 metric 0
+		stubnet 10.68.1.93/32 metric 0
+		external 10.96.48.64/26 metric 20
+
+	router 10.69.1.96
+		distance 26
+		router 10.69.7.13 metric 10
+		stubnet 10.69.1.96/32 metric 0
+		stubnet 10.68.1.96/32 metric 0
+		external 10.96.49.0/26 metric 20
+
+	router 10.69.1.97
+		distance 48
+		router 10.69.79.97 metric 10
+		router 10.69.79.97 metric 100
+		router 10.69.52.76 metric 100
+		stubnet 10.69.1.97/32 metric 0
+		stubnet 10.68.1.97/32 metric 0
+		external 10.96.49.64/26 metric 20
+
+	router 10.69.1.99
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.54.25 metric 100
+		router 10.69.3.64 metric 100
+		stubnet 10.69.1.99/32 metric 0
+		stubnet 10.68.1.99/32 metric 0
+		external 10.96.49.192/26 metric 20
+
+	router 10.69.1.159
+		distance 48
+		router 10.69.1.59 metric 10
+		router 10.69.26.47 metric 10
+		stubnet 10.69.1.159/32 metric 0
+
+	router 10.69.2.2
+		distance 43
+		router 10.69.4.56 metric 10
+		router 10.69.36.7 metric 10
+		router 10.69.26.146 metric 10
+		router 10.69.26.46 metric 100
+		router 10.69.36.7 metric 100
+		router 10.69.41.53 metric 100
+		router 10.69.11.59 metric 100
+		stubnet 10.69.2.2/32 metric 0
+		stubnet 10.68.2.2/32 metric 0
+		external 10.96.50.128/26 metric 20
+
+	router 10.69.2.3
+		distance 38
+		router 10.69.4.20 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.4.20 metric 100
+		stubnet 10.69.2.3/32 metric 0
+		stubnet 10.68.2.3/32 metric 0
+		external 10.96.50.192/26 metric 20
+
+	router 10.69.2.5
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.2.5/32 metric 0
+		stubnet 10.68.2.5/32 metric 0
+		external 10.96.51.64/26 metric 20
+
+	router 10.69.2.6
+		distance 33
+		router 10.69.2.184 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.75.3 metric 100
+		stubnet 10.69.2.6/32 metric 0
+		stubnet 10.68.2.6/32 metric 0
+		external 10.96.51.128/26 metric 20
+
+	router 10.69.2.8
+		distance 43
+		router 10.69.79.12 metric 10
+		router 10.69.79.12 metric 100
+		router 10.69.3.62 metric 100
+		stubnet 10.69.2.8/32 metric 0
+		stubnet 10.68.2.8/32 metric 0
+		external 10.96.52.0/26 metric 20
+
+	router 10.69.2.9
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.3.64 metric 100
+		router 10.69.3.62 metric 100
+		stubnet 10.69.2.9/32 metric 0
+		stubnet 10.68.2.9/32 metric 0
+		external 10.96.52.64/26 metric 20
+
+	router 10.69.2.10
+		distance 53
+		router 10.69.79.85 metric 10
+		router 10.69.79.59 metric 100
+		router 10.69.79.85 metric 100
+		router 10.69.73.98 metric 100
+		router 10.69.74.65 metric 100
+		router 10.69.1.74 metric 100
+		router 10.69.72.50 metric 100
+		router 10.69.78.94 metric 100
+		router 10.69.79.76 metric 100
+		stubnet 10.69.2.10/32 metric 0
+		stubnet 10.68.2.10/32 metric 0
+		external 10.96.52.128/26 metric 20
+
+	router 10.69.2.11
+		distance 46
+		router 10.69.40.62 metric 10
+		router 10.69.40.62 metric 100
+		stubnet 10.69.2.11/32 metric 0
+		stubnet 10.68.2.11/32 metric 0
+		external 10.96.52.192/26 metric 20
+
+	router 10.69.2.12
+		distance 38
+		router 10.69.4.61 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.4.61 metric 100
+		router 10.69.2.53 metric 100
+		router 10.69.75.82 metric 100
+		stubnet 10.69.2.12/32 metric 0
+		stubnet 10.68.2.12/32 metric 0
+		external 10.96.53.0/26 metric 20
+
+	router 10.69.2.13
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.2.13/32 metric 0
+		stubnet 10.68.2.13/32 metric 0
+		external 10.96.53.64/26 metric 20
+		external 199.170.132.10/32 metric 20
+
+	router 10.69.2.14
+		distance 43
+		router 10.69.20.12 metric 10
+		router 10.69.49.34 metric 100
+		router 10.69.20.12 metric 100
+		stubnet 10.69.2.14/32 metric 0
+		stubnet 10.68.2.14/32 metric 0
+		external 10.96.53.128/26 metric 20
+
+	router 10.69.2.15
+		distance 48
+		router 10.69.75.82 metric 10
+		router 10.69.75.82 metric 100
+		router 10.69.4.61 metric 100
+		stubnet 10.69.2.15/32 metric 0
+		stubnet 10.68.2.15/32 metric 0
+		external 10.96.53.192/26 metric 20
+
+	router 10.69.2.16
+		distance 91
+		router 10.69.2.63 metric 10
+		router 10.69.4.7 metric 10
+		router 10.69.2.63 metric 100
+		router 10.69.51.55 metric 100
+		router 10.69.68.44 metric 100
+		router 10.69.24.41 metric 100
+		router 10.69.3.69 metric 100
+		stubnet 10.69.2.16/32 metric 0
+		stubnet 10.68.2.16/32 metric 0
+		external 10.96.54.0/26 metric 20
+
+	router 10.69.2.17
+		distance 26
+		router 10.69.7.13 metric 10
+		stubnet 10.69.2.17/32 metric 0
+		stubnet 10.68.2.17/32 metric 0
+		external 10.96.54.64/26 metric 20
+
+	router 10.69.2.19
+		distance 33
+		router 10.69.2.59 metric 10
+		router 10.69.79.85 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.1.55 metric 10
+		router 10.69.2.59 metric 100
+		router 10.69.78.94 metric 100
+		router 10.69.79.85 metric 100
+		router 10.69.4.58 metric 100
+		router 10.69.1.74 metric 100
+		stubnet 10.69.2.19/32 metric 0
+		stubnet 10.68.2.19/32 metric 0
+		external 10.96.54.192/26 metric 20
+
+	router 10.69.2.20
+		distance 43
+		router 10.69.1.55 metric 10
+		router 10.69.4.2 metric 10
+		router 10.69.68.45 metric 10
+		router 10.69.3.96 metric 10
+		router 10.69.4.2 metric 100
+		router 10.69.68.45 metric 100
+		stubnet 10.69.2.20/32 metric 0
+		stubnet 10.68.2.20/32 metric 0
+		external 10.96.55.0/26 metric 20
+
+	router 10.69.2.21
+		distance 43
+		router 10.69.1.87 metric 10
+		router 10.69.1.87 metric 100
+		router 10.69.3.79 metric 100
+		stubnet 10.69.2.21/32 metric 0
+		stubnet 10.68.2.21/32 metric 0
+		external 10.96.55.64/26 metric 20
+
+	router 10.69.2.22
+		distance 38
+		router 10.69.3.6 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.3.6 metric 100
+		router 10.69.3.51 metric 100
+		stubnet 10.69.2.22/32 metric 0
+		stubnet 10.68.2.22/32 metric 0
+		external 10.96.55.128/26 metric 20
+
+	router 10.69.2.23
+		distance 36
+		router 10.69.51.51 metric 10
+		router 10.69.44.80 metric 100
+		router 10.69.51.51 metric 100
+		router 10.69.78.25 metric 100
+		stubnet 10.69.2.23/32 metric 0
+		stubnet 10.68.2.23/32 metric 0
+		external 10.96.55.192/26 metric 20
+
+	router 10.69.2.24
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.54.25 metric 100
+		stubnet 10.69.2.24/32 metric 0
+		stubnet 10.68.2.24/32 metric 0
+		external 10.96.56.0/26 metric 20
+
+	router 10.69.2.27
+		distance 51
+		router 10.69.4.226 metric 50
+		router 10.69.59.165 metric 50
+		router 10.69.78.100 metric 50
+		router 10.69.3.63 metric 50
+		router 10.69.3.118 metric 50
+		router 10.69.7.13 metric 100
+		router 10.69.19.34 metric 20
+		router 10.69.19.71 metric 25
+		router 10.69.78.69 metric 10
+		router 10.69.30.4 metric 10
+		router 10.69.1.63 metric 10
+		router 10.69.2.70 metric 10
+		router 10.69.51.55 metric 10
+		router 10.69.64.14 metric 10
+		router 10.69.35.31 metric 10
+		router 10.69.4.33 metric 10
+		router 10.69.79.41 metric 10
+		router 10.69.1.46 metric 10
+		router 10.69.4.90 metric 10
+		router 10.69.4.7 metric 10
+		router 10.69.45.4 metric 10
+		router 10.69.30.37 metric 10
+		router 10.69.72.32 metric 10
+		router 10.69.24.41 metric 10
+		router 10.69.18.48 metric 10
+		router 10.69.67.91 metric 10
+		router 10.69.0.3 metric 10
+		router 10.69.2.83 metric 10
+		router 10.69.63.46 metric 10
+		router 10.69.15.67 metric 10
+		router 10.69.6.86 metric 10
+		router 10.69.4.64 metric 10
+		router 10.69.36.54 metric 10
+		router 10.69.23.50 metric 10
+		router 10.69.45.85 metric 10
+		router 10.69.2.49 metric 10
+		router 10.69.1.50 metric 10
+		router 10.69.4.51 metric 10
+		network 10.70.76.0/24 metric 10
+		stubnet 10.70.72.1/32 metric 0
+		stubnet 10.70.72.1/32 metric 0
+		stubnet 10.70.72.1/32 metric 0
+		stubnet 10.70.72.1/32 metric 0
+		stubnet 10.70.72.1/32 metric 0
+		stubnet 10.70.71.2/32 metric 0
+		stubnet 10.70.251.17/32 metric 0
+		stubnet 10.70.253.21/32 metric 0
+		stubnet 10.70.72.0/24 metric 10
+		stubnet 10.70.71.130/32 metric 0
+		stubnet 10.69.2.27/32 metric 0
+		external 0.0.0.0/0 metric 1
+		external 10.10.10.100/32 metric 20
+		external 10.42.42.0/25 metric 20
+		external 10.42.43.0/24 metric 20
+		external 10.70.49.0/24 metric 20
+		external 10.70.71.9/32 metric 20
+		external 10.70.71.11/32 metric 20
+		external 10.70.71.13/32 metric 20
+		external 10.70.71.24/30 metric 20
+		external 10.70.71.25/32 metric 20
+		external 10.70.71.30/31 metric 20
+		external 10.70.71.32/31 metric 20
+		external 10.70.71.36/31 metric 20
+		external 10.70.73.0/24 metric 20
+		external 10.70.74.0/24 metric 20
+		external 10.70.112.0/24 metric 20
+		external 10.70.252.0/28 metric 20
+		external 10.70.253.6/31 metric 20
+		external 192.168.42.0/24 metric 20
+		external 199.167.59.4/32 metric 20
+		external 199.167.59.5/32 metric 20
+		external 199.167.59.6/32 metric 20
+		external 199.167.59.8/32 metric 20
+		external 199.167.59.10/32 metric 20
+		external 199.167.59.11/32 metric 20
+		external 199.170.132.240/28 metric 20
+		external 208.68.5.3/32 metric 20
+
+	router 10.69.2.28
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.2.28/32 metric 0
+		stubnet 10.68.2.28/32 metric 0
+		external 10.96.57.0/26 metric 20
+
+	router 10.69.2.33
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.2.33/32 metric 0
+		stubnet 10.68.2.33/32 metric 0
+		external 10.96.58.64/26 metric 20
+
+	router 10.69.2.34
+		distance 48
+		router 10.69.34.80 metric 10
+		router 10.69.34.80 metric 100
+		stubnet 10.69.2.34/32 metric 0
+		stubnet 10.68.2.34/32 metric 0
+		external 10.96.58.128/26 metric 20
+
+	router 10.69.2.35
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.2.35/32 metric 0
+		stubnet 10.68.2.35/32 metric 0
+		external 10.96.58.192/26 metric 20
+
+	router 10.69.2.36
+		distance 36
+		router 10.69.2.42 metric 10
+		router 10.69.3.16 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.4.9 metric 10
+		router 10.69.3.16 metric 100
+		router 10.69.2.91 metric 100
+		router 10.69.34.24 metric 100
+		stubnet 10.69.2.36/32 metric 0
+		stubnet 10.68.2.36/32 metric 0
+		external 10.96.59.0/26 metric 20
+
+	router 10.69.2.39
+		distance 51
+		router 10.69.31.75 metric 100
+		router 10.69.14.30 metric 100
+		router 10.70.164.1 metric 100
+		router 10.69.24.163 metric 10
+		stubnet 10.68.2.39/32 metric 0
+		stubnet 10.69.2.39/32 metric 0
+		external 10.96.59.192/26 metric 20
+
+	router 10.69.2.42
+		distance 46
+		router 10.69.2.36 metric 10
+		router 10.69.3.16 metric 100
+		router 10.69.34.24 metric 100
+		router 10.69.2.91 metric 100
+		router 10.69.68.33 metric 100
+		router 10.69.51.34 metric 100
+		stubnet 10.69.2.42/32 metric 0
+		stubnet 10.68.2.42/32 metric 0
+		external 10.96.60.128/26 metric 20
+
+	router 10.69.2.43
+		distance 75
+		router 10.69.78.0 metric 10
+		router 10.69.2.78 metric 100
+		stubnet 10.69.2.43/32 metric 0
+		stubnet 10.68.2.43/32 metric 0
+		external 10.96.60.192/26 metric 20
+
+	router 10.69.2.44
+		distance 36
+		router 10.69.27.1 metric 10
+		router 10.69.27.1 metric 100
+		router 10.69.32.84 metric 100
+		stubnet 10.69.2.44/32 metric 0
+		stubnet 10.68.2.44/32 metric 0
+		external 10.96.61.0/26 metric 20
+
+	router 10.69.2.45
+		distance 36
+		router 10.69.27.1 metric 10
+		router 10.69.27.1 metric 100
+		stubnet 10.69.2.45/32 metric 0
+		stubnet 10.68.2.45/32 metric 0
+		external 10.96.61.64/26 metric 20
+
+	router 10.69.2.47
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.28.27 metric 100
+		stubnet 10.69.2.47/32 metric 0
+		stubnet 10.68.2.47/32 metric 0
+		external 10.96.61.192/26 metric 20
+
+	router 10.69.2.48
+		distance 86
+		router 10.69.5.18 metric 10
+		router 10.69.19.71 metric 10
+		router 10.69.5.18 metric 100
+		router 10.69.4.64 metric 100
+		stubnet 10.69.2.48/32 metric 0
+		stubnet 10.68.2.48/32 metric 0
+		external 10.96.62.0/26 metric 20
+
+	router 10.69.2.49
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.14.40 metric 100
+		router 10.69.79.41 metric 100
+		router 10.69.4.90 metric 100
+		router 10.69.35.31 metric 100
+		router 10.70.175.1 metric 100
+		router 10.69.1.50 metric 100
+		router 10.69.18.48 metric 100
+		stubnet 10.69.2.49/32 metric 0
+		stubnet 10.68.2.49/32 metric 0
+		external 10.96.62.64/26 metric 20
+
+	router 10.69.2.50
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.4.98 metric 100
+		router 10.69.33.0 metric 100
+		router 10.69.59.89 metric 100
+		router 10.69.66.23 metric 100
+		stubnet 10.69.2.50/32 metric 0
+		stubnet 10.68.2.50/32 metric 0
+		external 10.96.62.128/26 metric 20
+
+	router 10.69.2.52
+		distance 41
+		router 10.69.19.34 metric 10
+		router 10.69.3.8 metric 100
+		stubnet 10.69.2.52/32 metric 0
+		stubnet 10.68.2.52/32 metric 0
+		external 10.96.63.0/26 metric 20
+
+	router 10.69.2.53
+		distance 138
+		router 10.69.75.82 metric 100
+		router 10.69.3.81 metric 100
+		router 10.69.2.12 metric 100
+		router 10.69.28.74 metric 100
+		stubnet 10.69.2.53/32 metric 0
+		stubnet 10.68.2.53/32 metric 0
+		external 10.96.63.64/26 metric 20
+
+	router 10.69.2.54
+		distance 38
+		router 10.69.1.49 metric 100
+		router 10.69.13.40 metric 10
+		stubnet 10.68.2.54/32 metric 0
+		stubnet 10.69.2.54/32 metric 0
+		external 10.96.63.128/26 metric 20
+
+	router 10.69.2.56
+		distance 33
+		router 10.69.1.16 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.1.16 metric 100
+		router 10.69.4.61 metric 100
+		stubnet 10.69.2.56/32 metric 0
+		stubnet 10.68.2.56/32 metric 0
+		external 10.96.64.0/26 metric 20
+
+	router 10.69.2.58
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.77.10 metric 100
+		router 10.69.3.13 metric 100
+		router 10.69.42.14 metric 100
+		stubnet 10.69.2.58/32 metric 0
+		stubnet 10.68.2.58/32 metric 0
+		external 10.96.64.128/26 metric 20
+
+	router 10.69.2.59
+		distance 43
+		router 10.69.2.19 metric 10
+		router 10.69.2.19 metric 100
+		router 10.69.4.58 metric 100
+		stubnet 10.69.2.59/32 metric 0
+		stubnet 10.68.2.59/32 metric 0
+		external 10.96.64.192/26 metric 20
+
+	router 10.69.2.60
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.2.60/32 metric 0
+		stubnet 10.68.2.60/32 metric 0
+		external 10.96.65.0/26 metric 20
+
+	router 10.69.2.62
+		distance 48
+		router 10.69.32.33 metric 10
+		router 10.69.32.33 metric 100
+		router 10.69.3.79 metric 100
+		router 10.69.2.92 metric 100
+		router 10.69.4.73 metric 100
+		router 10.69.50.20 metric 100
+		stubnet 10.69.2.62/32 metric 0
+		stubnet 10.68.2.62/32 metric 0
+		external 10.96.65.128/26 metric 20
+
+	router 10.69.2.63
+		distance 101
+		router 10.69.2.16 metric 10
+		router 10.69.3.8 metric 100
+		router 10.69.3.69 metric 100
+		router 10.69.2.16 metric 100
+		stubnet 10.69.2.63/32 metric 0
+		stubnet 10.68.2.63/32 metric 0
+		external 10.96.65.192/26 metric 20
+
+	router 10.69.2.65
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.59.33 metric 60
+		stubnet 10.70.253.13/32 metric 0
+		stubnet 10.69.2.65/32 metric 0
+		stubnet 10.68.2.65/32 metric 0
+		external 10.96.66.64/26 metric 20
+
+	router 10.69.2.67
+		distance 33
+		router 10.69.64.86 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.64.86 metric 100
+		stubnet 10.69.2.67/32 metric 0
+		stubnet 10.68.2.67/32 metric 0
+		external 10.96.66.192/26 metric 20
+
+	router 10.69.2.69
+		distance 60
+		router 10.69.22.74 metric 10
+		router 10.69.15.67 metric 100
+		router 10.69.77.89 metric 100
+		router 10.69.60.71 metric 100
+		router 10.69.1.78 metric 100
+		router 10.69.22.74 metric 100
+		stubnet 10.69.2.69/32 metric 0
+		stubnet 10.68.2.69/32 metric 0
+		external 10.96.67.64/26 metric 20
+
+	router 10.69.2.70
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.1.46 metric 100
+		router 10.69.1.63 metric 100
+		stubnet 10.69.2.70/32 metric 0
+		stubnet 10.68.2.70/32 metric 0
+		external 10.96.67.128/26 metric 20
+
+	router 10.69.2.72
+		distance 48
+		router 10.69.6.64 metric 100
+		router 10.69.6.64 metric 10
+		stubnet 10.68.2.72/32 metric 0
+		stubnet 10.69.2.72/32 metric 0
+		external 10.96.68.0/26 metric 20
+
+	router 10.69.2.74
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.1.65 metric 100
+		router 10.69.1.80 metric 100
+		stubnet 10.69.2.74/32 metric 0
+		stubnet 10.68.2.74/32 metric 0
+		external 10.96.68.128/26 metric 20
+
+	router 10.69.2.75
+		distance 58
+		router 10.69.1.88 metric 100
+		router 10.69.4.21 metric 100
+		router 10.69.50.90 metric 100
+		router 10.69.1.88 metric 10
+		stubnet 10.68.2.75/32 metric 0
+		stubnet 10.69.2.75/32 metric 0
+		external 10.96.68.192/26 metric 20
+
+	router 10.69.2.76
+		distance 48
+		router 10.69.74.89 metric 10
+		stubnet 10.69.2.76/32 metric 0
+		stubnet 10.68.2.76/32 metric 0
+		external 10.96.69.0/26 metric 20
+
+	router 10.69.2.78
+		distance 75
+		router 10.69.78.0 metric 10
+		router 10.69.2.43 metric 100
+		stubnet 10.69.2.78/32 metric 0
+		stubnet 10.68.2.78/32 metric 0
+		external 10.96.69.128/26 metric 20
+
+	router 10.69.2.82
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.24.81 metric 100
+		router 10.69.4.3 metric 100
+		stubnet 10.69.2.82/32 metric 0
+		stubnet 10.68.2.82/32 metric 0
+		external 10.96.70.128/26 metric 20
+
+	router 10.69.2.83
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.4.51 metric 100
+		router 10.69.14.40 metric 100
+		router 10.69.79.41 metric 100
+		stubnet 10.69.2.83/32 metric 0
+		stubnet 10.68.2.83/32 metric 0
+		external 10.96.70.192/26 metric 20
+		external 199.170.132.94/32 metric 20
+
+	router 10.69.2.84
+		distance 53
+		router 10.69.2.184 metric 10
+		stubnet 10.69.2.84/32 metric 0
+		stubnet 10.68.2.84/32 metric 0
+		external 10.96.71.0/26 metric 20
+
+	router 10.69.2.85
+		distance 36
+		router 10.69.66.22 metric 10
+		router 10.69.66.22 metric 100
+		router 10.69.66.23 metric 100
+		router 10.69.4.98 metric 100
+		router 10.69.1.75 metric 100
+		router 10.69.53.0 metric 100
+		stubnet 10.69.2.85/32 metric 0
+		stubnet 10.68.2.85/32 metric 0
+		external 10.96.71.64/26 metric 20
+
+	router 10.69.2.87
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.42.85 metric 100
+		stubnet 10.69.2.87/32 metric 0
+		stubnet 10.68.2.87/32 metric 0
+		external 10.96.71.192/26 metric 20
+
+	router 10.69.2.89
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.76.32 metric 100
+		router 10.69.16.6 metric 100
+		stubnet 10.69.2.89/32 metric 0
+		stubnet 10.68.2.89/32 metric 0
+		external 10.96.72.64/26 metric 20
+
+	router 10.69.2.90
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.13.50 metric 100
+		stubnet 10.69.2.90/32 metric 0
+		stubnet 10.68.2.90/32 metric 0
+		external 10.96.72.128/26 metric 20
+
+	router 10.69.2.91
+		distance 36
+		router 10.69.34.24 metric 100
+		router 10.69.2.42 metric 100
+		router 10.69.3.16 metric 100
+		router 10.69.2.36 metric 100
+		router 10.69.34.61 metric 10
+		stubnet 10.68.2.91/32 metric 0
+		stubnet 10.69.2.91/32 metric 0
+		external 10.96.72.192/26 metric 20
+
+	router 10.69.2.92
+		distance 113
+		router 10.69.1.59 metric 10
+		router 10.69.1.59 metric 100
+		router 10.69.3.79 metric 100
+		router 10.69.2.62 metric 100
+		router 10.69.1.87 metric 100
+		router 10.69.4.40 metric 100
+		stubnet 10.69.2.92/32 metric 0
+		stubnet 10.68.2.92/32 metric 0
+		external 10.96.73.0/26 metric 20
+
+	router 10.69.2.93
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.4.24 metric 100
+		stubnet 10.69.2.93/32 metric 0
+		stubnet 10.68.2.93/32 metric 0
+		external 10.96.73.64/26 metric 20
+
+	router 10.69.2.94
+		distance 51
+		router 10.69.24.163 metric 10
+		router 10.69.77.64 metric 10
+		stubnet 10.69.2.94/32 metric 0
+		stubnet 10.68.2.94/32 metric 0
+		external 10.96.73.128/26 metric 20
+
+	router 10.69.2.95
+		distance 56
+		router 10.69.1.66 metric 10
+		router 10.69.67.94 metric 10
+		router 10.69.4.49 metric 10
+		router 10.69.11.67 metric 10
+		router 10.69.67.94 metric 100
+		router 10.69.1.66 metric 100
+		router 10.69.4.49 metric 100
+		stubnet 10.69.2.95/32 metric 0
+		stubnet 10.68.2.95/32 metric 0
+		external 10.96.73.192/26 metric 20
+
+	router 10.69.2.97
+		distance 36
+		router 10.69.46.66 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.46.66 metric 100
+		stubnet 10.69.2.97/32 metric 0
+		stubnet 10.68.2.97/32 metric 0
+		external 10.96.74.64/26 metric 20
+
+	router 10.69.2.99
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.2.99/32 metric 0
+		stubnet 10.68.2.99/32 metric 0
+		external 10.96.74.192/26 metric 20
+
+	router 10.69.2.168
+		distance 71
+		router 10.69.0.3 metric 10
+		stubnet 10.69.2.168/32 metric 0
+		stubnet 10.68.2.168/32 metric 0
+		external 10.96.67.0/26 metric 20
+
+	router 10.69.2.184
+		distance 43
+		router 10.69.2.6 metric 10
+		router 10.69.2.84 metric 10
+		stubnet 10.69.2.184/32 metric 0
+		stubnet 10.68.2.184/32 metric 0
+
+	router 10.69.3.0
+		distance 26
+		router 10.69.33.54 metric 100
+		router 10.69.7.13 metric 10
+		stubnet 10.68.3.0/32 metric 0
+		stubnet 10.69.3.0/32 metric 0
+		external 10.96.75.0/26 metric 20
+
+	router 10.69.3.1
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.3.1/32 metric 0
+		stubnet 10.68.3.1/32 metric 0
+		external 10.96.75.64/26 metric 20
+
+	router 10.69.3.2
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.3.2/32 metric 0
+		stubnet 10.68.3.2/32 metric 0
+		external 10.96.75.128/26 metric 20
+
+	router 10.69.3.3
+		distance 53
+		router 10.69.62.48 metric 10
+		router 10.69.19.46 metric 10
+		router 10.69.62.48 metric 100
+		stubnet 10.69.3.3/32 metric 0
+		stubnet 10.68.3.3/32 metric 0
+		external 10.96.75.192/26 metric 20
+
+	router 10.69.3.4
+		distance 41
+		router 10.69.19.34 metric 10
+		stubnet 10.69.3.4/32 metric 0
+		stubnet 10.68.3.4/32 metric 0
+		external 10.96.76.0/26 metric 20
+		external 199.167.59.97/32 metric 20
+
+	router 10.69.3.6
+		distance 38
+		router 10.69.2.22 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.2.22 metric 100
+		router 10.69.3.51 metric 100
+		router 10.69.15.33 metric 100
+		stubnet 10.69.3.6/32 metric 0
+		stubnet 10.68.3.6/32 metric 0
+		external 10.96.76.128/26 metric 20
+
+	router 10.69.3.7
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.3.7/32 metric 0
+		stubnet 10.68.3.7/32 metric 0
+		external 10.96.76.192/26 metric 20
+
+	router 10.69.3.8
+		distance 51
+		router 10.69.3.69 metric 10
+		router 10.69.24.163 metric 10
+		router 10.69.3.69 metric 100
+		router 10.69.51.55 metric 100
+		router 10.69.2.63 metric 100
+		router 10.69.2.52 metric 100
+		router 10.69.67.91 metric 100
+		router 10.69.24.41 metric 100
+		stubnet 10.69.3.8/32 metric 0
+		stubnet 10.68.3.8/32 metric 0
+		external 10.96.77.0/26 metric 20
+
+	router 10.69.3.11
+		distance 51
+		router 10.69.7.31 metric 10
+		router 10.69.7.31 metric 100
+		router 10.69.1.38 metric 100
+		stubnet 10.69.3.11/32 metric 0
+		stubnet 10.68.3.11/32 metric 0
+		external 10.96.77.192/26 metric 20
+
+	router 10.69.3.13
+		distance 38
+		router 10.69.3.59 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.3.59 metric 100
+		router 10.69.2.58 metric 100
+		router 10.69.70.89 metric 100
+		stubnet 10.69.3.13/32 metric 0
+		stubnet 10.68.3.13/32 metric 0
+		external 10.96.78.64/26 metric 20
+
+	router 10.69.3.14
+		distance 36
+		router 10.69.64.50 metric 10
+		router 10.69.64.50 metric 100
+		router 10.69.33.0 metric 100
+		router 10.69.46.81 metric 100
+		stubnet 10.69.3.14/32 metric 0
+		stubnet 10.68.3.14/32 metric 0
+		external 10.96.78.128/26 metric 20
+
+	router 10.69.3.16
+		distance 46
+		router 10.69.2.36 metric 10
+		router 10.69.2.42 metric 100
+		router 10.69.34.24 metric 100
+		router 10.69.2.36 metric 100
+		router 10.69.2.91 metric 100
+		stubnet 10.69.3.16/32 metric 0
+		stubnet 10.68.3.16/32 metric 0
+		external 10.96.79.0/26 metric 20
+
+	router 10.69.3.17
+		distance 31
+		router 10.69.3.117 metric 10
+		stubnet 10.69.3.17/32 metric 0
+		stubnet 10.68.3.17/32 metric 0
+		external 10.96.79.64/26 metric 20
+
+	router 10.69.3.18
+		distance 65
+		router 10.69.3.118 metric 10
+		stubnet 10.69.3.18/32 metric 0
+		stubnet 10.68.3.18/32 metric 0
+		external 10.96.79.128/26 metric 20
+
+	router 10.69.3.19
+		distance 91
+		router 10.69.4.7 metric 10
+		router 10.69.6.86 metric 100
+		router 10.69.30.4 metric 100
+		stubnet 10.69.3.19/32 metric 0
+		stubnet 10.68.3.19/32 metric 0
+		external 10.96.79.192/26 metric 20
+
+	router 10.69.3.20
+		distance 46
+		router 10.69.0.48 metric 10
+		router 10.69.0.48 metric 100
+		stubnet 10.69.3.20/32 metric 0
+		stubnet 10.68.3.20/32 metric 0
+		external 10.96.80.0/26 metric 20
+
+	router 10.69.3.21
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.3.21/32 metric 0
+		stubnet 10.68.3.21/32 metric 0
+		external 10.96.80.64/26 metric 20
+
+	router 10.69.3.22
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.74.76 metric 100
+		stubnet 10.69.3.22/32 metric 0
+		stubnet 10.68.3.22/32 metric 0
+		external 10.96.80.128/26 metric 20
+
+	router 10.69.3.23
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.3.23/32 metric 0
+		stubnet 10.70.122.0/24 metric 10
+		stubnet 199.167.59.81/32 metric 10
+
+	router 10.69.3.25
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.3.25/32 metric 0
+		stubnet 10.68.3.25/32 metric 0
+		external 10.96.81.64/26 metric 20
+
+	router 10.69.3.29
+		distance 40
+		router 10.69.40.143 metric 10
+		router 10.69.76.74 metric 10
+		router 10.69.3.129 metric 10
+		router 10.69.3.83 metric 10
+		router 10.69.76.74 metric 100
+		stubnet 10.69.3.29/32 metric 0
+		stubnet 10.68.3.29/32 metric 0
+		external 10.96.82.64/26 metric 20
+
+	router 10.69.3.31
+		distance 46
+		router 10.69.52.83 metric 10
+		router 10.69.52.83 metric 100
+		router 10.69.73.25 metric 100
+		stubnet 10.69.3.31/32 metric 0
+		stubnet 10.68.3.31/32 metric 0
+		external 10.96.82.192/26 metric 20
+
+	router 10.69.3.32
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.68.3.32/32 metric 0
+		stubnet 10.69.3.32/32 metric 0
+		external 10.96.83.0/26 metric 20
+
+	router 10.69.3.34
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.3.34/32 metric 0
+		stubnet 10.68.3.34/32 metric 0
+		external 10.96.83.128/26 metric 20
+
+	router 10.69.3.35
+		distance 36
+		router 10.69.16.35 metric 10
+		router 10.69.26.16 metric 100
+		router 10.69.16.35 metric 100
+		stubnet 10.69.3.35/32 metric 0
+		stubnet 10.68.3.35/32 metric 0
+		external 10.96.83.192/26 metric 20
+
+	router 10.69.3.37
+		distance 66
+		router 10.69.1.56 metric 100
+		router 10.69.4.95 metric 100
+		router 10.69.1.37 metric 100
+		router 10.69.65.66 metric 100
+		router 10.69.57.12 metric 10
+		stubnet 10.68.3.37/32 metric 0
+		stubnet 10.69.3.37/32 metric 0
+		external 10.96.84.64/26 metric 20
+
+	router 10.69.3.40
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.70.89 metric 100
+		router 10.69.42.14 metric 100
+		stubnet 10.69.3.40/32 metric 0
+		stubnet 10.68.3.40/32 metric 0
+		external 10.96.85.0/26 metric 20
+
+	router 10.69.3.41
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.70.7 metric 100
+		stubnet 10.69.3.41/32 metric 0
+		stubnet 10.68.3.41/32 metric 0
+		external 10.96.85.64/26 metric 20
+
+	router 10.69.3.44
+		distance 66
+		router 10.69.57.12 metric 10
+		router 10.69.57.12 metric 100
+		stubnet 10.69.3.44/32 metric 0
+		stubnet 10.68.3.44/32 metric 0
+		external 10.96.86.0/26 metric 20
+
+	router 10.69.3.47
+		distance 58
+		router 10.69.1.90 metric 10
+		router 10.69.1.90 metric 100
+		stubnet 10.69.3.47/32 metric 0
+		stubnet 10.68.3.47/32 metric 0
+		external 10.96.86.192/26 metric 20
+
+	router 10.69.3.50
+		distance 101
+		router 10.69.13.84 metric 10
+		router 10.69.13.84 metric 100
+		stubnet 10.69.3.50/32 metric 0
+		stubnet 10.68.3.50/32 metric 0
+		external 10.96.87.128/26 metric 20
+
+	router 10.69.3.51
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.3.6 metric 100
+		router 10.69.2.22 metric 100
+		stubnet 10.69.3.51/32 metric 0
+		stubnet 10.68.3.51/32 metric 0
+		external 10.96.87.192/26 metric 20
+
+	router 10.69.3.57
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.3.57/32 metric 0
+		stubnet 10.68.3.57/32 metric 0
+		external 10.96.89.64/26 metric 20
+
+	router 10.69.3.58
+		distance 33
+		router 10.69.4.77 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.4.77 metric 100
+		stubnet 10.69.3.58/32 metric 0
+		stubnet 10.68.3.58/32 metric 0
+		external 10.96.89.128/26 metric 20
+
+	router 10.69.3.59
+		distance 48
+		router 10.69.3.13 metric 10
+		router 10.69.3.13 metric 100
+		router 10.69.44.62 metric 100
+		stubnet 10.69.3.59/32 metric 0
+		stubnet 10.68.3.59/32 metric 0
+		external 10.96.89.192/26 metric 20
+
+	router 10.69.3.61
+		distance 56
+		router 10.69.45.30 metric 10
+		router 10.69.45.30 metric 100
+		router 10.69.44.59 metric 100
+		router 10.69.44.39 metric 100
+		stubnet 10.69.3.61/32 metric 0
+		stubnet 10.68.3.61/32 metric 0
+		external 10.96.90.64/26 metric 20
+
+	router 10.69.3.62
+		distance 33
+		router 10.69.3.64 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.3.64 metric 100
+		router 10.69.2.9 metric 100
+		router 10.69.79.12 metric 100
+		router 10.69.2.8 metric 100
+		router 10.69.72.52 metric 100
+		stubnet 10.69.3.62/32 metric 0
+		stubnet 10.68.3.62/32 metric 0
+		external 10.96.90.128/26 metric 20
+
+	router 10.69.3.63
+		distance 101
+		router 10.69.2.27 metric 1060
+		stubnet 10.70.72.55/32 metric 0
+		stubnet 10.69.3.63/32 metric 0
+		external 10.70.132.0/24 metric 20
+		external 10.70.133.0/24 metric 20
+
+	router 10.69.3.64
+		distance 43
+		router 10.69.3.62 metric 10
+		router 10.69.3.62 metric 100
+		router 10.69.2.9 metric 100
+		router 10.69.54.25 metric 100
+		router 10.69.72.52 metric 100
+		router 10.69.1.99 metric 100
+		stubnet 10.69.3.64/32 metric 0
+		stubnet 10.68.3.64/32 metric 0
+		external 10.96.91.0/26 metric 20
+
+	router 10.69.3.65
+		distance 26
+		router 10.69.7.13 metric 10
+		stubnet 10.69.3.65/32 metric 0
+		stubnet 10.68.3.65/32 metric 0
+		external 10.96.91.64/26 metric 20
+		external 199.170.132.39/32 metric 20
+
+	router 10.69.3.68
+		distance 46
+		router 10.69.34.61 metric 100
+		router 10.69.50.89 metric 10
+		stubnet 10.70.253.56/32 metric 0
+		stubnet 10.69.3.68/32 metric 0
+		stubnet 10.68.3.68/32 metric 0
+		external 10.96.92.0/26 metric 20
+
+	router 10.69.3.69
+		distance 51
+		router 10.69.3.8 metric 10
+		router 10.69.24.163 metric 10
+		router 10.69.3.8 metric 100
+		router 10.69.2.63 metric 100
+		router 10.69.24.41 metric 100
+		router 10.69.2.16 metric 100
+		stubnet 10.69.3.69/32 metric 0
+		stubnet 10.68.3.69/32 metric 0
+		external 10.96.92.64/26 metric 20
+
+	router 10.69.3.70
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.3.70/32 metric 0
+		stubnet 10.68.3.70/32 metric 0
+		external 10.96.92.128/26 metric 20
+
+	router 10.69.3.72
+		distance 48
+		router 10.69.50.14 metric 10
+		stubnet 10.69.3.72/32 metric 0
+		stubnet 10.68.3.72/32 metric 0
+		external 10.96.93.0/26 metric 20
+
+	router 10.69.3.74
+		distance 51
+		router 10.69.24.163 metric 10
+		stubnet 10.69.3.74/32 metric 0
+		stubnet 10.68.3.74/32 metric 0
+		external 10.96.93.128/26 metric 20
+
+	router 10.69.3.75
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.3.75/32 metric 0
+		stubnet 10.68.3.75/32 metric 0
+		external 10.96.93.192/26 metric 20
+
+	router 10.69.3.78
+		distance 51
+		router 10.69.24.163 metric 10
+		router 199.167.59.98 metric 100
+		stubnet 10.69.3.78/32 metric 0
+		stubnet 10.68.3.78/32 metric 0
+		external 10.96.94.128/26 metric 20
+
+	router 10.69.3.79
+		distance 48
+		router 10.69.32.33 metric 10
+		router 10.69.2.62 metric 100
+		router 10.69.2.92 metric 100
+		router 10.69.32.33 metric 100
+		router 10.69.50.20 metric 100
+		router 10.69.26.47 metric 100
+		router 10.69.4.40 metric 100
+		router 10.69.2.21 metric 100
+		stubnet 10.69.3.79/32 metric 0
+		stubnet 10.68.3.79/32 metric 0
+		external 10.96.94.192/26 metric 20
+
+	router 10.69.3.80
+		distance 43
+		router 10.69.24.82 metric 10
+		router 10.69.24.82 metric 100
+		stubnet 10.69.3.80/32 metric 0
+		stubnet 10.68.3.80/32 metric 0
+		external 10.96.95.0/26 metric 20
+
+	router 10.69.3.81
+		distance 48
+		router 10.69.75.82 metric 10
+		router 10.69.75.82 metric 100
+		router 10.69.2.53 metric 100
+		stubnet 10.69.3.81/32 metric 0
+		stubnet 10.68.3.81/32 metric 0
+		external 10.96.95.64/26 metric 20
+
+	router 10.69.3.83
+		distance 50
+		router 10.69.3.183 metric 10
+		router 10.69.3.29 metric 10
+		router 10.69.1.45 metric 10
+		router 10.69.4.49 metric 10
+		router 10.69.4.49 metric 100
+		stubnet 10.69.3.83/32 metric 0
+		stubnet 10.68.3.83/32 metric 0
+		external 10.96.95.192/26 metric 20
+
+	router 10.69.3.85
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.42.32 metric 100
+		router 10.69.50.20 metric 100
+		router 10.69.4.40 metric 100
+		stubnet 10.69.3.85/32 metric 0
+		stubnet 10.68.3.85/32 metric 0
+		external 10.96.96.64/26 metric 20
+
+	router 10.69.3.87
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.79.97 metric 100
+		router 10.69.1.65 metric 100
+		stubnet 10.69.3.87/32 metric 0
+		stubnet 10.68.3.87/32 metric 0
+		external 10.96.96.192/26 metric 20
+
+	router 10.69.3.89
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.42.14 metric 100
+		stubnet 10.69.3.89/32 metric 0
+		stubnet 10.68.3.89/32 metric 0
+		external 10.96.97.64/26 metric 20
+
+	router 10.69.3.94
+		distance 48
+		router 10.69.50.14 metric 10
+		router 10.69.51.7 metric 100
+		stubnet 10.69.3.94/32 metric 0
+		stubnet 10.68.3.94/32 metric 0
+		external 10.96.98.128/26 metric 20
+
+	router 10.69.3.96
+		distance 43
+		router 10.69.1.55 metric 10
+		router 10.69.27.16 metric 10
+		router 10.69.2.20 metric 10
+		stubnet 10.69.3.96/32 metric 0
+		stubnet 10.68.3.96/32 metric 0
+		external 10.96.99.0/26 metric 20
+
+	router 10.69.3.97
+		distance 58
+		router 10.69.4.46 metric 10
+		stubnet 10.69.3.97/32 metric 0
+		stubnet 10.68.3.97/32 metric 0
+		external 10.96.99.64/26 metric 20
+
+	router 10.69.3.117
+		distance 30
+		router 10.69.3.17 metric 1
+		router 10.70.89.133 metric 15
+		stubnet 10.69.0.0/16 metric 1
+		stubnet 192.168.160.0/20 metric 1
+		stubnet 10.70.89.35/32 metric 0
+
+	router 10.69.3.118
+		distance 55
+		router 10.69.2.27 metric 50
+		router 10.69.7.13 metric 39
+		router 10.69.3.18 metric 10
+		stubnet 10.70.72.1/32 metric 50
+		stubnet 10.70.91.1/32 metric 39
+		stubnet 10.69.3.118/32 metric 0
+		external 10.70.180.128/27 metric 20
+
+	router 10.69.3.129
+		distance 30
+		router 10.69.3.29 metric 10
+		router 10.70.89.133 metric 29
+		stubnet 10.69.3.129/32 metric 0
+		stubnet 10.70.89.41/32 metric 0
+
+	router 10.69.3.156
+		distance 106
+		router 10.69.28.27 metric 10
+		stubnet 10.69.3.156/32 metric 0
+		stubnet 10.68.3.156/32 metric 0
+		external 10.96.89.0/26 metric 20
+
+	router 10.69.3.167
+		distance 46
+		router 10.69.51.34 metric 10
+		stubnet 10.69.3.167/32 metric 0
+		stubnet 10.68.3.167/32 metric 0
+		external 10.96.91.192/26 metric 20
+
+	router 10.69.3.183
+		distance 60
+		router 10.69.3.83 metric 10
+		stubnet 10.69.3.183/32 metric 0
+		stubnet 199.170.132.96/32 metric 0
+
+	router 10.69.4.0
+		distance 56
+		router 10.69.4.100 metric 10
+		stubnet 10.68.4.0/32 metric 0
+		stubnet 10.69.4.0/32 metric 0
+		external 10.96.100.0/26 metric 20
+
+	router 10.69.4.1
+		distance 75
+		router 10.69.78.0 metric 10
+		stubnet 10.69.4.1/32 metric 0
+		stubnet 10.68.4.1/32 metric 0
+		external 10.96.100.64/26 metric 20
+
+	router 10.69.4.2
+		distance 53
+		router 10.69.2.20 metric 10
+		router 10.69.2.20 metric 100
+		stubnet 10.69.4.2/32 metric 0
+		stubnet 10.68.4.2/32 metric 0
+		external 10.96.100.128/26 metric 20
+
+	router 10.69.4.3
+		distance 46
+		router 10.69.4.103 metric 10
+		router 10.69.78.68 metric 100
+		router 10.69.2.82 metric 100
+		router 10.69.33.54 metric 100
+		router 10.69.14.47 metric 100
+		router 10.69.63.63 metric 100
+		router 10.69.54.20 metric 100
+		router 10.69.24.81 metric 100
+		stubnet 10.69.4.3/32 metric 0
+		stubnet 10.68.4.3/32 metric 0
+		external 10.96.100.192/26 metric 20
+
+	router 10.69.4.4
+		distance 86
+		router 10.69.19.71 metric 10
+		stubnet 10.69.4.4/32 metric 0
+		stubnet 10.68.4.4/32 metric 0
+		external 10.96.101.0/26 metric 20
+
+	router 10.69.4.5
+		distance 46
+		router 10.69.78.17 metric 10
+		router 10.69.78.17 metric 100
+		stubnet 10.69.4.5/32 metric 0
+		stubnet 10.68.4.5/32 metric 0
+		external 10.96.101.64/26 metric 20
+
+	router 10.69.4.6
+		distance 48
+		router 10.69.50.14 metric 10
+		router 10.69.29.32 metric 100
+		router 10.69.4.32 metric 100
+		stubnet 10.69.4.6/32 metric 0
+		stubnet 10.68.4.6/32 metric 0
+		external 10.96.101.128/26 metric 20
+
+	router 10.69.4.7
+		distance 41
+		router 10.70.176.1 metric 50
+		router 10.69.56.39 metric 50
+		router 10.69.24.163 metric 50
+		router 10.69.62.74 metric 50
+		router 10.69.19.34 metric 50
+		router 10.69.2.27 metric 50
+		router 10.69.6.59 metric 50
+		router 10.69.2.16 metric 50
+		router 10.69.3.19 metric 50
+		router 10.69.13.84 metric 50
+		router 10.69.19.71 metric 50
+		router 10.69.70.16 metric 50
+		router 10.69.56.39 metric 100
+		router 10.69.6.86 metric 100
+		router 10.69.30.4 metric 100
+		router 10.70.176.1 metric 100
+		router 10.69.70.16 metric 100
+		stubnet 10.69.4.7/32 metric 0
+		stubnet 10.68.4.7/32 metric 0
+		external 10.96.101.192/26 metric 20
+
+	router 10.69.4.9
+		distance 46
+		router 10.69.2.36 metric 10
+		router 10.69.51.34 metric 100
+		router 10.69.43.43 metric 100
+		stubnet 10.69.4.9/32 metric 0
+		stubnet 10.68.4.9/32 metric 0
+		external 10.96.102.64/26 metric 20
+
+	router 10.69.4.11
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.4.11/32 metric 0
+		stubnet 10.68.4.11/32 metric 0
+		external 10.96.102.192/26 metric 20
+
+	router 10.69.4.14
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.4.14/32 metric 0
+		stubnet 10.68.4.14/32 metric 0
+		external 10.96.103.128/26 metric 20
+
+	router 10.69.4.15
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.69.92 metric 100
+		stubnet 10.69.4.15/32 metric 0
+		stubnet 10.68.4.15/32 metric 0
+		external 10.96.103.192/26 metric 20
+
+	router 10.69.4.17
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.4.17/32 metric 0
+		stubnet 10.68.4.17/32 metric 0
+		external 10.96.104.64/26 metric 20
+
+	router 10.69.4.18
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.4.18/32 metric 0
+		stubnet 10.68.4.18/32 metric 0
+		external 10.96.104.128/26 metric 20
+
+	router 10.69.4.19
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.4.19/32 metric 0
+		stubnet 10.68.4.19/32 metric 0
+		external 10.96.104.192/26 metric 20
+
+	router 10.69.4.20
+		distance 48
+		router 10.69.2.3 metric 10
+		router 10.69.2.3 metric 100
+		stubnet 10.69.4.20/32 metric 0
+		stubnet 10.68.4.20/32 metric 0
+		external 10.96.105.0/26 metric 20
+
+	router 10.69.4.21
+		distance 58
+		router 10.69.1.88 metric 10
+		router 10.69.1.88 metric 100
+		router 10.69.2.75 metric 100
+		stubnet 10.69.4.21/32 metric 0
+		stubnet 10.68.4.21/32 metric 0
+		external 10.96.105.64/26 metric 20
+
+	router 10.69.4.22
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.44.62 metric 100
+		stubnet 10.69.4.22/32 metric 0
+		stubnet 10.68.4.22/32 metric 0
+		external 10.96.105.128/26 metric 20
+
+	router 10.69.4.23
+		distance 75
+		router 10.69.78.0 metric 10
+		stubnet 10.69.4.23/32 metric 0
+		stubnet 10.68.4.23/32 metric 0
+		external 10.96.105.192/26 metric 20
+
+	router 10.69.4.24
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.2.93 metric 100
+		stubnet 10.69.4.24/32 metric 0
+		stubnet 10.68.4.24/32 metric 0
+		external 10.96.106.0/26 metric 20
+
+	router 10.69.4.26
+		distance 65
+		router 10.69.4.226 metric 10
+		router 10.69.4.126 metric 10
+		router 10.69.18.96 metric 100
+		stubnet 10.69.4.26/32 metric 0
+		stubnet 10.68.4.26/32 metric 0
+		external 10.96.106.128/26 metric 20
+
+	router 10.69.4.28
+		distance 56
+		router 10.69.69.25 metric 10
+		router 10.69.69.25 metric 100
+		stubnet 10.69.4.28/32 metric 0
+		stubnet 10.68.4.28/32 metric 0
+		external 10.96.107.0/26 metric 20
+
+	router 10.69.4.29
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.4.29/32 metric 0
+		stubnet 10.68.4.29/32 metric 0
+		external 10.96.107.64/26 metric 20
+
+	router 10.69.4.31
+		distance 75
+		router 10.69.78.0 metric 10
+		stubnet 10.69.4.31/32 metric 0
+		stubnet 10.68.4.31/32 metric 0
+		external 10.96.107.192/26 metric 20
+
+	router 10.69.4.32
+		distance 48
+		router 10.69.4.6 metric 100
+		router 10.69.42.32 metric 100
+		router 10.69.42.32 metric 10
+		stubnet 10.68.4.32/32 metric 0
+		stubnet 10.69.4.32/32 metric 0
+		external 10.96.108.0/26 metric 20
+
+	router 10.69.4.33
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.6.59 metric 100
+		stubnet 10.69.4.33/32 metric 0
+		stubnet 10.68.4.33/32 metric 0
+		external 10.96.108.64/26 metric 20
+
+	router 10.69.4.34
+		distance 43
+		router 10.69.43.95 metric 10
+		router 10.69.4.87 metric 10
+		router 10.69.43.95 metric 100
+		router 10.69.41.53 metric 100
+		router 10.69.4.87 metric 100
+		stubnet 10.69.4.34/32 metric 0
+		stubnet 10.68.4.34/32 metric 0
+		external 10.96.108.128/26 metric 20
+
+	router 10.69.4.35
+		distance 86
+		router 10.69.14.17 metric 10
+		router 10.69.14.17 metric 100
+		router 10.69.29.34 metric 100
+		stubnet 10.69.4.35/32 metric 0
+		stubnet 10.68.4.35/32 metric 0
+		external 10.96.108.192/26 metric 20
+
+	router 10.69.4.36
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.4.36/32 metric 0
+		stubnet 10.68.4.36/32 metric 0
+		external 10.96.109.0/26 metric 20
+
+	router 10.69.4.39
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.4.42 metric 10
+		router 10.69.4.42 metric 100
+		stubnet 10.69.4.39/32 metric 0
+		stubnet 10.68.4.39/32 metric 0
+		external 10.96.109.192/26 metric 20
+
+	router 10.69.4.40
+		distance 48
+		router 10.69.1.89 metric 100
+		router 10.69.3.85 metric 100
+		router 10.69.3.79 metric 100
+		router 10.69.2.92 metric 100
+		router 10.69.1.89 metric 10
+		stubnet 10.68.4.40/32 metric 0
+		stubnet 10.69.4.40/32 metric 0
+		external 10.96.110.0/26 metric 20
+
+	router 10.69.4.42
+		distance 43
+		router 10.69.4.39 metric 10
+		router 10.69.4.39 metric 100
+		stubnet 10.69.4.42/32 metric 0
+		stubnet 10.68.4.42/32 metric 0
+		external 10.96.110.128/26 metric 20
+
+	router 10.69.4.43
+		distance 56
+		router 10.69.1.15 metric 10
+		router 10.69.1.15 metric 100
+		router 10.69.71.3 metric 100
+		stubnet 10.69.4.43/32 metric 0
+		stubnet 10.68.4.43/32 metric 0
+		external 10.96.110.192/26 metric 20
+
+	router 10.69.4.44
+		distance 46
+		router 10.69.65.65 metric 10
+		stubnet 10.69.4.44/32 metric 0
+		stubnet 10.68.4.44/32 metric 0
+		external 10.96.111.0/26 metric 20
+
+	router 10.69.4.45
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.4.88 metric 100
+		stubnet 10.69.4.45/32 metric 0
+		stubnet 10.68.4.45/32 metric 0
+		external 10.96.111.64/26 metric 20
+
+	router 10.69.4.46
+		distance 48
+		router 10.69.50.14 metric 10
+		router 10.69.3.97 metric 10
+		stubnet 10.69.4.46/32 metric 0
+		stubnet 10.68.4.46/32 metric 0
+		external 10.96.111.128/26 metric 20
+
+	router 10.69.4.48
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.4.48/32 metric 0
+		stubnet 10.68.4.48/32 metric 0
+		external 10.96.112.0/26 metric 20
+
+	router 10.69.4.49
+		distance 60
+		router 10.69.2.95 metric 30
+		router 10.69.3.83 metric 30
+		router 10.69.3.83 metric 100
+		router 10.69.2.95 metric 100
+		stubnet 10.69.4.49/32 metric 0
+		stubnet 10.68.4.49/32 metric 0
+		external 10.96.112.64/26 metric 20
+
+	router 10.69.4.51
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.1.50 metric 100
+		router 10.69.30.37 metric 100
+		router 10.69.2.83 metric 100
+		router 10.69.35.31 metric 100
+		stubnet 10.69.4.51/32 metric 0
+		stubnet 10.68.4.51/32 metric 0
+		external 10.96.112.192/26 metric 20
+
+	router 10.69.4.54
+		distance 51
+		router 10.69.24.163 metric 10
+		stubnet 10.69.4.54/32 metric 0
+		stubnet 10.68.4.54/32 metric 0
+		external 10.96.113.128/26 metric 20
+
+	router 10.69.4.55
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.4.55/32 metric 0
+		stubnet 10.68.4.55/32 metric 0
+		external 10.96.113.192/26 metric 20
+
+	router 10.69.4.56
+		distance 43
+		router 10.69.36.7 metric 10
+		router 10.69.2.2 metric 10
+		router 10.69.26.146 metric 10
+		router 10.69.26.46 metric 100
+		router 10.69.36.7 metric 100
+		router 10.69.11.59 metric 100
+		stubnet 10.69.4.56/32 metric 0
+		stubnet 10.68.4.56/32 metric 0
+		external 10.96.114.0/26 metric 20
+
+	router 10.69.4.58
+		distance 36
+		router 10.69.4.78 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.4.78 metric 100
+		router 10.69.2.59 metric 100
+		router 10.69.2.19 metric 100
+		stubnet 10.69.4.58/32 metric 0
+		stubnet 10.68.4.58/32 metric 0
+		external 10.96.114.128/26 metric 20
+
+	router 10.69.4.60
+		distance 36
+		router 10.69.14.47 metric 10
+		router 10.69.14.47 metric 100
+		router 10.69.4.94 metric 100
+		router 10.69.63.63 metric 100
+		stubnet 10.69.4.60/32 metric 0
+		stubnet 10.68.4.60/32 metric 0
+		external 10.96.115.0/26 metric 20
+
+	router 10.69.4.61
+		distance 48
+		router 10.69.2.12 metric 10
+		router 10.69.2.12 metric 100
+		router 10.69.2.56 metric 100
+		router 10.69.2.15 metric 100
+		stubnet 10.69.4.61/32 metric 0
+		stubnet 10.68.4.61/32 metric 0
+		external 10.96.115.64/26 metric 20
+
+	router 10.69.4.62
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.4.62/32 metric 0
+		stubnet 10.68.4.62/32 metric 0
+		external 10.96.115.128/26 metric 20
+
+	router 10.69.4.64
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.30.37 metric 100
+		router 10.69.5.18 metric 100
+		router 10.69.2.48 metric 100
+		stubnet 10.69.4.64/32 metric 0
+		stubnet 10.68.4.64/32 metric 0
+		external 10.96.116.0/26 metric 20
+
+	router 10.69.4.66
+		distance 36
+		router 10.69.22.82 metric 10
+		stubnet 10.69.4.66/32 metric 0
+		stubnet 10.68.4.66/32 metric 0
+		external 10.96.116.128/26 metric 20
+
+	router 10.69.4.71
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.74.98 metric 100
+		stubnet 10.69.4.71/32 metric 0
+		stubnet 10.68.4.71/32 metric 0
+		external 10.96.117.192/26 metric 20
+
+	router 10.69.4.73
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.1.59 metric 100
+		router 10.69.2.62 metric 100
+		stubnet 10.69.4.73/32 metric 0
+		stubnet 10.68.4.73/32 metric 0
+		external 10.96.118.64/26 metric 20
+
+	router 10.69.4.74
+		distance 66
+		router 10.69.57.12 metric 10
+		stubnet 10.69.4.74/32 metric 0
+		stubnet 10.68.4.74/32 metric 0
+		external 10.96.118.128/26 metric 20
+
+	router 10.69.4.75
+		distance 43
+		router 10.69.41.53 metric 10
+		router 10.69.41.53 metric 100
+		router 10.69.4.87 metric 100
+		stubnet 10.69.4.75/32 metric 0
+		stubnet 10.68.4.75/32 metric 0
+		external 10.96.118.192/26 metric 20
+
+	router 10.69.4.76
+		distance 36
+		router 10.69.41.92 metric 100
+		router 10.69.34.61 metric 10
+		stubnet 10.68.4.76/32 metric 0
+		stubnet 10.69.4.76/32 metric 0
+		external 10.96.119.0/26 metric 20
+
+	router 10.69.4.77
+		distance 33
+		router 10.69.3.58 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.3.58 metric 100
+		stubnet 10.69.4.77/32 metric 0
+		stubnet 10.68.4.77/32 metric 0
+		external 10.96.119.64/26 metric 20
+
+	router 10.69.4.78
+		distance 46
+		router 10.69.4.58 metric 10
+		router 10.69.4.58 metric 100
+		stubnet 10.69.4.78/32 metric 0
+		stubnet 10.68.4.78/32 metric 0
+		external 10.96.119.128/26 metric 20
+
+	router 10.69.4.80
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.4.80/32 metric 0
+		stubnet 10.68.4.80/32 metric 0
+		external 10.96.120.0/26 metric 20
+
+	router 10.69.4.81
+		distance 60
+		router 10.69.22.74 metric 10
+		stubnet 10.69.4.81/32 metric 0
+		stubnet 10.68.4.81/32 metric 0
+		external 10.96.120.64/26 metric 20
+
+	router 10.69.4.82
+		distance 46
+		router 10.69.4.182 metric 10
+		router 10.69.78.25 metric 100
+		router 10.69.51.51 metric 100
+		router 10.69.44.80 metric 100
+		stubnet 10.69.4.82/32 metric 0
+		stubnet 10.68.4.82/32 metric 0
+		external 10.96.120.128/26 metric 20
+
+	router 10.69.4.84
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.62.68 metric 100
+		stubnet 10.69.4.84/32 metric 0
+		stubnet 10.68.4.84/32 metric 0
+		external 10.96.121.0/26 metric 20
+
+	router 10.69.4.87
+		distance 43
+		router 10.69.43.95 metric 10
+		router 10.69.4.34 metric 10
+		router 10.69.41.53 metric 100
+		router 10.69.43.95 metric 100
+		router 10.69.68.45 metric 100
+		router 10.69.4.75 metric 100
+		router 10.69.4.34 metric 100
+		stubnet 10.69.4.87/32 metric 0
+		stubnet 10.68.4.87/32 metric 0
+		external 10.96.121.192/26 metric 20
+
+	router 10.69.4.88
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.24.82 metric 100
+		router 10.69.4.45 metric 100
+		stubnet 10.69.4.88/32 metric 0
+		stubnet 10.68.4.88/32 metric 0
+		external 10.96.122.0/26 metric 20
+
+	router 10.69.4.89
+		distance 58
+		router 10.69.44.62 metric 10
+		router 10.69.44.62 metric 100
+		stubnet 10.69.4.89/32 metric 0
+		stubnet 10.68.4.89/32 metric 0
+		external 10.96.122.64/26 metric 20
+
+	router 10.69.4.90
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.23.50 metric 100
+		router 10.69.35.31 metric 100
+		router 10.69.2.49 metric 100
+		router 10.69.79.41 metric 100
+		router 10.70.175.1 metric 100
+		router 10.69.14.40 metric 100
+		router 10.69.18.48 metric 100
+		stubnet 10.69.4.90/32 metric 0
+		stubnet 10.68.4.90/32 metric 0
+		external 10.96.122.128/26 metric 20
+
+	router 10.69.4.91
+		distance 137
+		router 10.69.9.44 metric 100
+		router 10.69.11.46 metric 100
+		stubnet 10.69.4.91/32 metric 0
+		stubnet 10.68.4.91/32 metric 0
+		external 10.96.122.192/26 metric 20
+
+	router 10.69.4.92
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.4.92/32 metric 0
+		stubnet 10.68.4.92/32 metric 0
+		external 10.96.123.0/26 metric 20
+
+	router 10.69.4.94
+		distance 36
+		router 10.69.46.81 metric 10
+		router 10.69.63.63 metric 100
+		router 10.69.14.47 metric 100
+		router 10.69.4.60 metric 100
+		router 10.69.46.81 metric 100
+		router 10.69.24.81 metric 100
+		router 10.69.54.20 metric 100
+		router 10.69.1.75 metric 100
+		stubnet 10.69.4.94/32 metric 0
+		stubnet 10.68.4.94/32 metric 0
+		external 10.96.123.128/26 metric 20
+
+	router 10.69.4.95
+		distance 66
+		router 10.69.1.37 metric 10
+		router 10.69.57.12 metric 10
+		router 10.69.1.56 metric 100
+		router 10.69.1.37 metric 100
+		router 10.69.3.37 metric 100
+		router 10.69.57.12 metric 100
+		stubnet 10.69.4.95/32 metric 0
+		stubnet 10.68.4.95/32 metric 0
+		external 10.96.123.192/26 metric 20
+
+	router 10.69.4.98
+		distance 36
+		router 10.69.66.22 metric 10
+		router 10.69.66.22 metric 100
+		router 10.69.2.85 metric 100
+		router 10.69.69.11 metric 100
+		router 10.69.1.75 metric 100
+		router 10.69.53.0 metric 100
+		router 10.69.2.50 metric 100
+		router 10.69.60.22 metric 100
+		router 10.69.76.32 metric 100
+		router 10.69.33.0 metric 100
+		router 10.69.33.54 metric 100
+		stubnet 10.69.4.98/32 metric 0
+		stubnet 10.68.4.98/32 metric 0
+		external 10.96.124.128/26 metric 20
+
+	router 10.69.4.100
+		distance 46
+		router 10.69.4.0 metric 10
+		router 10.69.52.83 metric 10
+		stubnet 10.69.4.100/32 metric 0
+		stubnet 10.68.4.100/32 metric 0
+
+	router 10.69.4.103
+		distance 36
+		router 10.69.4.3 metric 10
+		router 10.69.78.68 metric 10
+		stubnet 10.69.4.103/32 metric 0
+		stubnet 10.68.4.103/32 metric 0
+
+	router 10.69.4.126
+		distance 75
+		router 10.69.78.0 metric 10
+		router 10.69.4.26 metric 10
+		stubnet 10.68.4.126/32 metric 0
+		stubnet 10.69.4.126/32 metric 0
+
+	router 10.69.4.182
+		distance 36
+		router 10.69.4.82 metric 10
+		router 10.69.51.51 metric 10
+		stubnet 10.69.4.182/32 metric 0
+		stubnet 10.68.4.182/32 metric 0
+
+	router 10.69.4.186
+		distance 46
+		router 10.69.1.54 metric 10
+		stubnet 10.69.4.186/32 metric 0
+		stubnet 10.68.4.186/32 metric 0
+		external 10.96.121.128/26 metric 20
+
+	router 10.69.4.226
+		distance 55
+		router 10.69.2.27 metric 50
+		router 10.69.7.13 metric 39
+		router 10.69.4.26 metric 10
+		stubnet 10.70.72.94/32 metric 0
+		stubnet 10.70.91.163/32 metric 0
+		stubnet 10.69.4.226/32 metric 0
+
+	router 10.69.5.0
+		distance 46
+		router 10.69.75.12 metric 10
+		stubnet 10.69.5.0/32 metric 0
+		stubnet 10.68.5.0/32 metric 0
+		external 10.96.125.0/26 metric 20
+
+	router 10.69.5.7
+		distance 51
+		router 10.69.24.163 metric 10
+		stubnet 10.69.5.7/32 metric 0
+		stubnet 10.68.5.7/32 metric 0
+		external 10.70.182.128/25 metric 20
+		external 10.96.126.192/26 metric 20
+
+	router 10.69.5.18
+		distance 96
+		router 10.69.2.48 metric 100
+		router 10.69.4.64 metric 100
+		router 10.69.2.48 metric 10
+		stubnet 10.68.5.18/32 metric 0
+		stubnet 10.69.5.18/32 metric 0
+		external 10.96.129.128/26 metric 20
+
+	router 10.69.5.56
+		distance 51
+		router 10.69.7.31 metric 10
+		stubnet 10.69.5.56/32 metric 0
+		stubnet 10.68.5.56/32 metric 0
+		external 10.96.139.0/26 metric 20
+
+	router 10.69.6.27
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.6.27/32 metric 0
+		stubnet 10.68.6.27/32 metric 0
+		external 10.96.156.192/26 metric 20
+
+	router 10.69.6.59
+		distance 91
+		router 10.69.38.64 metric 10
+		router 10.69.4.7 metric 10
+		router 10.69.38.64 metric 100
+		router 10.69.4.33 metric 100
+		stubnet 10.69.6.59/32 metric 0
+		stubnet 10.68.6.59/32 metric 0
+		external 10.96.164.192/26 metric 20
+
+	router 10.69.6.64
+		distance 38
+		router 10.69.13.40 metric 9
+		router 10.69.2.72 metric 10
+		router 10.69.76.0 metric 10
+		router 10.69.75.3 metric 10
+		router 10.69.6.164 metric 10
+		router 10.69.2.72 metric 100
+		stubnet 10.70.253.35/32 metric 0
+		stubnet 10.69.6.64/32 metric 0
+		stubnet 10.68.6.64/32 metric 0
+		external 10.96.166.0/26 metric 20
+
+	router 10.69.6.72
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.1.84 metric 100
+		stubnet 10.69.6.72/32 metric 0
+		stubnet 10.68.6.72/32 metric 0
+		external 10.96.168.0/26 metric 20
+
+	router 10.69.6.86
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.3.19 metric 100
+		router 10.69.4.7 metric 100
+		router 10.69.56.39 metric 100
+		router 10.69.70.16 metric 100
+		stubnet 10.69.6.86/32 metric 0
+		stubnet 10.68.6.86/32 metric 0
+		external 10.96.171.128/26 metric 20
+
+	router 10.69.6.164
+		distance 48
+		router 10.69.76.0 metric 10
+		router 10.69.6.64 metric 10
+		stubnet 10.69.6.164/32 metric 0
+		external 10.96.166.0/26 metric 20
+
+	router 10.69.7.13
+		distance 16
+		router 10.69.4.226 metric 39
+		router 10.69.59.165 metric 39
+		router 10.69.12.167 metric 39
+		router 10.69.78.100 metric 39
+		router 10.69.2.27 metric 100
+		router 10.69.3.118 metric 39
+		router 10.69.68.2 metric 39
+		router 10.69.34.61 metric 10
+		router 10.69.22.82 metric 11
+		router 10.69.59.16 metric 7
+		router 10.69.4.24 metric 10
+		router 10.69.68.72 metric 10
+		router 10.69.2.17 metric 10
+		router 10.69.2.93 metric 10
+		router 10.69.47.61 metric 10
+		router 10.69.28.83 metric 10
+		router 10.69.32.84 metric 10
+		router 10.69.24.62 metric 10
+		router 10.69.16.6 metric 10
+		router 10.69.46.81 metric 10
+		router 10.69.64.50 metric 10
+		router 10.69.65.71 metric 10
+		router 10.69.24.81 metric 10
+		router 10.69.1.75 metric 10
+		router 10.69.54.20 metric 10
+		router 10.69.78.68 metric 10
+		router 10.69.3.65 metric 10
+		router 10.69.2.89 metric 10
+		router 10.69.33.54 metric 10
+		router 10.69.3.0 metric 10
+		router 10.69.2.50 metric 10
+		router 10.69.79.25 metric 10
+		router 10.69.27.1 metric 10
+		router 10.69.66.22 metric 10
+		router 10.69.22.82 metric 10
+		router 10.69.53.0 metric 10
+		router 10.69.14.47 metric 10
+		router 10.69.73.19 metric 10
+		router 10.69.16.35 metric 10
+		router 10.69.75.74 metric 10
+		router 10.69.33.0 metric 10
+		router 10.69.59.89 metric 10
+		router 10.69.51.51 metric 10
+		router 10.69.1.96 metric 10
+		router 10.69.2.82 metric 10
+		network 10.70.90.0/24 metric 10
+		network 10.70.89.128/27 metric 1
+		stubnet 10.70.91.1/32 metric 0
+		stubnet 10.70.91.1/32 metric 0
+		stubnet 10.70.91.1/32 metric 0
+		stubnet 10.70.91.1/32 metric 0
+		stubnet 10.70.91.1/32 metric 0
+		stubnet 10.70.91.1/32 metric 0
+		stubnet 10.70.91.1/32 metric 0
+		stubnet 10.70.91.1/32 metric 0
+		stubnet 10.70.71.3/32 metric 0
+		stubnet 10.70.91.1/32 metric 0
+		stubnet 10.70.91.1/32 metric 0
+		stubnet 10.70.253.0/32 metric 0
+		stubnet 10.70.253.52/32 metric 0
+		stubnet 10.70.253.4/32 metric 0
+		stubnet 10.69.7.13/32 metric 0
+		stubnet 10.70.91.0/24 metric 10
+		external 0.0.0.0/0 metric 1
+		external 10.10.10.100/32 metric 20
+		external 10.70.88.0/24 metric 20
+		external 10.70.95.0/24 metric 20
+		external 10.70.253.46/32 metric 20
+		external 199.170.132.0/24 metric 20 via 10.70.89.131
+		external 199.170.132.1/32 metric 20 via 10.70.89.131
+		external 199.170.132.3/32 metric 20
+		external 199.170.132.6/32 metric 20
+		external 199.170.132.17/32 metric 20
+		external 199.170.132.35/32 metric 20 via 10.70.89.131
+		external 199.170.132.50/32 metric 20 via 10.70.89.131
+		external 199.170.132.64/26 metric 20 via 10.70.89.131
+
+	router 10.69.7.31
+		distance 41
+		router 10.69.22.74 metric 20
+		router 10.69.3.11 metric 100
+		router 10.69.44.41 metric 100
+		router 10.69.3.11 metric 10
+		router 10.69.44.41 metric 10
+		router 10.69.24.163 metric 10
+		router 10.69.1.38 metric 10
+		router 10.69.1.41 metric 10
+		router 10.69.30.16 metric 10
+		router 10.68.29.50 metric 10
+		router 10.69.5.56 metric 10
+		router 10.69.19.34 metric 10
+		stubnet 10.70.253.51/32 metric 0
+		stubnet 10.68.7.31/32 metric 0
+		stubnet 10.69.7.31/32 metric 0
+		external 10.70.155.0/24 metric 20
+		external 10.70.155.128/26 metric 20
+		external 10.96.182.192/26 metric 20
+
+	router 10.69.7.79
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.7.79/32 metric 0
+		stubnet 10.68.7.79/32 metric 0
+		external 10.96.194.192/26 metric 20
+
+	router 10.69.7.94
+		distance 191
+		router 10.69.13.84 metric 100
+		stubnet 10.69.7.94/32 metric 0
+		stubnet 10.68.7.94/32 metric 0
+		external 10.96.198.128/26 metric 20
+
+	router 10.69.8.98
+		distance 65
+		router 10.69.78.0 metric 10
+		router 10.69.78.100 metric 10
+		router 10.69.1.35 metric 10
+		router 10.69.49.17 metric 10
+		stubnet 10.69.8.98/32 metric 0
+		external 10.96.224.128/26 metric 20
+
+	router 10.69.9.44
+		distance 36
+		router 10.69.11.46 metric 70
+		router 10.69.34.61 metric 70
+		router 10.69.13.40 metric 70
+		router 10.69.11.46 metric 101
+		router 10.69.4.91 metric 101
+		stubnet 10.69.9.44/32 metric 0
+		stubnet 10.68.9.44/32 metric 0
+		external 10.96.236.0/26 metric 20
+
+	router 10.69.10.84
+		distance 36
+		router 10.69.19.34 metric 5
+		router 10.69.79.9 metric 10
+		router 10.69.1.15 metric 10
+		router 10.69.11.67 metric 10
+		router 10.69.19.34 metric 10
+		router 10.69.11.67 metric 100
+		router 10.69.55.81 metric 100
+		stubnet 10.70.251.2/32 metric 0
+		stubnet 10.69.10.84/32 metric 0
+		stubnet 10.68.10.84/32 metric 0
+		external 10.97.15.0/26 metric 20
+
+	router 10.69.11.46
+		distance 106
+		router 10.69.9.44 metric 10
+		router 10.69.9.44 metric 100
+		router 10.69.4.91 metric 100
+		stubnet 10.69.11.46/32 metric 0
+		stubnet 10.68.11.46/32 metric 0
+		external 10.97.30.128/26 metric 20
+
+	router 10.69.11.59
+		distance 133
+		router 10.69.4.56 metric 100
+		router 10.69.36.7 metric 100
+		router 10.69.26.46 metric 100
+		router 10.69.2.2 metric 100
+		stubnet 10.69.11.59/32 metric 0
+		stubnet 10.68.11.59/32 metric 0
+		external 10.97.33.192/26 metric 20
+
+	router 10.69.11.63
+		distance 60
+		router 10.69.22.74 metric 10
+		stubnet 10.69.11.63/32 metric 0
+		stubnet 10.68.11.63/32 metric 0
+		external 10.97.34.192/26 metric 20
+
+	router 10.69.11.67
+		distance 46
+		router 10.69.55.81 metric 10
+		router 10.69.2.95 metric 10
+		router 10.69.10.84 metric 10
+		router 10.69.55.81 metric 100
+		router 10.69.10.84 metric 100
+		stubnet 10.69.11.67/32 metric 0
+		stubnet 10.68.11.67/32 metric 0
+		external 10.97.35.192/26 metric 20
+
+	router 10.69.12.167
+		distance 55
+		router 10.69.7.13 metric 39
+		stubnet 10.70.91.185/32 metric 0
+		stubnet 10.69.12.167/32 metric 0
+		external 10.97.60.192/26 metric 20
+
+	router 10.69.13.40
+		distance 28
+		router 10.69.14.117 metric 50
+		router 10.69.6.64 metric 10
+		router 10.69.59.16 metric 5
+		router 10.69.74.89 metric 10
+		router 10.69.26.47 metric 10
+		router 10.69.3.70 metric 10
+		router 10.69.3.89 metric 10
+		router 10.69.29.59 metric 10
+		router 10.69.1.80 metric 10
+		router 10.69.2.33 metric 10
+		router 10.69.72.88 metric 10
+		router 10.69.3.13 metric 10
+		router 10.69.42.14 metric 10
+		router 10.69.2.13 metric 10
+		router 10.69.70.89 metric 10
+		router 10.69.47.33 metric 10
+		router 10.69.39.23 metric 10
+		router 10.69.63.8 metric 10
+		router 10.69.76.86 metric 10
+		router 10.69.50.20 metric 10
+		router 10.69.53.28 metric 10
+		router 10.69.74.49 metric 10
+		router 10.69.3.51 metric 10
+		router 10.69.2.74 metric 10
+		router 10.69.15.33 metric 10
+		router 10.69.1.86 metric 10
+		router 10.69.3.40 metric 10
+		router 10.69.2.54 metric 10
+		router 10.69.2.3 metric 10
+		router 10.69.1.16 metric 10
+		router 10.69.1.58 metric 10
+		router 10.69.42.66 metric 10
+		router 10.69.3.23 metric 10
+		router 10.69.2.12 metric 10
+		router 10.69.71.78 metric 10
+		router 10.69.1.89 metric 10
+		router 10.69.79.97 metric 10
+		router 10.69.42.32 metric 10
+		router 10.69.28.74 metric 10
+		router 10.69.50.14 metric 10
+		router 10.69.32.33 metric 10
+		router 10.69.2.58 metric 10
+		router 10.69.4.92 metric 10
+		router 10.69.2.60 metric 10
+		router 10.69.1.65 metric 10
+		router 10.69.4.55 metric 10
+		router 10.69.32.13 metric 10
+		router 10.69.55.88 metric 10
+		router 10.69.46.76 metric 10
+		router 10.69.6.72 metric 10
+		router 10.69.4.84 metric 10
+		router 10.69.32.82 metric 10
+		router 10.69.69.92 metric 10
+		router 10.69.3.32 metric 10
+		router 10.69.4.88 metric 10
+		router 10.69.3.87 metric 10
+		router 10.69.44.62 metric 10
+		router 10.69.29.32 metric 10
+		router 10.69.77.10 metric 10
+		router 10.69.1.76 metric 10
+		router 10.69.34.80 metric 10
+		router 10.69.4.22 metric 10
+		router 10.69.47.6 metric 10
+		router 10.69.21.1 metric 10
+		router 10.69.33.96 metric 10
+		router 10.69.42.85 metric 10
+		router 10.69.2.22 metric 10
+		router 10.69.3.6 metric 10
+		router 10.69.22.3 metric 10
+		router 10.69.18.93 metric 10
+		router 10.69.68.45 metric 10
+		router 10.69.52.76 metric 10
+		router 10.69.62.68 metric 10
+		router 10.69.54.21 metric 10
+		router 10.69.3.7 metric 10
+		router 10.69.51.27 metric 10
+		router 10.69.75.82 metric 10
+		router 10.69.37.15 metric 10
+		router 10.69.9.44 metric 10
+		router 10.69.40.18 metric 10
+		router 10.69.70.65 metric 10
+		router 10.69.3.75 metric 10
+		stubnet 10.70.253.22/32 metric 0
+		stubnet 10.70.253.34/32 metric 0
+		stubnet 10.70.253.27/32 metric 0
+		stubnet 10.70.253.24/32 metric 0
+		stubnet 10.69.13.40/32 metric 0
+		external 10.70.131.0/24 metric 20
+		external 10.97.79.0/26 metric 20
+
+	router 10.69.13.50
+		distance 44
+		router 10.69.35.75 metric 10
+		router 10.69.33.5 metric 10
+		router 10.69.13.150 metric 10
+		router 10.69.66.18 metric 10
+		router 10.69.48.69 metric 10
+		router 10.69.33.105 metric 10
+		router 10.69.65.81 metric 10
+		router 10.69.35.75 metric 100
+		router 10.69.66.18 metric 100
+		router 10.69.48.69 metric 100
+		router 10.69.33.5 metric 100
+		router 10.69.65.81 metric 100
+		router 10.69.2.90 metric 100
+		router 10.69.70.37 metric 100
+		router 10.69.72.52 metric 100
+		stubnet 10.69.13.50/32 metric 0
+		stubnet 10.68.13.50/32 metric 0
+		external 10.97.81.128/26 metric 20
+
+	router 10.69.13.84
+		distance 91
+		router 10.69.3.50 metric 10
+		router 10.69.4.7 metric 10
+		router 10.69.7.94 metric 100
+		router 10.69.3.50 metric 100
+		stubnet 10.69.13.84/32 metric 0
+		stubnet 10.68.13.84/32 metric 0
+		external 10.97.90.0/26 metric 20
+
+	router 10.69.13.150
+		distance 33
+		router 10.69.13.50 metric 11
+		router 10.69.59.16 metric 11
+		stubnet 10.69.13.150/32 metric 0
+		external 10.70.180.224/27 metric 20
+
+	router 10.69.14.17
+		distance 76
+		router 10.69.4.35 metric 100
+		router 10.69.32.34 metric 100
+		router 10.69.14.117 metric 10
+		router 10.69.29.34 metric 10
+		router 10.69.4.35 metric 10
+		router 10.69.32.34 metric 10
+		stubnet 10.70.253.24/32 metric 0
+		stubnet 10.68.14.17/32 metric 0
+		stubnet 10.69.14.17/32 metric 0
+		external 10.70.84.65/32 metric 20
+		external 10.70.84.67/32 metric 20
+		external 10.70.84.69/32 metric 20
+		external 10.70.84.71/32 metric 20
+		external 10.70.84.73/32 metric 20
+		external 10.70.84.75/32 metric 20
+		external 10.70.84.77/32 metric 20
+		external 10.70.84.81/32 metric 20
+		external 10.70.84.83/32 metric 20
+		external 10.70.84.128/26 metric 20
+		external 10.70.84.192/26 metric 20
+
+	router 10.69.14.30
+		distance 51
+		router 10.69.24.163 metric 10
+		router 10.69.2.39 metric 100
+		router 10.69.31.75 metric 100
+		router 10.70.164.1 metric 100
+		stubnet 10.69.14.30/32 metric 0
+		stubnet 10.68.14.30/32 metric 0
+		external 10.97.101.128/26 metric 20
+
+	router 10.69.14.40
+		distance 86
+		router 10.69.19.71 metric 10
+		router 10.70.175.1 metric 100
+		router 10.69.2.49 metric 100
+		router 10.69.35.31 metric 100
+		router 10.69.1.51 metric 100
+		router 10.69.79.41 metric 100
+		router 10.69.4.90 metric 100
+		router 10.69.2.83 metric 100
+		router 10.69.1.50 metric 100
+		stubnet 10.69.14.40/32 metric 0
+		stubnet 10.68.14.40/32 metric 0
+		external 10.97.104.0/26 metric 20
+
+	router 10.69.14.47
+		distance 26
+		router 10.69.54.20 metric 10
+		router 10.69.4.60 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.4.60 metric 100
+		router 10.69.4.94 metric 100
+		router 10.69.46.81 metric 100
+		router 10.69.63.63 metric 100
+		router 10.69.54.20 metric 100
+		router 10.69.24.81 metric 100
+		router 10.69.4.3 metric 100
+		router 10.69.33.54 metric 100
+		stubnet 10.69.14.47/32 metric 0
+		stubnet 10.68.14.47/32 metric 0
+		external 10.97.105.192/26 metric 20
+
+	router 10.69.14.117
+		distance 66
+		router 10.69.13.40 metric 50
+		router 10.69.14.17 metric 10
+		router 10.69.14.217 metric 10
+		router 10.69.36.6 metric 10
+		stubnet 10.70.253.23/32 metric 0
+		stubnet 10.69.14.117/32 metric 0
+		external 10.97.98.64/26 metric 20
+
+	router 10.69.14.174
+		distance 36
+		router 10.69.51.51 metric 10
+		stubnet 10.69.14.174/32 metric 0
+		stubnet 10.68.14.174/32 metric 0
+		external 10.97.112.128/26 metric 20
+
+	router 10.69.14.217
+		distance 65
+		router 10.69.14.117 metric 1
+		router 10.70.89.133 metric 50
+		stubnet 10.69.0.0/16 metric 1
+		stubnet 10.70.89.33/32 metric 0
+
+	router 10.69.15.33
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.3.6 metric 100
+		stubnet 10.69.15.33/32 metric 0
+		stubnet 10.68.15.33/32 metric 0
+		external 10.97.127.64/26 metric 20
+
+	router 10.69.15.47
+		distance 48
+		router 10.69.50.14 metric 10
+		router 10.69.21.1 metric 100
+		stubnet 10.255.255.4/30 metric 10
+		stubnet 10.69.15.47/32 metric 0
+		stubnet 10.68.15.47/32 metric 0
+		external 10.97.130.192/26 metric 20
+
+	router 10.69.15.67
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.2.69 metric 100
+		router 10.69.79.26 metric 100
+		stubnet 10.69.15.67/32 metric 0
+		stubnet 10.68.15.67/32 metric 0
+		external 10.97.135.192/26 metric 20
+
+	router 10.69.15.98
+		distance 48
+		router 10.69.50.14 metric 10
+		stubnet 10.68.15.98/32 metric 0
+		stubnet 10.69.15.98/32 metric 0
+		external 10.97.143.128/26 metric 20
+
+	router 10.69.16.6
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.60.22 metric 100
+		router 10.69.2.89 metric 100
+		stubnet 10.69.16.6/32 metric 0
+		stubnet 10.68.16.6/32 metric 0
+		external 10.97.145.128/26 metric 20
+
+	router 10.69.16.19
+		distance 48
+		router 10.69.51.7 metric 10
+		router 10.69.50.14 metric 10
+		router 10.69.51.7 metric 100
+		stubnet 10.69.16.19/32 metric 0
+		stubnet 10.68.16.19/32 metric 0
+		external 10.97.148.192/26 metric 20
+
+	router 10.69.16.35
+		distance 26
+		router 10.69.78.25 metric 10
+		router 10.69.3.35 metric 10
+		router 10.69.26.16 metric 10
+		router 10.69.78.17 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.3.35 metric 100
+		stubnet 10.69.16.35/32 metric 0
+		stubnet 10.68.16.35/32 metric 0
+		external 10.97.152.192/26 metric 20
+
+	router 10.69.17.79
+		distance 46
+		router 10.69.43.91 metric 10
+		router 10.69.48.1 metric 10
+		router 10.69.52.83 metric 10
+		router 10.69.43.91 metric 100
+		router 10.69.19.44 metric 100
+		router 10.69.48.1 metric 100
+		stubnet 10.69.17.79/32 metric 0
+		stubnet 10.68.17.79/32 metric 0
+		external 10.97.188.192/26 metric 20
+
+	router 10.69.18.48
+		distance 61
+		router 10.69.1.51 metric 10
+		router 10.69.2.27 metric 10
+		router 10.69.1.51 metric 100
+		router 10.69.2.49 metric 100
+		router 10.69.35.31 metric 100
+		router 10.69.4.90 metric 100
+		stubnet 10.69.18.48/32 metric 0
+		stubnet 10.68.18.48/32 metric 0
+		external 10.97.206.0/26 metric 20
+
+	router 10.69.18.93
+		distance 38
+		router 10.69.37.15 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.37.15 metric 100
+		router 10.69.40.18 metric 100
+		stubnet 10.69.18.93/32 metric 0
+		stubnet 10.68.18.93/32 metric 0
+		external 10.97.217.64/26 metric 20
+
+	router 10.69.18.96
+		distance 75
+		router 10.69.78.0 metric 100
+		router 10.69.18.196 metric 100
+		router 10.69.4.26 metric 100
+		stubnet 10.69.18.96/32 metric 0
+		stubnet 10.68.18.96/32 metric 0
+		external 10.97.218.0/26 metric 20
+
+	router 10.69.18.196
+		distance 175
+		router 10.69.18.96 metric 10
+		stubnet 10.69.18.196/32 metric 10
+
+	router 10.69.19.34
+		distance 31
+		router 10.69.0.10 metric 1
+		router 10.69.43.94 metric 10
+		router 10.69.3.4 metric 10
+		router 10.69.4.7 metric 10
+		router 10.69.10.84 metric 10
+		router 10.69.30.65 metric 10
+		router 10.69.19.234 metric 10
+		router 10.69.73.59 metric 10
+		router 10.69.7.31 metric 10
+		router 10.69.1.68 metric 10
+		router 10.69.75.12 metric 10
+		router 10.69.43.42 metric 10
+		router 10.69.27.41 metric 10
+		router 10.69.2.52 metric 10
+		router 10.69.75.12 metric 5
+		router 10.69.59.16 metric 8
+		router 10.69.10.84 metric 5
+		router 10.69.24.163 metric 10
+		router 10.69.2.27 metric 20
+		router 10.69.20.90 metric 50
+		stubnet 10.70.253.38/31 metric 1
+		stubnet 10.69.19.34/32 metric 0
+		stubnet 10.70.184.0/22 metric 1
+		stubnet 10.70.188.0/24 metric 1
+		stubnet 10.70.251.9/32 metric 0
+		stubnet 10.70.251.13/32 metric 0
+		stubnet 10.70.251.1/32 metric 0
+		stubnet 10.70.251.5/32 metric 0
+		stubnet 10.70.251.18/32 metric 0
+		stubnet 10.70.251.44/30 metric 50
+
+	router 10.69.19.44
+		distance 66
+		router 10.69.43.91 metric 10
+		router 10.69.17.79 metric 100
+		router 10.69.43.91 metric 100
+		router 10.69.48.1 metric 100
+		stubnet 10.69.19.44/32 metric 0
+		stubnet 10.68.19.44/32 metric 0
+		external 10.97.230.0/26 metric 20
+
+	router 10.69.19.46
+		distance 53
+		router 10.69.3.3 metric 100
+		router 10.69.62.48 metric 100
+		stubnet 10.68.19.46/32 metric 0
+		stubnet 10.69.19.46/32 metric 0
+		external 10.97.230.128/26 metric 20
+
+	router 10.69.19.71
+		distance 76
+		router 10.69.2.27 metric 25
+		router 10.69.4.4 metric 10
+		router 10.69.73.47 metric 10
+		router 10.69.14.40 metric 10
+		router 10.70.175.1 metric 10
+		router 10.69.2.48 metric 10
+		router 10.69.4.7 metric 10
+		router 10.69.63.46 metric 100
+		stubnet 10.70.253.20/32 metric 0
+		stubnet 10.69.19.71/32 metric 0
+		stubnet 10.68.19.71/32 metric 0
+		external 10.97.236.192/26 metric 20
+
+	router 10.69.19.234
+		distance 41
+		router 10.69.19.34 metric 10
+		stubnet 10.69.19.234/32 metric 0
+		stubnet 199.170.132.99/32 metric 0
+		stubnet 10.70.251.56/30 metric 10
+		external 10.70.251.60/30 metric2 10
+		external 199.167.59.100/32 metric2 10
+
+	router 10.69.20.12
+		distance 33
+		router 10.69.2.14 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.77.70 metric 100
+		router 10.69.2.14 metric 100
+		stubnet 10.69.20.12/32 metric 0
+		stubnet 10.68.20.12/32 metric 0
+		external 10.97.247.0/26 metric 20
+
+	router 10.69.20.90
+		distance 67
+		router 10.69.24.163 metric 26
+		router 10.69.19.34 metric 50
+		router 10.69.33.53 metric 100
+		router 10.69.37.21 metric 100
+		router 10.69.46.93 metric 100
+		router 10.69.79.9 metric 100
+		router 10.69.46.93 metric 10
+		router 10.69.37.21 metric 10
+		stubnet 10.70.253.45/32 metric 0
+		stubnet 10.70.251.44/30 metric 50
+		stubnet 10.68.20.90/32 metric 0
+		stubnet 10.69.20.90/32 metric 0
+		external 10.98.10.128/26 metric 20
+
+	router 10.69.21.1
+		distance 38
+		router 10.69.13.40 metric 60
+		router 10.69.1.84 metric 100
+		router 10.69.15.47 metric 100
+		stubnet 10.69.21.1/32 metric 0
+		stubnet 10.68.21.1/32 metric 0
+		external 10.98.13.64/26 metric 20
+
+	router 10.69.22.3
+		distance 38
+		router 10.69.71.19 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.71.19 metric 100
+		router 10.69.68.45 metric 100
+		router 10.69.1.55 metric 100
+		stubnet 10.69.22.3/32 metric 0
+		stubnet 10.68.22.3/32 metric 0
+		external 10.98.38.192/26 metric 20
+
+	router 10.69.22.74
+		distance 50
+		router 10.69.24.163 metric 9
+		router 10.69.7.31 metric 20
+		router 10.69.63.11 metric 10
+		router 10.69.41.16 metric 10
+		router 10.69.79.26 metric 10
+		router 10.69.35.78 metric 10
+		router 10.69.58.33 metric 10
+		router 10.69.11.63 metric 10
+		router 10.69.2.69 metric 10
+		router 10.69.4.81 metric 10
+		router 10.69.1.60 metric 10
+		router 10.69.77.89 metric 10
+		router 10.69.58.33 metric 100
+		router 10.69.1.60 metric 100
+		router 10.69.2.69 metric 100
+		stubnet 10.70.253.19/32 metric 0
+		stubnet 10.70.253.50/32 metric 0
+		stubnet 10.69.22.74/32 metric 0
+		stubnet 10.68.22.74/32 metric 0
+		external 10.98.56.128/26 metric 20
+
+	router 10.69.22.82
+		distance 26
+		router 10.69.7.13 metric 11
+		router 10.69.4.66 metric 10
+		router 10.69.65.65 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.67.74 metric 10
+		router 10.69.58.6 metric 10
+		stubnet 10.70.253.53/32 metric 0
+		stubnet 10.69.22.82/32 metric 0
+		external 10.98.58.128/26 metric 20
+		external 199.170.132.98/32 metric 20
+
+	router 10.69.23.50
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.4.90 metric 100
+		stubnet 10.69.23.50/32 metric 0
+		stubnet 10.68.23.50/32 metric 0
+		external 10.98.75.128/26 metric 20
+
+	router 10.69.24.41
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.68.44 metric 10
+		router 10.69.68.44 metric 100
+		router 10.69.77.64 metric 100
+		router 10.69.51.55 metric 100
+		router 10.69.3.8 metric 100
+		router 10.69.3.69 metric 100
+		router 10.69.2.16 metric 100
+		stubnet 10.69.24.41/32 metric 0
+		stubnet 10.68.24.41/32 metric 0
+		external 10.98.98.64/26 metric 20
+
+	router 10.69.24.62
+		distance 26
+		router 10.69.79.34 metric 10
+		router 10.69.55.78 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.79.34 metric 100
+		router 10.69.55.78 metric 100
+		stubnet 10.69.24.62/32 metric 0
+		stubnet 10.68.24.62/32 metric 0
+		external 10.98.103.128/26 metric 20
+
+	router 10.69.24.63
+		distance 51
+		router 10.69.24.163 metric 10
+		stubnet 10.68.24.63/32 metric 0
+		stubnet 10.69.24.63/32 metric 0
+		external 10.98.103.192/26 metric 20
+
+	router 10.69.24.81
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.2.82 metric 100
+		router 10.69.63.63 metric 100
+		router 10.69.4.94 metric 100
+		router 10.69.46.81 metric 100
+		router 10.69.14.47 metric 100
+		router 10.69.54.20 metric 100
+		router 10.69.33.54 metric 100
+		router 10.69.4.3 metric 100
+		stubnet 10.69.24.81/32 metric 0
+		stubnet 10.68.24.81/32 metric 0
+		external 10.98.108.64/26 metric 20
+
+	router 10.69.24.82
+		distance 33
+		router 10.69.62.48 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.3.80 metric 10
+		router 10.69.4.88 metric 100
+		router 10.69.3.80 metric 100
+		router 10.69.62.48 metric 100
+		router 10.69.1.59 metric 100
+		stubnet 10.69.24.82/32 metric 0
+		stubnet 10.68.24.82/32 metric 0
+		external 10.98.108.128/26 metric 20
+
+	router 10.69.24.163
+		distance 41
+		router 10.69.24.63 metric 10
+		router 10.69.47.45 metric 10
+		router 10.70.164.1 metric 10
+		router 10.69.2.39 metric 10
+		router 10.69.4.7 metric 10
+		router 199.167.59.98 metric 10
+		router 10.69.2.94 metric 10
+		router 10.69.75.35 metric 10
+		router 10.69.77.64 metric 10
+		router 10.69.40.26 metric 10
+		router 10.69.29.83 metric 10
+		router 10.69.3.78 metric 10
+		router 10.69.3.74 metric 10
+		router 10.69.4.54 metric 10
+		router 10.69.31.75 metric 10
+		router 10.69.3.69 metric 10
+		router 10.69.3.8 metric 10
+		router 10.69.7.31 metric 10
+		router 10.69.5.7 metric 10
+		router 10.69.60.4 metric 10
+		router 10.69.14.30 metric 10
+		router 10.69.20.90 metric 26
+		router 10.69.19.34 metric 10
+		router 10.69.22.74 metric 9
+		stubnet 10.69.24.163/32 metric 0
+		stubnet 10.70.253.44/32 metric 0
+		stubnet 10.70.251.6/32 metric 0
+		stubnet 10.70.253.18/32 metric 0
+		external 10.70.161.0/24 metric 20
+		external 10.70.161.160/27 metric 20
+
+	router 10.69.26.16
+		distance 36
+		router 10.69.16.35 metric 10
+		router 10.69.3.35 metric 100
+		stubnet 10.69.26.16/32 metric 0
+		stubnet 10.68.26.16/32 metric 0
+		external 10.98.142.0/26 metric 20
+
+	router 10.69.26.46
+		distance 53
+		router 10.69.26.146 metric 10
+		router 10.69.4.56 metric 100
+		router 10.69.2.2 metric 100
+		router 10.69.36.7 metric 100
+		router 10.69.11.59 metric 100
+		router 10.69.41.53 metric 100
+		router 10.69.75.45 metric 100
+		router 10.69.37.13 metric 100
+		stubnet 10.69.26.46/32 metric 0
+		stubnet 10.68.26.46/32 metric 0
+		external 10.98.149.128/26 metric 20
+
+	router 10.69.26.47
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.1.159 metric 10
+		router 10.69.1.87 metric 100
+		router 10.69.3.79 metric 100
+		stubnet 10.69.26.47/32 metric 0
+		stubnet 10.68.26.47/32 metric 0
+		external 10.98.149.192/26 metric 20
+
+	router 10.69.26.146
+		distance 43
+		router 10.69.26.46 metric 10
+		router 10.69.4.56 metric 10
+		router 10.69.36.7 metric 10
+		router 10.69.2.2 metric 10
+		stubnet 10.69.26.146/32 metric 0
+		stubnet 10.68.26.146/32 metric 0
+
+	router 10.69.27.1
+		distance 26
+		router 10.69.2.44 metric 10
+		router 10.69.2.45 metric 10
+		router 10.69.50.89 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.2.44 metric 100
+		router 10.69.32.84 metric 100
+		router 10.69.2.45 metric 100
+		stubnet 10.69.27.1/32 metric 0
+		stubnet 10.68.27.1/32 metric 0
+		external 10.98.163.64/26 metric 20
+
+	router 10.69.27.16
+		distance 43
+		router 10.69.1.55 metric 10
+		router 10.69.3.96 metric 10
+		router 10.69.1.93 metric 10
+		router 10.69.1.93 metric 100
+		router 10.69.1.55 metric 100
+		stubnet 10.69.27.16/32 metric 0
+		stubnet 10.68.27.16/32 metric 0
+		external 10.98.167.0/26 metric 20
+
+	router 10.69.27.41
+		distance 41
+		router 10.69.19.34 metric 50
+		stubnet 10.69.27.41/32 metric 0
+		stubnet 10.68.27.41/32 metric 0
+		external 10.98.173.64/26 metric 20
+
+	router 10.69.28.27
+		distance 96
+		router 10.69.28.127 metric 10
+		router 10.69.3.156 metric 10
+		router 10.69.41.26 metric 100
+		router 10.69.70.37 metric 100
+		router 10.69.2.47 metric 100
+		stubnet 10.69.28.27/32 metric 0
+		stubnet 10.68.28.27/32 metric 0
+		external 10.98.194.192/26 metric 20
+
+	router 10.69.28.74
+		distance 38
+		router 10.69.29.59 metric 100
+		router 10.69.75.82 metric 100
+		router 10.69.2.53 metric 100
+		router 10.69.13.40 metric 10
+		stubnet 10.68.28.74/32 metric 0
+		stubnet 10.69.28.74/32 metric 0
+		external 10.98.206.128/26 metric 20
+
+	router 10.69.28.83
+		distance 26
+		router 10.69.7.13 metric 10
+		stubnet 10.69.28.83/32 metric 0
+		stubnet 10.68.28.83/32 metric 0
+		external 10.98.208.192/26 metric 20
+
+	router 10.69.28.89
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.28.89/32 metric 0
+		stubnet 10.68.28.89/32 metric 0
+		external 10.98.210.64/26 metric 20
+
+	router 10.69.28.127
+		distance 86
+		router 10.69.41.26 metric 10
+		router 10.69.28.27 metric 10
+		stubnet 10.69.28.127/32 metric 0
+		stubnet 10.68.28.127/32 metric 0
+
+	router 10.69.29.32
+		distance 38
+		router 10.69.50.94 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.47.33 metric 10
+		router 10.69.50.94 metric 100
+		router 10.69.50.20 metric 100
+		router 10.69.4.6 metric 100
+		stubnet 10.69.29.32/32 metric 0
+		stubnet 10.68.29.32/32 metric 0
+		external 10.98.221.0/26 metric 20
+
+	router 10.69.29.34
+		distance 86
+		router 10.69.4.35 metric 100
+		router 10.69.14.17 metric 10
+		stubnet 10.68.29.34/32 metric 0
+		stubnet 10.69.29.34/32 metric 0
+		external 10.98.221.128/26 metric 20
+
+	router 10.69.29.59
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.28.74 metric 100
+		router 10.69.75.82 metric 100
+		stubnet 10.69.29.59/32 metric 0
+		stubnet 10.68.29.59/32 metric 0
+		external 10.98.227.192/26 metric 20
+
+	router 10.69.29.83
+		distance 51
+		router 10.69.24.163 metric 10
+		router 199.167.59.98 metric 100
+		stubnet 10.69.29.83/32 metric 0
+		stubnet 10.68.29.83/32 metric 0
+		external 10.98.233.192/26 metric 20
+
+	router 10.69.29.94
+		distance 70
+		router 10.69.35.78 metric 10
+		router 10.69.35.78 metric 100
+		router 10.69.30.16 metric 100
+		router 10.69.1.41 metric 100
+		router 10.69.75.153 metric 100
+		stubnet 10.69.29.94/32 metric 0
+		stubnet 10.68.29.94/32 metric 0
+		external 10.98.236.128/26 metric 20
+
+	router 10.69.30.4
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.62.74 metric 100
+		router 10.69.3.19 metric 100
+		router 10.69.63.46 metric 100
+		router 10.69.4.7 metric 100
+		stubnet 10.69.30.4/32 metric 0
+		stubnet 10.68.30.4/32 metric 0
+		external 10.98.239.0/26 metric 20
+
+	router 10.69.30.16
+		distance 51
+		router 10.69.7.31 metric 10
+		router 10.69.35.78 metric 100
+		router 10.69.29.94 metric 100
+		router 10.69.79.26 metric 100
+		router 10.69.1.41 metric 100
+		router 10.69.63.11 metric 100
+		stubnet 10.69.30.16/32 metric 0
+		stubnet 10.68.30.16/32 metric 0
+		external 10.98.242.0/26 metric 20
+
+	router 10.69.30.37
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.4.51 metric 100
+		router 10.69.4.64 metric 100
+		router 10.69.62.74 metric 100
+		router 10.69.1.50 metric 100
+		stubnet 10.69.30.37/32 metric 0
+		stubnet 10.68.30.37/32 metric 0
+		external 10.98.247.64/26 metric 20
+		external 199.167.59.95/32 metric 20
+
+	router 10.69.30.65
+		distance 41
+		router 10.69.19.34 metric 10
+		stubnet 10.69.30.65/32 metric 0
+		stubnet 10.68.30.65/32 metric 0
+		external 10.98.254.64/26 metric 20
+
+	router 10.69.31.75
+		distance 51
+		router 10.69.24.163 metric 10
+		router 10.70.164.1 metric 100
+		router 10.69.2.39 metric 100
+		router 10.69.14.30 metric 100
+		stubnet 10.69.31.75/32 metric 0
+		stubnet 10.68.31.75/32 metric 0
+		external 10.99.25.192/26 metric 20
+
+	router 10.69.32.13
+		distance 38
+		router 10.69.59.47 metric 10
+		router 10.69.61.21 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.59.47 metric 100
+		router 10.69.61.21 metric 100
+		stubnet 10.69.32.13/32 metric 0
+		stubnet 10.68.32.13/32 metric 0
+		external 10.99.35.64/26 metric 20
+
+	router 10.69.32.17
+		distance 43
+		router 10.69.54.25 metric 10
+		router 10.69.54.25 metric 100
+		stubnet 10.69.32.17/32 metric 0
+		stubnet 10.68.32.17/32 metric 0
+		external 10.99.36.64/26 metric 20
+
+	router 10.69.32.33
+		distance 38
+		router 10.69.2.62 metric 10
+		router 10.69.3.79 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.2.62 metric 100
+		router 10.69.1.59 metric 100
+		router 10.69.3.79 metric 100
+		stubnet 10.69.32.33/32 metric 0
+		stubnet 10.68.32.33/32 metric 0
+		external 10.99.40.64/26 metric 20
+		external 199.167.59.83/32 metric 20
+
+	router 10.69.32.34
+		distance 86
+		router 10.69.14.17 metric 10
+		router 10.69.14.17 metric 100
+		stubnet 10.69.32.34/32 metric 0
+		stubnet 10.68.32.34/32 metric 0
+		external 10.99.40.128/26 metric 20
+
+	router 10.69.32.82
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.32.82/32 metric 0
+		stubnet 10.68.32.82/32 metric 0
+		external 10.99.52.128/26 metric 20
+
+	router 10.69.32.84
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.27.1 metric 100
+		router 10.69.2.44 metric 100
+		stubnet 10.69.32.84/32 metric 0
+		stubnet 10.68.32.84/32 metric 0
+		external 10.99.53.0/26 metric 20
+
+	router 10.69.33.0
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.64.50 metric 100
+		router 10.69.1.75 metric 100
+		router 10.69.66.23 metric 100
+		router 10.69.3.14 metric 100
+		router 10.69.63.63 metric 100
+		router 10.69.66.22 metric 100
+		router 10.69.2.50 metric 100
+		router 10.69.59.89 metric 100
+		router 10.69.33.54 metric 100
+		router 10.69.4.98 metric 100
+		stubnet 10.69.33.0/32 metric 0
+		stubnet 10.68.33.0/32 metric 0
+		external 10.99.57.0/26 metric 20
+
+	router 10.69.33.1
+		distance 36
+		router 10.69.79.86 metric 100
+		router 10.69.34.61 metric 10
+		router 10.69.79.86 metric 10
+		stubnet 10.68.33.1/32 metric 0
+		stubnet 10.69.33.1/32 metric 0
+		external 10.99.57.64/26 metric 20
+
+	router 10.69.33.5
+		distance 54
+		router 10.69.13.50 metric 10
+		router 10.69.66.18 metric 100
+		router 10.69.13.50 metric 100
+		router 10.69.65.81 metric 100
+		router 10.69.48.69 metric 100
+		stubnet 10.69.33.5/32 metric 0
+		stubnet 10.68.33.5/32 metric 0
+		external 10.99.58.64/26 metric 20
+		external 199.170.132.90/32 metric 20
+
+	router 10.69.33.53
+		distance 87
+		router 10.69.37.21 metric 10
+		router 10.69.46.93 metric 100
+		router 10.69.20.90 metric 100
+		router 10.69.37.21 metric 100
+		stubnet 10.69.33.53/32 metric 0
+		stubnet 10.68.33.53/32 metric 0
+		external 10.99.70.64/26 metric 20
+
+	router 10.69.33.54
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.3.0 metric 100
+		router 10.69.78.68 metric 100
+		router 10.69.63.63 metric 100
+		router 10.69.4.3 metric 100
+		router 10.69.46.81 metric 100
+		router 10.69.33.0 metric 100
+		router 10.69.14.47 metric 100
+		router 10.69.24.81 metric 100
+		router 10.69.4.98 metric 100
+		stubnet 10.69.33.54/32 metric 0
+		stubnet 10.68.33.54/32 metric 0
+		external 10.99.70.128/26 metric 20
+
+	router 10.69.33.96
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.1.49 metric 100
+		stubnet 10.69.33.96/32 metric 0
+		stubnet 10.68.33.96/32 metric 0
+		external 10.99.81.0/26 metric 20
+
+	router 10.69.33.105
+		distance 54
+		router 10.69.13.50 metric 10
+		stubnet 10.69.33.105/32 metric 0
+		stubnet 10.68.33.105/32 metric 0
+
+	router 10.69.34.24
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.3.16 metric 100
+		router 10.69.2.42 metric 100
+		router 10.69.2.91 metric 100
+		router 10.69.2.36 metric 100
+		stubnet 10.69.34.24/32 metric 0
+		stubnet 10.68.34.24/32 metric 0
+		external 10.99.88.0/26 metric 20
+
+	router 10.69.34.61
+		distance 26
+		router 10.69.3.68 metric 100
+		router 10.69.41.26 metric 50
+		router 10.69.59.16 metric 15
+		router 10.69.74.89 metric 100
+		router 10.69.7.13 metric 10
+		router 10.69.2.36 metric 10
+		router 10.69.2.35 metric 10
+		router 10.69.75.45 metric 10
+		router 10.69.33.1 metric 10
+		router 10.69.79.54 metric 10
+		router 10.69.3.34 metric 10
+		router 10.69.70.7 metric 10
+		router 10.69.4.71 metric 10
+		router 10.69.74.98 metric 10
+		router 10.69.4.58 metric 10
+		router 10.69.53.27 metric 10
+		router 10.69.4.62 metric 10
+		router 10.69.53.44 metric 10
+		router 10.69.7.79 metric 10
+		router 10.69.48.91 metric 10
+		router 10.69.75.37 metric 10
+		router 10.69.4.14 metric 10
+		router 10.69.44.39 metric 10
+		router 10.69.1.54 metric 10
+		router 10.69.44.2 metric 10
+		router 10.69.40.62 metric 10
+		router 10.69.62.19 metric 10
+		router 10.69.4.76 metric 10
+		router 10.69.56.86 metric 10
+		router 10.69.0.48 metric 10
+		router 10.69.45.7 metric 10
+		router 10.69.36.7 metric 10
+		router 10.69.67.93 metric 10
+		router 10.69.4.29 metric 10
+		router 10.69.1.81 metric 10
+		router 10.69.9.44 metric 10
+		router 10.69.41.92 metric 10
+		router 10.69.52.43 metric 10
+		router 10.69.37.13 metric 10
+		router 10.69.28.89 metric 10
+		router 10.69.44.59 metric 10
+		router 10.69.50.51 metric 10
+		router 10.69.73.98 metric 10
+		router 10.69.2.28 metric 10
+		router 10.69.34.24 metric 10
+		router 10.69.72.52 metric 10
+		router 10.69.52.83 metric 10
+		router 10.69.2.97 metric 10
+		router 10.69.45.17 metric 10
+		router 10.69.51.34 metric 10
+		router 10.69.4.19 metric 10
+		router 10.69.36.82 metric 10
+		router 10.69.1.77 metric 10
+		router 10.69.1.85 metric 10
+		router 10.69.2.91 metric 10
+		stubnet 10.70.253.57/32 metric 0
+		stubnet 10.70.253.40/32 metric 0
+		stubnet 10.70.253.31/32 metric 0
+		stubnet 10.70.253.8/32 metric 0
+		stubnet 10.70.253.1/32 metric 0
+		stubnet 10.69.34.61/32 metric 0
+		external 10.70.179.0/24 metric 20
+		external 10.99.97.64/26 metric 20
+
+	router 10.69.34.80
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.2.34 metric 10
+		router 10.69.2.34 metric 100
+		stubnet 10.69.34.80/32 metric 0
+		stubnet 10.68.34.80/32 metric 0
+		external 10.99.102.0/26 metric 20
+		external 199.167.59.87/32 metric 20
+
+	router 10.69.35.31
+		distance 61
+		router 10.69.1.51 metric 100
+		router 10.70.175.1 metric 100
+		router 10.69.4.90 metric 100
+		router 10.69.14.40 metric 100
+		router 10.69.79.41 metric 100
+		router 10.69.2.49 metric 100
+		router 10.69.1.50 metric 100
+		router 10.69.4.51 metric 100
+		router 10.69.18.48 metric 100
+		router 10.69.2.27 metric 10
+		stubnet 10.68.35.31/32 metric 0
+		stubnet 10.69.35.31/32 metric 0
+		external 10.99.114.192/26 metric 20
+
+	router 10.69.35.72
+		distance 46
+		router 10.69.45.6 metric 100
+		router 10.69.43.93 metric 100
+		router 10.69.44.59 metric 100
+		router 10.69.44.2 metric 100
+		router 10.69.48.91 metric 100
+		router 10.69.44.59 metric 10
+		stubnet 10.68.35.72/32 metric 0
+		stubnet 10.69.35.72/32 metric 0
+		external 10.99.125.0/26 metric 20
+
+	router 10.69.35.75
+		distance 54
+		router 10.69.13.50 metric 10
+		router 10.69.13.50 metric 100
+		router 10.69.48.69 metric 100
+		router 10.69.72.52 metric 100
+		router 10.69.66.18 metric 100
+		stubnet 10.69.35.75/32 metric 0
+		stubnet 10.68.35.75/32 metric 0
+		external 10.99.125.192/26 metric 20
+
+	router 10.69.35.78
+		distance 60
+		router 10.69.29.94 metric 10
+		router 10.69.22.74 metric 10
+		router 10.69.75.153 metric 100
+		router 10.69.29.94 metric 100
+		router 10.69.30.16 metric 100
+		router 10.69.1.41 metric 100
+		stubnet 10.69.35.78/32 metric 0
+		stubnet 10.68.35.78/32 metric 0
+		external 10.99.126.128/26 metric 20
+
+	router 10.69.36.6
+		distance 76
+		router 10.69.1.69 metric 10
+		router 10.69.14.117 metric 10
+		router 10.69.1.69 metric 100
+		router 10.69.59.33 metric 100
+		stubnet 10.70.253.3/32 metric 0
+		stubnet 10.69.36.6/32 metric 0
+		stubnet 10.68.36.6/32 metric 0
+		external 10.99.133.128/26 metric 20
+
+	router 10.69.36.7
+		distance 33
+		router 10.69.4.56 metric 10
+		router 10.69.2.2 metric 10
+		router 10.69.26.146 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.4.56 metric 100
+		router 10.69.26.46 metric 100
+		router 10.69.11.59 metric 100
+		router 10.69.2.2 metric 100
+		router 10.69.37.13 metric 100
+		stubnet 10.69.36.7/32 metric 0
+		stubnet 10.68.36.7/32 metric 0
+		external 10.99.133.192/26 metric 20
+
+	router 10.69.36.54
+		distance 61
+		router 10.69.2.27 metric 10
+		stubnet 10.69.36.54/32 metric 0
+		stubnet 10.68.36.54/32 metric 0
+		external 10.99.145.128/26 metric 20
+		external 199.167.59.89/32 metric 20
+
+	router 10.69.36.82
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.36.82/32 metric 0
+		stubnet 10.68.36.82/32 metric 0
+		external 10.99.152.128/26 metric 20
+
+	router 10.69.37.13
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.26.46 metric 100
+		router 10.69.36.7 metric 100
+		stubnet 10.69.37.13/32 metric 0
+		stubnet 10.68.37.13/32 metric 0
+		external 10.99.160.64/26 metric 20
+
+	router 10.69.37.15
+		distance 38
+		router 10.69.18.93 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.18.93 metric 100
+		router 10.69.40.18 metric 100
+		stubnet 10.69.37.15/32 metric 0
+		stubnet 10.68.37.15/32 metric 0
+		external 10.99.160.192/26 metric 20
+
+	router 10.69.37.21
+		distance 77
+		router 10.69.33.53 metric 10
+		router 10.69.20.90 metric 10
+		router 10.69.33.53 metric 100
+		router 10.69.46.93 metric 100
+		router 10.69.20.90 metric 100
+		stubnet 10.69.37.21/32 metric 0
+		stubnet 10.68.37.21/32 metric 0
+		external 10.99.162.64/26 metric 20
+
+	router 10.69.38.64
+		distance 101
+		router 10.69.6.59 metric 10
+		router 10.69.6.59 metric 100
+		stubnet 10.69.38.64/32 metric 0
+		stubnet 10.68.38.64/32 metric 0
+		external 10.99.198.0/26 metric 20
+
+	router 10.69.39.23
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.74.49 metric 100
+		router 10.69.42.85 metric 100
+		stubnet 10.69.39.23/32 metric 0
+		stubnet 10.68.39.23/32 metric 0
+		external 10.99.212.192/26 metric 20
+
+	router 10.69.40.18
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.37.15 metric 100
+		router 10.69.18.93 metric 100
+		stubnet 10.69.40.18/32 metric 0
+		stubnet 10.68.40.18/32 metric 0
+		external 10.99.236.128/26 metric 20
+
+	router 10.69.40.26
+		distance 51
+		router 10.69.24.163 metric 10
+		stubnet 10.69.40.26/32 metric 0
+		stubnet 10.68.40.26/32 metric 0
+		external 10.99.238.128/26 metric 20
+
+	router 10.69.40.62
+		distance 36
+		router 10.69.2.11 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.2.11 metric 100
+		router 10.69.74.98 metric 100
+		stubnet 10.69.40.62/32 metric 0
+		stubnet 10.68.40.62/32 metric 0
+		external 10.99.247.128/26 metric 20
+
+	router 10.69.40.143
+		distance 50
+		router 10.69.3.29 metric 10
+		stubnet 10.69.40.143/32 metric 0
+		stubnet 10.68.40.143/32 metric 0
+		external 10.99.242.192/26 metric 20
+
+	router 10.69.41.16
+		distance 60
+		router 10.69.22.74 metric 10
+		router 10.69.1.78 metric 100
+		router 10.69.77.89 metric 100
+		router 10.69.79.26 metric 100
+		stubnet 10.69.41.16/32 metric 0
+		stubnet 10.68.41.16/32 metric 0
+		external 10.100.5.0/26 metric 20
+		external 199.167.59.92/32 metric 20
+
+	router 10.69.41.26
+		distance 76
+		router 10.69.34.61 metric 50
+		router 10.69.28.127 metric 10
+		router 10.69.28.27 metric 100
+		router 10.69.54.25 metric 100
+		stubnet 10.70.253.41/32 metric 0
+		stubnet 10.69.41.26/32 metric 0
+		stubnet 10.68.41.26/32 metric 0
+		external 10.100.7.128/26 metric 20
+
+	router 10.69.41.28
+		distance 49
+		router 10.69.51.27 metric 100
+		router 10.69.51.27 metric 10
+		stubnet 10.68.41.28/32 metric 0
+		stubnet 10.69.41.28/32 metric 0
+		external 10.100.8.0/26 metric 20
+
+	router 10.69.41.53
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.4.75 metric 10
+		router 10.69.4.34 metric 100
+		router 10.69.4.87 metric 100
+		router 10.69.4.75 metric 100
+		router 10.69.2.2 metric 100
+		router 10.69.26.46 metric 100
+		stubnet 10.69.41.53/32 metric 0
+		stubnet 10.68.41.53/32 metric 0
+		external 10.100.14.64/26 metric 20
+
+	router 10.69.41.81
+		distance 71
+		router 10.69.41.181 metric 10
+		router 10.69.1.38 metric 100
+		router 10.69.44.41 metric 100
+		stubnet 10.69.41.81/32 metric 0
+		stubnet 10.68.41.81/32 metric 0
+		external 10.100.21.64/26 metric 20
+
+	router 10.69.41.92
+		distance 36
+		router 10.69.77.165 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.79.54 metric 100
+		router 10.69.4.76 metric 100
+		router 10.69.77.65 metric 100
+		stubnet 10.69.41.92/32 metric 0
+		stubnet 10.68.41.92/32 metric 0
+		external 10.100.24.0/26 metric 20
+
+	router 10.69.41.181
+		distance 61
+		router 10.69.41.81 metric 10
+		router 10.69.1.38 metric 10
+		stubnet 10.69.41.181/32 metric 0
+		stubnet 10.68.41.181/32 metric 0
+
+	router 10.69.42.14
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.3.89 metric 100
+		router 10.69.3.40 metric 100
+		router 10.69.2.58 metric 100
+		stubnet 10.69.42.14/32 metric 0
+		stubnet 10.68.42.14/32 metric 0
+		external 10.100.29.128/26 metric 20
+
+	router 10.69.42.32
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.4.32 metric 10
+		router 10.69.50.20 metric 100
+		router 10.69.3.85 metric 100
+		router 10.69.4.32 metric 100
+		stubnet 10.69.42.32/32 metric 0
+		stubnet 10.68.42.32/32 metric 0
+		external 10.100.34.0/26 metric 20
+
+	router 10.69.42.66
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.42.66/32 metric 0
+		stubnet 10.68.42.66/32 metric 0
+		external 10.100.42.128/26 metric 20
+
+	router 10.69.42.85
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.2.87 metric 100
+		router 10.69.39.23 metric 100
+		stubnet 10.69.42.85/32 metric 0
+		stubnet 10.68.42.85/32 metric 0
+		external 10.100.47.64/26 metric 20
+
+	router 10.69.43.42
+		distance 41
+		router 10.69.19.34 metric 10
+		stubnet 10.69.43.42/32 metric 0
+		stubnet 10.68.43.42/32 metric 0
+		external 10.100.61.128/26 metric 20
+
+	router 10.69.43.43
+		distance 56
+		router 10.69.43.143 metric 10
+		router 10.69.68.33 metric 100
+		router 10.69.51.34 metric 100
+		router 10.69.4.9 metric 100
+		stubnet 10.69.43.43/32 metric 0
+		stubnet 10.68.43.43/32 metric 0
+		external 10.100.61.192/26 metric 20
+
+	router 10.69.43.91
+		distance 56
+		router 10.69.19.44 metric 10
+		router 10.69.17.79 metric 10
+		router 10.69.48.1 metric 100
+		router 10.69.17.79 metric 100
+		router 10.69.19.44 metric 100
+		stubnet 10.69.43.91/32 metric 0
+		stubnet 10.68.43.91/32 metric 0
+		external 10.100.73.192/26 metric 20
+
+	router 10.69.43.93
+		distance 136
+		router 10.69.45.6 metric 100
+		router 10.69.44.2 metric 100
+		router 10.69.35.72 metric 100
+		router 10.69.48.91 metric 100
+		router 10.69.44.59 metric 100
+		router 10.69.45.30 metric 100
+		stubnet 10.68.43.93/32 metric 0
+		stubnet 10.69.43.93/32 metric 0
+		external 10.100.74.64/26 metric 20
+
+	router 10.69.43.94
+		distance 41
+		router 10.69.19.34 metric 10
+		stubnet 10.69.43.94/32 metric 0
+		stubnet 10.68.43.94/32 metric 0
+		external 10.100.74.128/26 metric 20
+
+	router 10.69.43.95
+		distance 33
+		router 10.69.4.34 metric 10
+		router 10.69.4.87 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.4.34 metric 100
+		router 10.69.4.87 metric 100
+		stubnet 10.69.43.95/32 metric 0
+		stubnet 10.68.43.95/32 metric 0
+		external 10.100.74.192/26 metric 20
+
+	router 10.69.43.143
+		distance 46
+		router 10.69.43.43 metric 10
+		router 10.69.51.34 metric 10
+		stubnet 10.69.43.143/32 metric 0
+		stubnet 10.68.43.143/32 metric 0
+
+	router 10.69.44.2
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.43.93 metric 100
+		router 10.69.45.6 metric 100
+		router 10.69.35.72 metric 100
+		router 10.69.44.59 metric 100
+		router 10.69.0.18 metric 100
+		router 10.69.45.30 metric 100
+		router 10.69.48.91 metric 100
+		router 10.69.48.68 metric 100
+		stubnet 10.69.44.2/32 metric 0
+		stubnet 10.68.44.2/32 metric 0
+		external 10.100.76.128/26 metric 20
+
+	router 10.69.44.39
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.45.30 metric 10
+		router 10.69.45.30 metric 100
+		router 10.69.3.61 metric 100
+		stubnet 10.69.44.39/32 metric 0
+		stubnet 10.68.44.39/32 metric 0
+		external 10.100.85.192/26 metric 20
+
+	router 10.69.44.41
+		distance 51
+		router 10.69.7.31 metric 10
+		router 10.69.41.81 metric 100
+		router 10.69.1.38 metric 100
+		router 10.69.7.31 metric 100
+		stubnet 10.69.44.41/32 metric 0
+		stubnet 10.68.44.41/32 metric 0
+		external 10.100.86.64/26 metric 20
+
+	router 10.69.44.59
+		distance 36
+		router 10.69.35.72 metric 10
+		router 10.69.45.6 metric 10
+		router 10.69.0.18 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.35.72 metric 100
+		router 10.69.45.6 metric 100
+		router 10.69.0.18 metric 100
+		router 10.69.44.2 metric 100
+		router 10.69.48.91 metric 100
+		router 10.69.43.93 metric 100
+		router 10.69.45.30 metric 100
+		router 10.69.3.61 metric 100
+		stubnet 10.69.44.59/32 metric 0
+		stubnet 10.68.44.59/32 metric 0
+		external 10.100.90.192/26 metric 20
+
+	router 10.69.44.62
+		distance 38
+		router 10.69.4.89 metric 20
+		router 10.69.13.40 metric 20
+		router 10.69.4.22 metric 110
+		router 10.69.4.89 metric 110
+		router 10.69.1.76 metric 110
+		router 10.69.3.59 metric 110
+		stubnet 10.69.44.62/32 metric 0
+		stubnet 10.68.44.62/32 metric 0
+		external 10.100.91.128/26 metric 20
+
+	router 10.69.44.80
+		distance 36
+		router 10.69.51.51 metric 10
+		router 10.69.78.25 metric 100
+		router 10.69.2.23 metric 100
+		router 10.69.51.51 metric 100
+		router 10.69.4.82 metric 100
+		stubnet 10.69.44.80/32 metric 0
+		stubnet 10.68.44.80/32 metric 0
+		external 10.100.96.0/26 metric 20
+
+	router 10.69.45.4
+		distance 61
+		router 10.69.2.27 metric 10
+		stubnet 10.69.45.4/32 metric 0
+		stubnet 10.68.45.4/32 metric 0
+		external 10.100.102.0/26 metric 20
+
+	router 10.69.45.6
+		distance 46
+		router 10.69.44.59 metric 10
+		router 10.69.43.93 metric 100
+		router 10.69.35.72 metric 100
+		router 10.69.0.18 metric 100
+		router 10.69.44.2 metric 100
+		router 10.69.44.59 metric 100
+		router 10.69.48.91 metric 100
+		router 10.69.45.30 metric 100
+		router 10.69.48.68 metric 100
+		stubnet 10.69.45.6/32 metric 0
+		stubnet 10.68.45.6/32 metric 0
+		external 10.100.102.128/26 metric 20
+
+	router 10.69.45.7
+		distance 36
+		router 10.69.45.107 metric 10
+		router 10.69.34.61 metric 10
+		stubnet 10.69.45.7/32 metric 0
+		stubnet 10.68.45.7/32 metric 0
+		external 10.100.102.192/26 metric 20
+
+	router 10.69.45.17
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.45.17/32 metric 0
+		stubnet 10.68.45.17/32 metric 0
+		external 10.100.105.64/26 metric 20
+
+	router 10.69.45.30
+		distance 46
+		router 10.69.3.61 metric 10
+		router 10.69.44.39 metric 10
+		router 10.69.45.6 metric 100
+		router 10.69.3.61 metric 100
+		router 10.69.44.59 metric 100
+		router 10.69.44.39 metric 100
+		router 10.69.43.93 metric 100
+		router 10.69.44.2 metric 100
+		stubnet 10.69.45.30/32 metric 0
+		stubnet 10.68.45.30/32 metric 0
+		external 10.100.108.128/26 metric 20
+
+	router 10.69.45.34
+		distance 103
+		router 10.69.59.33 metric 10
+		stubnet 10.69.45.34/32 metric 0
+		stubnet 10.68.45.34/32 metric 0
+		external 10.100.109.128/26 metric 20
+
+	router 10.69.45.85
+		distance 61
+		router 10.69.2.27 metric 10
+		stubnet 10.69.45.85/32 metric 0
+		stubnet 10.68.45.85/32 metric 0
+		external 10.100.122.64/26 metric 20
+
+	router 10.69.45.91
+		distance 36
+		router 10.69.47.61 metric 10
+		router 10.69.47.61 metric 100
+		stubnet 10.69.45.91/32 metric 0
+		stubnet 10.68.45.91/32 metric 0
+		external 10.100.123.192/26 metric 20
+
+	router 10.69.45.107
+		distance 46
+		router 10.69.45.7 metric 10
+		router 10.69.48.68 metric 10
+		stubnet 10.69.45.107/32 metric 0
+
+	router 10.69.46.66
+		distance 46
+		router 10.69.2.97 metric 10
+		router 10.69.2.97 metric 100
+		stubnet 10.69.46.66/32 metric 0
+		stubnet 10.68.46.66/32 metric 0
+		external 10.100.142.128/26 metric 20
+
+	router 10.69.46.76
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.46.76/32 metric 0
+		stubnet 10.68.46.76/32 metric 0
+		external 10.100.145.0/26 metric 20
+
+	router 10.69.46.81
+		distance 26
+		router 10.69.63.63 metric 10
+		router 10.69.4.94 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.4.94 metric 100
+		router 10.69.14.47 metric 100
+		router 10.69.63.63 metric 100
+		router 10.69.54.20 metric 100
+		router 10.69.24.81 metric 100
+		router 10.69.33.54 metric 100
+		router 10.69.3.14 metric 100
+		stubnet 10.69.46.81/32 metric 0
+		stubnet 10.68.46.81/32 metric 0
+		external 10.100.146.64/26 metric 20
+
+	router 10.69.46.93
+		distance 77
+		router 10.69.20.90 metric 10
+		router 10.69.33.53 metric 100
+		router 10.69.37.21 metric 100
+		router 10.69.20.90 metric 100
+		stubnet 10.69.46.93/32 metric 0
+		stubnet 10.68.46.93/32 metric 0
+		external 10.100.149.64/26 metric 20
+
+	router 10.69.47.6
+		distance 38
+		router 10.69.69.92 metric 100
+		router 10.69.13.40 metric 10
+		stubnet 10.68.47.6/32 metric 0
+		stubnet 10.69.47.6/32 metric 0
+		external 10.100.152.128/26 metric 20
+
+	router 10.69.47.33
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.29.32 metric 10
+		stubnet 10.69.47.33/32 metric 0
+		stubnet 10.68.47.33/32 metric 0
+		external 10.100.159.64/26 metric 20
+
+	router 10.69.47.34
+		distance 66
+		router 10.69.48.68 metric 10
+		router 10.69.48.68 metric 100
+		router 10.69.48.91 metric 100
+		stubnet 10.69.47.34/32 metric 0
+		stubnet 10.68.47.34/32 metric 0
+		external 10.100.159.128/26 metric 20
+
+	router 10.69.47.45
+		distance 51
+		router 10.69.24.163 metric 10
+		router 10.69.1.41 metric 100
+		stubnet 10.69.47.45/32 metric 0
+		stubnet 10.68.47.45/32 metric 0
+		external 10.100.162.64/26 metric 20
+
+	router 10.69.47.61
+		distance 26
+		router 10.69.45.91 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.45.91 metric 100
+		stubnet 10.69.47.61/32 metric 0
+		stubnet 10.68.47.61/32 metric 0
+		external 10.100.166.64/26 metric 20
+
+	router 10.69.48.1
+		distance 46
+		router 10.69.17.79 metric 10
+		router 10.69.48.101 metric 10
+		router 10.69.52.83 metric 10
+		router 10.69.43.91 metric 100
+		router 10.69.19.44 metric 100
+		router 10.69.17.79 metric 100
+		stubnet 10.69.48.1/32 metric 0
+		stubnet 10.68.48.1/32 metric 0
+		external 10.100.176.64/26 metric 20
+
+	router 10.69.48.68
+		distance 56
+		router 10.69.47.34 metric 10
+		router 10.69.45.107 metric 10
+		router 10.69.47.34 metric 100
+		router 10.69.44.2 metric 100
+		router 10.69.45.6 metric 100
+		router 10.69.48.91 metric 100
+		stubnet 10.69.48.68/32 metric 0
+		stubnet 10.68.48.68/32 metric 0
+		external 10.100.193.0/26 metric 20
+
+	router 10.69.48.69
+		distance 54
+		router 10.69.13.50 metric 10
+		router 10.69.66.18 metric 100
+		router 10.69.13.50 metric 100
+		router 10.69.35.75 metric 100
+		router 10.69.33.5 metric 100
+		router 10.69.70.37 metric 100
+		stubnet 10.69.48.69/32 metric 0
+		stubnet 10.68.48.69/32 metric 0
+		external 10.100.193.64/26 metric 20
+
+	router 10.69.48.91
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.45.6 metric 100
+		router 10.69.0.18 metric 100
+		router 10.69.44.59 metric 100
+		router 10.69.47.34 metric 100
+		router 10.69.35.72 metric 100
+		router 10.69.43.93 metric 100
+		router 10.69.44.2 metric 100
+		router 10.69.48.68 metric 100
+		stubnet 10.69.48.91/32 metric 0
+		stubnet 10.68.48.91/32 metric 0
+		external 10.100.198.192/26 metric 20
+
+	router 10.69.48.101
+		distance 56
+		router 10.69.48.1 metric 10
+		stubnet 10.69.48.101/32 metric 10
+
+	router 10.69.49.17
+		distance 75
+		router 10.69.8.98 metric 10
+		stubnet 10.69.49.17/32 metric 0
+		stubnet 10.68.49.17/32 metric 0
+		external 10.100.205.64/26 metric 20
+
+	router 10.69.49.34
+		distance 143
+		router 10.69.2.14 metric 100
+		stubnet 10.69.49.34/32 metric 0
+		stubnet 10.68.49.34/32 metric 0
+		external 10.100.209.128/26 metric 20
+
+	router 10.69.50.14
+		distance 38
+		router 10.69.1.84 metric 10
+		router 10.69.65.70 metric 10
+		router 10.69.3.94 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.15.47 metric 10
+		router 10.69.1.49 metric 10
+		router 10.69.50.50 metric 10
+		router 10.69.15.98 metric 10
+		router 10.69.1.88 metric 10
+		router 10.69.4.46 metric 10
+		router 10.69.3.72 metric 10
+		router 10.69.51.7 metric 10
+		router 10.69.16.19 metric 10
+		router 10.69.4.6 metric 10
+		stubnet 10.69.50.14/32 metric 0
+		stubnet 10.68.50.14/32 metric 0
+		external 10.100.229.128/26 metric 20
+
+	router 10.69.50.20
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.42.32 metric 100
+		router 10.69.3.85 metric 100
+		router 10.69.3.79 metric 100
+		router 10.69.29.32 metric 100
+		router 10.69.2.62 metric 100
+		stubnet 10.69.50.20/32 metric 0
+		stubnet 10.68.50.20/32 metric 0
+		external 10.100.231.0/26 metric 20
+
+	router 10.69.50.50
+		distance 48
+		router 10.69.50.14 metric 10
+		stubnet 10.69.50.50/32 metric 0
+		stubnet 10.68.50.50/32 metric 0
+		external 10.100.238.128/26 metric 20
+
+	router 10.69.50.51
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.50.51/32 metric 0
+		stubnet 10.68.50.51/32 metric 0
+		external 10.100.238.192/26 metric 20
+
+	router 10.69.50.89
+		distance 36
+		router 10.69.3.68 metric 10
+		router 10.69.27.1 metric 10
+		stubnet 10.69.50.89/32 metric 0
+		stubnet 10.68.50.89/32 metric 0
+		external 10.100.248.64/26 metric 20
+
+	router 10.69.50.90
+		distance 58
+		router 10.69.1.88 metric 10
+		router 10.69.1.88 metric 100
+		router 10.69.2.75 metric 100
+		stubnet 10.69.50.90/32 metric 0
+		stubnet 10.68.50.90/32 metric 0
+		external 10.100.248.128/26 metric 20
+
+	router 10.69.50.94
+		distance 48
+		router 10.69.29.32 metric 10
+		router 10.69.29.32 metric 100
+		stubnet 10.69.50.94/32 metric 0
+		stubnet 10.68.50.94/32 metric 0
+		external 10.100.249.128/26 metric 20
+
+	router 10.69.51.7
+		distance 48
+		router 10.69.16.19 metric 10
+		router 10.69.50.14 metric 10
+		router 10.69.16.19 metric 100
+		router 10.69.3.94 metric 100
+		stubnet 10.69.51.7/32 metric 0
+		stubnet 10.68.51.7/32 metric 0
+		external 10.100.252.192/26 metric 20
+		external 199.170.132.8/32 metric 20
+
+	router 10.69.51.8
+		distance 46
+		router 10.69.51.108 metric 10
+		stubnet 10.69.51.8/32 metric 0
+		stubnet 10.68.51.8/32 metric 0
+		external 10.100.253.0/26 metric 20
+
+	router 10.69.51.27
+		distance 38
+		router 10.69.13.40 metric 11
+		router 10.69.41.28 metric 11
+		router 10.69.41.28 metric 100
+		stubnet 10.69.51.27/32 metric 0
+		stubnet 10.68.51.27/32 metric 0
+		external 10.101.1.192/26 metric 20
+
+	router 10.69.51.34
+		distance 36
+		router 10.69.3.167 metric 10
+		router 10.69.68.33 metric 10
+		router 10.69.51.234 metric 10
+		router 10.69.43.143 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.68.33 metric 100
+		router 10.69.43.43 metric 100
+		router 10.69.2.42 metric 100
+		router 10.69.4.9 metric 100
+		stubnet 10.69.51.34/32 metric 0
+		stubnet 10.68.51.34/32 metric 0
+		external 10.101.3.128/26 metric 20
+
+	router 10.69.51.51
+		distance 26
+		router 10.69.2.23 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.44.80 metric 10
+		router 10.69.51.108 metric 10
+		router 10.69.72.159 metric 10
+		router 10.69.14.174 metric 10
+		router 10.69.4.182 metric 10
+		router 10.69.2.23 metric 100
+		router 10.69.4.82 metric 100
+		router 10.69.44.80 metric 100
+		router 10.69.78.25 metric 100
+		stubnet 10.69.51.51/32 metric 0
+		stubnet 10.68.51.51/32 metric 0
+		external 10.101.7.192/26 metric 20
+		external 199.170.132.84/32 metric 20
+
+	router 10.69.51.55
+		distance 61
+		router 10.69.3.8 metric 100
+		router 10.69.24.41 metric 100
+		router 10.69.2.16 metric 100
+		router 10.69.2.27 metric 10
+		stubnet 10.68.51.55/32 metric 0
+		stubnet 10.69.51.55/32 metric 0
+		external 10.101.8.192/26 metric 20
+
+	router 10.69.51.108
+		distance 36
+		router 10.69.51.8 metric 10
+		router 10.69.51.51 metric 10
+		stubnet 10.69.51.108/32 metric 0
+		stubnet 10.68.51.108/32 metric 0
+
+	router 10.69.51.234
+		distance 46
+		router 10.69.51.34 metric 10
+		stubnet 10.69.51.134/32 metric 0
+		external 10.101.3.128/26 metric 20
+
+	router 10.69.52.43
+		distance 36
+		router 10.69.76.69 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.76.69 metric 100
+		stubnet 10.69.52.43/32 metric 0
+		stubnet 10.68.52.43/32 metric 0
+		external 10.101.30.192/26 metric 20
+
+	router 10.69.52.76
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.70.65 metric 100
+		router 10.69.1.97 metric 100
+		stubnet 10.69.52.76/32 metric 0
+		stubnet 10.68.52.76/32 metric 0
+		external 10.101.39.0/26 metric 20
+
+	router 10.69.52.83
+		distance 36
+		router 10.69.3.31 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.4.100 metric 10
+		router 10.69.17.79 metric 10
+		router 10.69.52.183 metric 10
+		router 10.69.48.1 metric 10
+		router 10.68.73.125 metric 100
+		router 10.69.73.25 metric 100
+		router 10.69.3.31 metric 100
+		stubnet 10.69.52.83/32 metric 0
+		stubnet 10.68.52.83/32 metric 0
+		external 10.101.40.192/26 metric 20
+
+	router 10.69.52.183
+		distance 46
+		router 10.69.52.83 metric 10
+		stubnet 10.69.52.183/32 metric 0
+
+	router 10.69.53.0
+		distance 26
+		router 10.69.69.11 metric 10
+		router 10.69.60.22 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.66.22 metric 100
+		router 10.69.69.11 metric 100
+		router 10.69.60.22 metric 100
+		router 10.69.4.98 metric 100
+		router 10.69.2.85 metric 100
+		stubnet 10.69.53.0/32 metric 0
+		stubnet 10.68.53.0/32 metric 0
+		external 10.101.45.0/26 metric 20
+
+	router 10.69.53.27
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.53.27/32 metric 0
+		stubnet 10.68.53.27/32 metric 0
+		external 10.101.51.192/26 metric 20
+
+	router 10.69.53.28
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.53.28/32 metric 0
+		stubnet 10.68.53.28/32 metric 0
+		external 10.101.52.0/26 metric 20
+
+	router 10.69.53.44
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.53.44/32 metric 0
+		stubnet 10.68.53.44/32 metric 0
+		external 10.101.56.0/26 metric 20
+
+	router 10.69.54.20
+		distance 26
+		router 10.69.14.47 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.14.47 metric 100
+		router 10.69.46.81 metric 100
+		router 10.69.4.94 metric 100
+		router 10.69.64.50 metric 100
+		router 10.69.24.81 metric 100
+		router 10.69.63.63 metric 100
+		router 10.69.4.3 metric 100
+		stubnet 10.69.54.20/32 metric 0
+		stubnet 10.68.54.20/32 metric 0
+		external 10.101.75.0/26 metric 20
+
+	router 10.69.54.21
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.54.21/32 metric 0
+		stubnet 10.68.54.21/32 metric 0
+		external 10.101.75.64/26 metric 20
+
+	router 10.69.54.25
+		distance 33
+		router 10.69.32.17 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.32.17 metric 100
+		router 10.69.2.24 metric 100
+		router 10.69.1.99 metric 100
+		router 10.69.3.64 metric 100
+		router 10.69.72.52 metric 100
+		router 10.69.41.26 metric 100
+		stubnet 10.69.54.25/32 metric 0
+		stubnet 10.68.54.25/32 metric 0
+		external 10.101.76.64/26 metric 20
+
+	router 10.69.55.78
+		distance 36
+		router 10.69.24.62 metric 10
+		router 10.69.79.34 metric 100
+		router 10.69.24.62 metric 100
+		stubnet 10.69.55.78/32 metric 0
+		stubnet 10.68.55.78/32 metric 0
+		external 10.101.114.128/26 metric 20
+
+	router 10.69.55.81
+		distance 56
+		router 10.69.11.67 metric 10
+		router 10.69.11.67 metric 100
+		router 10.69.10.84 metric 100
+		router 10.69.1.66 metric 100
+		stubnet 10.69.55.81/32 metric 0
+		stubnet 10.68.55.81/32 metric 0
+		external 10.101.115.64/26 metric 20
+
+	router 10.69.55.88
+		distance 38
+		router 10.69.69.60 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.69.60 metric 100
+		stubnet 10.69.55.88/32 metric 0
+		stubnet 10.68.55.88/32 metric 0
+		external 10.101.117.0/26 metric 20
+
+	router 10.69.56.39
+		distance 91
+		router 10.69.4.7 metric 10
+		router 10.69.4.7 metric 100
+		router 10.69.6.86 metric 100
+		stubnet 10.69.56.39/32 metric 0
+		stubnet 10.68.56.39/32 metric 0
+		external 10.101.129.192/26 metric 20
+
+	router 10.69.56.86
+		distance 36
+		router 10.69.34.61 metric 10
+		stubnet 10.69.56.86/32 metric 0
+		stubnet 10.68.56.86/32 metric 0
+		external 10.101.141.128/26 metric 20
+
+	router 10.69.57.12
+		distance 56
+		router 10.69.1.15 metric 10
+		router 10.69.65.66 metric 10
+		router 10.69.4.74 metric 10
+		router 10.69.1.56 metric 10
+		router 10.69.3.37 metric 10
+		router 10.69.3.44 metric 10
+		router 10.69.4.95 metric 10
+		router 10.69.3.44 metric 100
+		router 10.69.1.15 metric 100
+		router 10.69.4.95 metric 100
+		stubnet 10.69.57.12/32 metric 0
+		stubnet 10.68.57.12/32 metric 0
+		external 10.101.148.0/26 metric 20
+
+	router 10.69.57.23
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.57.23/32 metric 0
+		stubnet 10.68.57.23/32 metric 0
+		external 10.101.150.192/26 metric 20
+
+	router 10.69.58.6
+		distance 36
+		router 10.69.22.82 metric 10
+		stubnet 10.69.58.6/32 metric 0
+		stubnet 10.68.58.6/32 metric 0
+		external 10.101.171.128/26 metric 20
+
+	router 10.69.58.33
+		distance 60
+		router 10.69.22.74 metric 10
+		router 10.69.22.74 metric 100
+		stubnet 10.69.58.33/32 metric 0
+		stubnet 10.68.58.33/32 metric 0
+		external 10.101.178.64/26 metric 20
+
+	router 10.69.59.16
+		distance 23
+		router 10.69.1.47 metric 10
+		router 10.69.1.55 metric 10
+		router 10.69.1.59 metric 10
+		router 10.69.1.87 metric 10
+		router 10.69.1.99 metric 10
+		router 10.69.2.5 metric 10
+		router 10.69.2.6 metric 10
+		router 10.69.2.9 metric 10
+		router 10.69.2.19 metric 10
+		router 10.69.2.24 metric 10
+		router 10.69.2.47 metric 10
+		router 10.69.2.56 metric 10
+		router 10.69.2.65 metric 10
+		router 10.69.2.67 metric 10
+		router 10.69.2.87 metric 10
+		router 10.69.2.90 metric 10
+		router 10.69.2.99 metric 10
+		router 10.69.3.1 metric 10
+		router 10.69.3.2 metric 10
+		router 10.69.3.21 metric 10
+		router 10.69.3.22 metric 10
+		router 10.69.3.25 metric 10
+		router 10.69.3.41 metric 10
+		router 10.69.3.57 metric 10
+		router 10.69.3.58 metric 10
+		router 10.69.3.62 metric 10
+		router 10.69.3.85 metric 10
+		router 10.69.4.11 metric 10
+		router 10.69.4.15 metric 10
+		router 10.69.4.17 metric 10
+		router 10.69.4.18 metric 10
+		router 10.69.4.36 metric 10
+		router 10.69.4.39 metric 10
+		router 10.69.4.45 metric 10
+		router 10.69.4.48 metric 10
+		router 10.69.4.73 metric 10
+		router 10.69.4.77 metric 10
+		router 10.69.4.80 metric 10
+		router 10.69.6.27 metric 10
+		router 10.69.7.13 metric 7
+		router 10.69.13.40 metric 5
+		router 10.69.13.150 metric 10
+		router 10.69.19.34 metric 8
+		router 10.69.20.12 metric 10
+		router 10.69.24.82 metric 10
+		router 10.69.34.61 metric 15
+		router 10.69.36.7 metric 10
+		router 10.69.41.53 metric 10
+		router 10.69.43.95 metric 10
+		router 10.69.54.25 metric 10
+		router 10.69.57.23 metric 10
+		router 10.69.66.96 metric 10
+		router 10.69.67.32 metric 10
+		router 10.69.69.29 metric 10
+		router 10.69.70.37 metric 10
+		router 10.69.75.91 metric 10
+		router 10.69.77.8 metric 10
+		router 10.69.77.70 metric 10
+		router 10.69.79.12 metric 10
+		stubnet 10.69.59.16/32 metric 10
+		stubnet 10.70.251.14/32 metric 8
+		stubnet 10.70.253.2/32 metric 73
+		stubnet 10.70.253.5/32 metric 7
+		stubnet 10.70.253.12/32 metric 10
+		stubnet 10.70.253.26/32 metric 5
+		stubnet 10.70.253.30/32 metric 15
+		external 10.70.181.0/24 metric 1
+		external 10.70.251.12/30 metric 1
+		external 10.70.253.3/32 metric 1
+		external 10.70.253.4/32 metric 1
+		external 10.70.253.13/32 metric 1
+		external 10.70.253.27/32 metric 1
+		external 10.70.253.31/32 metric 1
+		external 10.101.199.0/26 metric 1
+
+	router 10.69.59.33
+		distance 93
+		router 10.69.45.34 metric 10
+		router 10.69.2.65 metric 10
+		router 10.69.1.69 metric 100
+		router 10.69.36.6 metric 100
+		stubnet 10.69.59.33/32 metric 0
+		stubnet 10.68.59.33/32 metric 0
+		external 10.101.203.64/26 metric 20
+
+	router 10.69.59.47
+		distance 48
+		router 10.69.32.13 metric 10
+		router 10.69.32.13 metric 100
+		router 10.69.61.21 metric 100
+		stubnet 10.69.59.47/32 metric 0
+		stubnet 10.68.59.47/32 metric 0
+		external 10.101.206.192/26 metric 20
+
+	router 10.69.59.65
+		distance 65
+		router 10.69.59.165 metric 10
+		stubnet 10.69.59.65/32 metric 0
+		stubnet 10.68.59.65/32 metric 0
+		external 10.101.211.64/26 metric 20
+
+	router 10.69.59.89
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.33.0 metric 100
+		router 10.69.2.50 metric 100
+		stubnet 10.69.59.89/32 metric 0
+		stubnet 10.68.59.89/32 metric 0
+		external 10.101.217.64/26 metric 20
+
+	router 10.69.59.165
+		distance 55
+		router 10.69.2.27 metric 35
+		router 10.69.7.13 metric 30
+		router 10.69.59.65 metric 10
+		stubnet 10.70.72.1/32 metric 35
+		stubnet 10.70.91.1/32 metric 30
+		stubnet 10.69.59.165/32 metric 0
+		external 10.10.100.0/24 metric 20
+		external 10.70.178.64/26 metric 20
+
+	router 10.69.60.4
+		distance 51
+		router 10.69.24.163 metric 10
+		router 10.69.1.38 metric 100
+		stubnet 10.69.60.4/32 metric 0
+		stubnet 10.68.60.4/32 metric 0
+		external 10.101.221.0/26 metric 20
+
+	router 10.69.60.22
+		distance 36
+		router 10.69.69.11 metric 10
+		router 10.69.53.0 metric 10
+		router 10.69.53.0 metric 100
+		router 10.69.69.11 metric 100
+		router 10.69.16.6 metric 100
+		router 10.69.4.98 metric 100
+		router 10.69.66.22 metric 100
+		stubnet 10.69.60.22/32 metric 0
+		stubnet 10.68.60.22/32 metric 0
+		external 10.101.225.128/26 metric 20
+
+	router 10.69.60.71
+		distance 80
+		router 10.69.60.171 metric 10
+		router 10.69.1.78 metric 100
+		router 10.69.77.89 metric 100
+		router 10.69.2.69 metric 100
+		stubnet 10.69.60.71/32 metric 0
+		stubnet 10.68.60.71/32 metric 0
+		external 10.101.237.192/26 metric 20
+
+	router 10.69.60.171
+		distance 70
+		router 10.69.60.71 metric 10
+		router 10.69.77.89 metric 10
+		stubnet 10.69.60.171/32 metric 0
+		stubnet 10.68.60.171/32 metric 0
+
+	router 10.69.61.21
+		distance 48
+		router 10.69.32.13 metric 10
+		router 10.69.32.13 metric 100
+		router 10.69.59.47 metric 100
+		stubnet 10.69.61.21/32 metric 0
+		stubnet 10.68.61.21/32 metric 0
+		external 10.101.250.64/26 metric 20
+
+	router 10.69.62.19
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.76.69 metric 100
+		stubnet 10.69.62.19/32 metric 0
+		stubnet 10.68.62.19/32 metric 0
+		external 10.102.18.192/26 metric 20
+
+	router 10.69.62.48
+		distance 43
+		router 10.69.19.46 metric 10
+		router 10.69.3.3 metric 10
+		router 10.69.24.82 metric 10
+		router 10.69.3.3 metric 100
+		router 10.69.24.82 metric 100
+		stubnet 10.69.62.48/32 metric 0
+		stubnet 10.68.62.48/32 metric 0
+		external 10.102.26.0/26 metric 20
+
+	router 10.69.62.68
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.4.84 metric 100
+		stubnet 10.69.62.68/32 metric 0
+		stubnet 10.68.62.68/32 metric 0
+		external 10.102.31.0/26 metric 20
+
+	router 10.69.62.74
+		distance 91
+		router 10.69.4.7 metric 10
+		router 10.69.30.4 metric 100
+		router 10.69.30.37 metric 100
+		router 10.69.63.46 metric 100
+		stubnet 10.69.62.74/32 metric 0
+		stubnet 10.68.62.74/32 metric 0
+		external 10.102.32.128/26 metric 20
+
+	router 10.69.63.8
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.63.8/32 metric 0
+		stubnet 10.68.63.8/32 metric 0
+		external 10.102.41.0/26 metric 20
+
+	router 10.69.63.11
+		distance 60
+		router 10.69.22.74 metric 10
+		router 10.69.30.16 metric 100
+		stubnet 10.69.63.11/32 metric 0
+		stubnet 10.68.63.11/32 metric 0
+		external 10.102.41.192/26 metric 20
+
+	router 10.69.63.46
+		distance 61
+		router 10.69.30.4 metric 100
+		router 10.69.19.71 metric 100
+		router 10.69.62.74 metric 100
+		router 10.69.2.27 metric 10
+		stubnet 10.68.63.46/32 metric 0
+		stubnet 10.69.63.46/32 metric 0
+		external 10.102.50.128/26 metric 20
+
+	router 10.69.63.63
+		distance 36
+		router 10.69.46.81 metric 10
+		router 10.69.4.94 metric 100
+		router 10.69.4.60 metric 100
+		router 10.69.46.81 metric 100
+		router 10.69.24.81 metric 100
+		router 10.69.14.47 metric 100
+		router 10.69.54.20 metric 100
+		router 10.69.33.0 metric 100
+		router 10.69.33.54 metric 100
+		router 10.69.4.3 metric 100
+		stubnet 10.69.63.63/32 metric 0
+		stubnet 10.68.63.63/32 metric 0
+		external 10.102.54.192/26 metric 20
+
+	router 10.69.64.14
+		distance 61
+		router 10.69.2.27 metric 10
+		stubnet 10.69.64.14/32 metric 0
+		stubnet 10.68.64.14/32 metric 0
+		external 10.102.67.128/26 metric 20
+
+	router 10.69.64.50
+		distance 26
+		router 10.69.3.14 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.33.0 metric 100
+		router 10.69.3.14 metric 100
+		router 10.69.54.20 metric 100
+		stubnet 10.69.64.50/32 metric 0
+		stubnet 10.68.64.50/32 metric 0
+		external 10.102.76.128/26 metric 20
+
+	router 10.69.64.86
+		distance 43
+		router 10.69.2.67 metric 10
+		router 10.69.2.67 metric 100
+		stubnet 10.69.64.86/32 metric 0
+		stubnet 10.68.64.86/32 metric 0
+		external 10.102.85.128/26 metric 20
+
+	router 10.69.65.65
+		distance 36
+		router 10.69.22.82 metric 10
+		router 10.69.4.44 metric 10
+		stubnet 10.69.65.65/32 metric 0
+		stubnet 10.68.65.65/32 metric 0
+		external 10.102.105.64/26 metric 20
+
+	router 10.69.65.66
+		distance 66
+		router 10.69.57.12 metric 10
+		router 10.69.3.37 metric 100
+		stubnet 10.69.65.66/32 metric 0
+		stubnet 10.68.65.66/32 metric 0
+		external 10.102.105.128/26 metric 20
+
+	router 10.69.65.70
+		distance 48
+		router 10.69.50.14 metric 10
+		stubnet 10.69.65.70/32 metric 0
+		stubnet 10.68.65.70/32 metric 0
+		external 10.102.106.128/26 metric 20
+
+	router 10.69.65.71
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.76.32 metric 10
+		router 10.69.76.32 metric 100
+		stubnet 10.69.65.71/32 metric 0
+		stubnet 10.68.65.71/32 metric 0
+		external 10.102.106.192/26 metric 20
+
+	router 10.69.65.81
+		distance 54
+		router 10.69.13.50 metric 10
+		router 10.69.13.50 metric 100
+		router 10.69.33.5 metric 100
+		stubnet 10.69.65.81/32 metric 0
+		stubnet 10.68.65.81/32 metric 0
+		external 10.102.109.64/26 metric 20
+
+	router 10.69.66.18
+		distance 54
+		router 10.69.13.50 metric 10
+		router 10.69.13.50 metric 100
+		router 10.69.33.5 metric 100
+		router 10.69.48.69 metric 100
+		router 10.69.35.75 metric 100
+		stubnet 10.69.66.18/32 metric 0
+		stubnet 10.68.66.18/32 metric 0
+		external 10.102.118.128/26 metric 20
+
+	router 10.69.66.22
+		distance 26
+		router 10.69.7.13 metric 10
+		router 10.69.4.98 metric 10
+		router 10.69.2.85 metric 10
+		router 10.69.53.0 metric 100
+		router 10.69.1.75 metric 100
+		router 10.69.4.98 metric 100
+		router 10.69.69.11 metric 100
+		router 10.69.2.85 metric 100
+		router 10.69.33.0 metric 100
+		router 10.69.60.22 metric 100
+		stubnet 10.69.66.22/32 metric 0
+		stubnet 10.68.66.22/32 metric 0
+		external 10.102.119.128/26 metric 20
+
+	router 10.69.66.23
+		distance 36
+		router 10.69.1.75 metric 10
+		router 10.69.1.75 metric 100
+		router 10.69.33.0 metric 100
+		router 10.69.2.85 metric 100
+		router 10.69.2.50 metric 100
+		stubnet 10.69.66.23/32 metric 0
+		stubnet 10.68.66.23/32 metric 0
+		external 10.102.119.192/26 metric 20
+
+	router 10.69.66.96
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.66.96/32 metric 0
+		stubnet 10.68.66.96/32 metric 0
+		external 10.102.138.0/26 metric 20
+
+	router 10.69.67.32
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.67.32/32 metric 0
+		stubnet 10.68.67.32/32 metric 0
+		external 10.102.147.0/26 metric 20
+
+	router 10.69.67.74
+		distance 36
+		router 10.69.22.82 metric 10
+		stubnet 10.69.67.74/32 metric 0
+		stubnet 10.68.67.74/32 metric 0
+		external 10.102.157.128/26 metric 20
+
+	router 10.69.67.91
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.3.8 metric 100
+		stubnet 10.69.67.91/32 metric 0
+		stubnet 10.68.67.91/32 metric 0
+		external 10.102.161.192/26 metric 20
+
+	router 10.69.67.93
+		distance 36
+		router 10.69.75.16 metric 10
+		router 10.69.34.61 metric 10
+		router 10.69.75.16 metric 100
+		router 10.69.75.45 metric 100
+		stubnet 10.69.67.93/32 metric 0
+		stubnet 10.68.67.93/32 metric 0
+		external 10.102.162.64/26 metric 20
+
+	router 10.69.67.94
+		distance 66
+		router 10.69.2.95 metric 10
+		router 10.69.2.95 metric 100
+		stubnet 10.69.67.94/32 metric 0
+		stubnet 10.68.67.94/32 metric 0
+		external 10.102.162.128/26 metric 20
+
+	router 10.69.68.2
+		distance 55
+		router 10.69.7.13 metric 50
+		stubnet 10.70.91.246/32 metric 0
+		stubnet 10.68.34.161/32 metric 0
+		stubnet 10.69.68.2/32 metric 0
+		external 10.102.164.128/26 metric 20
+
+	router 10.69.68.33
+		distance 46
+		router 10.69.51.34 metric 10
+		router 10.69.51.34 metric 100
+		router 10.69.43.43 metric 100
+		router 10.69.2.42 metric 100
+		stubnet 10.69.68.33/32 metric 0
+		stubnet 10.68.68.33/32 metric 0
+		external 10.102.172.64/26 metric 20
+
+	router 10.69.68.44
+		distance 71
+		router 10.69.24.41 metric 10
+		router 10.69.24.41 metric 100
+		router 10.69.2.16 metric 100
+		stubnet 10.69.68.44/32 metric 0
+		stubnet 10.68.68.44/32 metric 0
+		external 10.102.175.0/26 metric 20
+
+	router 10.69.68.45
+		distance 38
+		router 10.69.2.20 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.4.87 metric 100
+		router 10.69.2.20 metric 100
+		router 10.69.22.3 metric 100
+		stubnet 10.69.68.45/32 metric 0
+		stubnet 10.68.68.45/32 metric 0
+		external 10.102.175.64/26 metric 20
+
+	router 10.69.68.72
+		distance 26
+		router 10.69.7.13 metric 10
+		stubnet 10.69.68.72/32 metric 0
+		stubnet 10.68.68.72/32 metric 0
+		external 10.102.182.0/26 metric 20
+
+	router 10.69.69.11
+		distance 36
+		router 10.69.53.0 metric 100
+		router 10.69.60.22 metric 100
+		router 10.69.66.22 metric 100
+		router 10.69.4.98 metric 100
+		router 10.69.53.0 metric 10
+		router 10.69.60.22 metric 10
+		stubnet 10.68.69.11/32 metric 0
+		stubnet 10.69.69.11/32 metric 0
+		external 10.102.191.192/26 metric 20
+
+	router 10.69.69.25
+		distance 46
+		router 10.69.4.28 metric 10
+		router 10.69.75.12 metric 10
+		router 10.69.4.28 metric 100
+		router 10.69.73.59 metric 100
+		stubnet 10.69.69.25/32 metric 0
+		stubnet 10.68.69.25/32 metric 0
+		external 10.102.195.64/26 metric 20
+
+	router 10.69.69.29
+		distance 33
+		router 10.69.59.16 metric 10
+		stubnet 10.69.69.29/32 metric 0
+		stubnet 10.68.69.29/32 metric 0
+		external 10.102.196.64/26 metric 20
+
+	router 10.69.69.60
+		distance 48
+		router 10.69.55.88 metric 10
+		router 10.69.55.88 metric 100
+		stubnet 10.69.69.60/32 metric 0
+		stubnet 10.68.69.60/32 metric 0
+		external 10.102.204.0/26 metric 20
+
+	router 10.69.69.92
+		distance 38
+		router 10.69.74.76 metric 100
+		router 10.69.47.6 metric 100
+		router 10.69.4.15 metric 100
+		router 10.69.13.40 metric 10
+		stubnet 10.68.69.92/32 metric 0
+		stubnet 10.69.69.92/32 metric 0
+		external 10.102.212.0/26 metric 20
+
+	router 10.69.70.7
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.3.41 metric 100
+		stubnet 10.69.70.7/32 metric 0
+		stubnet 10.68.70.7/32 metric 0
+		external 10.102.215.192/26 metric 20
+
+	router 10.69.70.16
+		distance 91
+		router 10.69.4.7 metric 10
+		router 10.69.4.7 metric 100
+		router 10.69.6.86 metric 100
+		router 10.70.176.1 metric 100
+		stubnet 10.69.70.16/32 metric 0
+		stubnet 10.68.70.16/32 metric 0
+		external 10.102.218.0/26 metric 20
+
+	router 10.69.70.37
+		distance 33
+		router 10.69.28.27 metric 100
+		router 10.69.75.91 metric 100
+		router 10.69.48.69 metric 100
+		router 10.69.13.50 metric 100
+		router 10.69.59.16 metric 10
+		stubnet 10.68.70.37/32 metric 0
+		stubnet 10.69.70.37/32 metric 0
+		external 10.102.223.64/26 metric 20
+
+	router 10.69.70.65
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.79.97 metric 100
+		router 10.69.52.76 metric 100
+		stubnet 10.69.70.65/32 metric 0
+		stubnet 10.68.70.65/32 metric 0
+		external 10.102.230.64/26 metric 20
+
+	router 10.69.70.89
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.3.40 metric 100
+		router 10.69.3.13 metric 100
+		stubnet 10.69.70.89/32 metric 0
+		stubnet 10.68.70.89/32 metric 0
+		external 10.102.236.64/26 metric 20
+
+	router 10.69.71.3
+		distance 56
+		router 10.69.1.15 metric 10
+		router 10.69.1.15 metric 100
+		router 10.69.4.43 metric 100
+		stubnet 10.69.71.3/32 metric 0
+		stubnet 10.68.71.3/32 metric 0
+		external 10.102.239.192/26 metric 20
+
+	router 10.69.71.19
+		distance 48
+		router 10.69.22.3 metric 10
+		router 10.69.22.3 metric 100
+		router 10.69.1.55 metric 100
+		stubnet 10.69.71.19/32 metric 0
+		stubnet 10.68.71.19/32 metric 0
+		external 10.102.243.192/26 metric 20
+
+	router 10.69.71.78
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.71.78/32 metric 0
+		stubnet 10.68.71.78/32 metric 0
+		external 10.103.2.128/26 metric 20
+
+	router 10.69.72.32
+		distance 61
+		router 10.69.2.27 metric 10
+		stubnet 10.69.72.32/32 metric 0
+		stubnet 10.68.72.32/32 metric 0
+		external 10.103.16.0/26 metric 20
+
+	router 10.69.72.50
+		distance 53
+		router 10.69.79.85 metric 10
+		router 10.69.79.76 metric 100
+		router 10.69.1.74 metric 100
+		router 10.69.79.85 metric 100
+		router 10.69.74.65 metric 100
+		router 10.69.2.10 metric 100
+		router 10.69.78.94 metric 100
+		router 10.69.73.98 metric 100
+		router 10.69.79.59 metric 100
+		stubnet 10.69.72.50/32 metric 0
+		stubnet 10.68.72.50/32 metric 0
+		external 10.103.20.128/26 metric 20
+
+	router 10.69.72.52
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.35.75 metric 100
+		router 10.69.54.25 metric 100
+		router 10.69.3.64 metric 100
+		router 10.69.13.50 metric 100
+		router 10.69.3.62 metric 100
+		stubnet 10.69.72.52/32 metric 0
+		stubnet 10.68.72.52/32 metric 0
+		external 10.103.21.0/26 metric 20
+
+	router 10.69.72.88
+		distance 38
+		router 10.69.13.40 metric 10
+		stubnet 10.69.72.88/32 metric 0
+		stubnet 10.68.72.88/32 metric 0
+		external 10.103.30.0/26 metric 20
+
+	router 10.69.72.159
+		distance 36
+		router 10.69.51.51 metric 10
+		stubnet 10.69.72.159/32 metric 0
+		stubnet 10.68.72.159/32 metric 0
+		external 10.103.22.192/26 metric 20
+
+	router 10.69.73.19
+		distance 26
+		router 10.69.7.13 metric 10
+		stubnet 10.69.73.19/32 metric 0
+		stubnet 10.68.73.19/32 metric 0
+		external 10.103.37.192/26 metric 20
+
+	router 10.69.73.25
+		distance 136
+		router 10.68.73.125 metric 10
+		router 10.69.52.83 metric 100
+		router 10.69.3.31 metric 100
+		router 10.68.73.125 metric 100
+		stubnet 10.69.73.25/32 metric 0
+		stubnet 10.68.73.25/32 metric 0
+		stubnet 10.60.73.25/32 metric 0
+		external 10.103.39.64/26 metric 20
+
+	router 10.69.73.47
+		distance 86
+		router 10.69.19.71 metric 10
+		stubnet 10.69.73.47/32 metric 0
+		stubnet 10.68.73.47/32 metric 0
+		external 10.103.44.192/26 metric 20
+
+	router 10.69.73.59
+		distance 41
+		router 10.69.19.34 metric 10
+		router 10.69.69.25 metric 100
+		stubnet 10.69.73.59/32 metric 0
+		stubnet 10.68.73.59/32 metric 0
+		external 10.103.47.192/26 metric 20
+
+	router 10.69.73.98
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.1.74 metric 10
+		router 10.69.74.65 metric 100
+		router 10.69.2.10 metric 100
+		router 10.69.78.94 metric 100
+		router 10.69.79.85 metric 100
+		router 10.69.1.74 metric 100
+		router 10.69.79.76 metric 100
+		router 10.69.79.59 metric 100
+		router 10.69.72.50 metric 100
+		stubnet 10.69.73.98/32 metric 0
+		stubnet 10.68.73.98/32 metric 0
+		external 10.103.57.128/26 metric 20
+
+	router 10.69.74.49
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.39.23 metric 100
+		stubnet 10.69.74.49/32 metric 0
+		stubnet 10.68.74.49/32 metric 0
+		external 10.103.70.64/26 metric 20
+
+	router 10.69.74.65
+		distance 63
+		router 10.69.78.94 metric 10
+		router 10.69.78.94 metric 100
+		router 10.69.73.98 metric 100
+		router 10.69.79.59 metric 100
+		router 10.69.2.10 metric 100
+		router 10.69.1.74 metric 100
+		router 10.69.79.85 metric 100
+		router 10.69.72.50 metric 100
+		router 10.69.79.76 metric 100
+		router 10.69.76.86 metric 100
+		stubnet 10.69.74.65/32 metric 0
+		stubnet 10.68.74.65/32 metric 0
+		external 10.103.74.64/26 metric 20
+
+	router 10.69.74.76
+		distance 133
+		router 10.69.3.22 metric 100
+		router 10.69.69.92 metric 100
+		stubnet 10.69.74.76/32 metric 0
+		stubnet 10.68.74.76/32 metric 0
+		external 10.103.77.0/26 metric 20
+
+	router 10.69.74.89
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.34.61 metric 100
+		router 10.69.1.90 metric 10
+		router 10.69.2.76 metric 10
+		router 10.69.77.34 metric 100
+		stubnet 10.70.253.25/32 metric 0
+		stubnet 10.70.253.9/32 metric 0
+		stubnet 10.69.74.89/32 metric 0
+		stubnet 10.68.74.89/32 metric 0
+		external 10.103.80.64/26 metric 20
+
+	router 10.69.74.98
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.4.71 metric 100
+		router 10.69.40.62 metric 100
+		stubnet 10.69.74.98/32 metric 0
+		stubnet 10.68.74.98/32 metric 0
+		external 10.103.82.128/26 metric 20
+
+	router 10.69.75.3
+		distance 48
+		router 10.69.6.64 metric 10
+		router 10.69.2.6 metric 100
+		stubnet 10.69.75.3/32 metric 0
+		stubnet 10.68.75.3/32 metric 0
+		external 10.103.83.192/26 metric 20
+
+	router 10.69.75.12
+		distance 36
+		router 10.69.19.34 metric 5
+		router 10.69.19.34 metric 10
+		router 10.69.69.25 metric 10
+		router 10.69.5.0 metric 10
+		stubnet 10.70.251.10/32 metric 0
+		stubnet 10.69.75.12/32 metric 0
+		stubnet 10.68.75.12/32 metric 0
+		external 10.103.86.0/26 metric 20
+
+	router 10.69.75.16
+		distance 46
+		router 10.69.67.93 metric 10
+		router 10.69.67.93 metric 100
+		router 10.69.75.45 metric 100
+		stubnet 10.69.75.16/32 metric 0
+		stubnet 10.68.75.16/32 metric 0
+		external 10.103.87.0/26 metric 20
+
+	router 10.69.75.34
+		distance 43
+		router 10.69.75.91 metric 10
+		router 10.69.75.91 metric 100
+		stubnet 10.69.75.34/32 metric 0
+		stubnet 10.68.75.34/32 metric 0
+		external 10.103.91.128/26 metric 20
+		external 199.170.132.86/32 metric 20
+
+	router 10.69.75.35
+		distance 51
+		router 10.69.24.163 metric 10
+		stubnet 10.69.75.35/32 metric 0
+
+	router 10.69.75.37
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.77.8 metric 100
+		stubnet 10.69.75.37/32 metric 0
+		stubnet 10.68.75.37/32 metric 0
+		external 10.103.92.64/26 metric 20
+
+	router 10.69.75.45
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.67.93 metric 100
+		router 10.69.26.46 metric 100
+		router 10.69.75.16 metric 100
+		stubnet 10.69.75.45/32 metric 0
+		stubnet 10.68.75.45/32 metric 0
+		external 10.103.94.64/26 metric 20
+
+	router 10.69.75.74
+		distance 26
+		router 10.69.7.13 metric 10
+		stubnet 10.69.75.74/32 metric 0
+		stubnet 10.68.75.74/32 metric 0
+		external 10.103.101.128/26 metric 20
+
+	router 10.69.75.82
+		distance 38
+		router 10.69.3.81 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.2.15 metric 10
+		router 10.69.3.81 metric 100
+		router 10.69.28.74 metric 100
+		router 10.69.2.53 metric 100
+		router 10.69.29.59 metric 100
+		router 10.69.2.12 metric 100
+		router 10.69.2.15 metric 100
+		stubnet 10.69.75.82/32 metric 0
+		stubnet 10.68.75.82/32 metric 0
+		external 10.103.103.128/26 metric 20
+
+	router 10.69.75.91
+		distance 33
+		router 10.69.75.34 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.75.34 metric 100
+		router 10.69.70.37 metric 100
+		stubnet 10.69.75.91/32 metric 0
+		stubnet 10.68.75.91/32 metric 0
+		external 10.103.105.192/26 metric 20
+
+	router 10.69.75.153
+		distance 160
+		router 10.69.35.78 metric 30
+		router 10.69.29.94 metric 30
+		stubnet 10.69.75.153/32 metric 0
+		stubnet 10.68.75.153/32 metric 0
+		external 10.103.96.64/26 metric 20
+
+	router 10.69.76.0
+		distance 48
+		router 10.69.6.164 metric 10
+		router 10.69.6.64 metric 10
+		stubnet 10.69.76.0/32 metric 0
+		stubnet 10.68.76.0/32 metric 0
+		external 10.103.108.0/26 metric 20
+
+	router 10.69.76.32
+		distance 36
+		router 10.69.65.71 metric 10
+		router 10.69.65.71 metric 100
+		router 10.69.2.89 metric 100
+		router 10.69.4.98 metric 100
+		stubnet 10.69.76.32/32 metric 0
+		stubnet 10.68.76.32/32 metric 0
+		external 10.103.116.0/26 metric 20
+
+	router 10.69.76.69
+		distance 46
+		router 10.69.52.43 metric 100
+		router 10.69.62.19 metric 100
+		router 10.69.52.43 metric 10
+		stubnet 10.68.76.69/32 metric 0
+		stubnet 10.69.76.69/32 metric 0
+		external 10.103.125.64/26 metric 20
+
+	router 10.69.76.74
+		distance 50
+		router 10.69.3.29 metric 10
+		router 10.69.3.29 metric 100
+		stubnet 10.69.76.74/32 metric 0
+		stubnet 10.68.76.74/32 metric 0
+		external 10.103.126.128/26 metric 20
+
+	router 10.69.76.86
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.74.65 metric 100
+		stubnet 10.69.76.86/32 metric 0
+		stubnet 10.68.76.86/32 metric 0
+		external 10.103.129.128/26 metric 20
+
+	router 10.69.77.8
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.75.37 metric 100
+		stubnet 10.69.77.8/32 metric 0
+		stubnet 10.68.77.8/32 metric 0
+		external 10.103.135.0/26 metric 20
+
+	router 10.69.77.10
+		distance 38
+		router 10.69.13.40 metric 10
+		router 10.69.2.58 metric 100
+		stubnet 10.69.77.10/32 metric 0
+		stubnet 10.68.77.10/32 metric 0
+		external 10.103.135.128/26 metric 20
+
+	router 10.69.77.34
+		distance 138
+		router 10.69.74.89 metric 100
+		stubnet 10.69.77.34/32 metric 0
+		stubnet 10.68.77.34/32 metric 0
+		external 10.70.182.0/25 metric 20
+		external 10.103.141.128/26 metric 20
+
+	router 10.69.77.64
+		distance 51
+		router 10.69.24.163 metric 10
+		router 10.69.2.94 metric 10
+		router 10.69.24.41 metric 100
+		stubnet 10.69.77.64/32 metric 0
+		stubnet 10.68.77.64/32 metric 0
+		external 10.103.149.0/26 metric 20
+
+	router 10.69.77.65
+		distance 56
+		router 10.69.77.165 metric 10
+		router 10.69.41.92 metric 100
+		stubnet 10.69.77.65/32 metric 0
+		stubnet 10.68.77.65/32 metric 0
+		external 10.103.149.64/26 metric 20
+
+	router 10.69.77.70
+		distance 33
+		router 10.69.59.16 metric 10
+		router 10.69.20.12 metric 100
+		stubnet 10.69.77.70/32 metric 0
+		stubnet 10.68.77.70/32 metric 0
+		external 10.103.150.128/26 metric 20
+
+	router 10.69.77.89
+		distance 60
+		router 10.69.1.78 metric 10
+		router 10.69.60.171 metric 10
+		router 10.69.22.74 metric 10
+		router 10.69.1.78 metric 100
+		router 10.69.60.71 metric 100
+		router 10.69.41.16 metric 100
+		router 10.69.79.26 metric 100
+		router 10.69.2.69 metric 100
+		stubnet 10.69.77.89/32 metric 0
+		stubnet 10.68.77.89/32 metric 0
+		external 10.103.155.64/26 metric 20
+
+	router 10.69.77.165
+		distance 46
+		router 10.69.77.65 metric 10
+		router 10.69.41.92 metric 10
+		stubnet 10.69.77.165/32 metric 0
+		stubnet 10.68.77.165/32 metric 0
+
+	router 10.69.78.0
+		distance 65
+		router 10.69.4.1 metric 10
+		router 10.69.2.43 metric 10
+		router 10.69.8.98 metric 10
+		router 10.69.78.100 metric 10
+		router 10.69.4.31 metric 10
+		router 10.69.4.23 metric 10
+		router 10.69.2.78 metric 10
+		router 10.69.4.126 metric 10
+		router 10.69.18.96 metric 10
+		router 10.69.1.48 metric 10
+		stubnet 10.69.78.0/32 metric 0
+		stubnet 10.68.78.0/32 metric 0
+		external 10.103.158.0/26 metric 20
+
+	router 10.69.78.17
+		distance 36
+		router 10.69.4.5 metric 10
+		router 10.69.16.35 metric 10
+		router 10.69.4.5 metric 100
+		stubnet 10.69.78.17/32 metric 0
+		stubnet 10.68.78.17/32 metric 0
+		external 10.103.162.64/26 metric 20
+
+	router 10.69.78.25
+		distance 36
+		router 10.69.16.35 metric 10
+		router 10.69.4.82 metric 100
+		router 10.69.44.80 metric 100
+		router 10.69.51.51 metric 100
+		router 10.69.2.23 metric 100
+		stubnet 10.69.78.25/32 metric 0
+		stubnet 10.68.78.25/32 metric 0
+		external 10.103.164.64/26 metric 20
+
+	router 10.69.78.68
+		distance 26
+		router 10.69.4.103 metric 10
+		router 10.69.7.13 metric 10
+		router 10.69.4.3 metric 100
+		router 10.69.33.54 metric 100
+		stubnet 10.69.78.68/32 metric 0
+		stubnet 10.68.78.68/32 metric 0
+		external 10.103.175.0/26 metric 20
+
+	router 10.69.78.69
+		distance 61
+		router 10.69.2.27 metric 10
+		stubnet 10.69.78.69/32 metric 0
+		stubnet 10.68.78.69/32 metric 0
+		external 10.103.175.64/26 metric 20
+
+	router 10.69.78.94
+		distance 53
+		router 10.69.74.65 metric 10
+		router 10.69.79.85 metric 10
+		router 10.69.74.65 metric 100
+		router 10.69.79.85 metric 100
+		router 10.69.73.98 metric 100
+		router 10.69.2.10 metric 100
+		router 10.69.1.74 metric 100
+		router 10.69.79.59 metric 100
+		router 10.69.72.50 metric 100
+		router 10.69.79.76 metric 100
+		router 10.69.2.19 metric 100
+		stubnet 10.69.78.94/32 metric 0
+		stubnet 10.68.78.94/32 metric 0
+		external 10.103.181.128/26 metric 20
+
+	router 10.69.78.100
+		distance 55
+		router 10.69.2.27 metric 50
+		router 10.69.7.13 metric 39
+		router 10.69.8.98 metric 10
+		router 10.69.78.0 metric 10
+		stubnet 10.70.72.35/32 metric 0
+		stubnet 10.70.91.249/32 metric 0
+		stubnet 10.69.78.100/32 metric 0
+		external 10.16.10.0/23 metric 20
+		external 10.70.185.0/26 metric 20
+
+	router 10.69.79.9
+		distance 46
+		router 10.69.10.84 metric 10
+		router 10.69.20.90 metric 100
+		stubnet 10.69.79.9/32 metric 0
+		stubnet 10.68.79.9/32 metric 0
+		external 10.103.185.64/26 metric 20
+
+	router 10.69.79.12
+		distance 33
+		router 10.69.2.8 metric 10
+		router 10.69.59.16 metric 10
+		router 10.69.2.8 metric 100
+		router 10.69.3.62 metric 100
+		stubnet 10.69.79.12/32 metric 0
+		stubnet 10.68.79.12/32 metric 0
+		external 10.103.186.0/26 metric 20
+
+	router 10.69.79.25
+		distance 26
+		router 10.69.7.13 metric 10
+		stubnet 10.69.79.25/32 metric 0
+		stubnet 10.68.79.25/32 metric 0
+		external 10.103.189.64/26 metric 20
+
+	router 10.69.79.26
+		distance 60
+		router 10.69.22.74 metric 10
+		router 10.69.41.16 metric 100
+		router 10.69.77.89 metric 100
+		router 10.69.30.16 metric 100
+		router 10.69.15.67 metric 100
+		stubnet 10.69.79.26/32 metric 0
+		stubnet 10.68.79.26/32 metric 0
+		external 10.103.189.128/26 metric 20
+
+	router 10.69.79.34
+		distance 36
+		router 10.69.24.62 metric 10
+		router 10.69.55.78 metric 100
+		router 10.69.24.62 metric 100
+		stubnet 10.69.79.34/32 metric 0
+		stubnet 10.68.79.34/32 metric 0
+		external 10.103.191.128/26 metric 20
+
+	router 10.69.79.41
+		distance 61
+		router 10.69.2.27 metric 10
+		router 10.69.2.49 metric 100
+		router 10.69.4.90 metric 100
+		router 10.69.35.31 metric 100
+		router 10.69.14.40 metric 100
+		router 10.69.1.50 metric 100
+		router 10.69.2.83 metric 100
+		router 10.70.175.1 metric 100
+		stubnet 10.69.79.41/32 metric 0
+		stubnet 10.68.79.41/32 metric 0
+		external 10.103.193.64/26 metric 20
+
+	router 10.69.79.54
+		distance 36
+		router 10.69.34.61 metric 10
+		router 10.69.41.92 metric 100
+		stubnet 10.69.79.54/32 metric 0
+		stubnet 10.68.79.54/32 metric 0
+		external 10.103.196.128/26 metric 20
+
+	router 10.69.79.59
+		distance 53
+		router 10.69.79.85 metric 10
+		router 10.69.2.10 metric 100
+		router 10.69.79.85 metric 100
+		router 10.69.74.65 metric 100
+		router 10.69.78.94 metric 100
+		router 10.69.73.98 metric 100
+		router 10.69.72.50 metric 100
+		router 10.69.1.74 metric 100
+		stubnet 10.69.79.59/32 metric 0
+		stubnet 10.68.79.59/32 metric 0
+		external 10.103.197.192/26 metric 20
+
+	router 10.69.79.76
+		distance 53
+		router 10.69.79.85 metric 10
+		router 10.69.1.74 metric 100
+		router 10.69.72.50 metric 100
+		router 10.69.79.85 metric 100
+		router 10.69.2.10 metric 100
+		router 10.69.73.98 metric 100
+		router 10.69.74.65 metric 100
+		router 10.69.78.94 metric 100
+		stubnet 10.69.79.76/32 metric 0
+		stubnet 10.68.79.76/32 metric 0
+		external 10.103.202.0/26 metric 20
+
+	router 10.69.79.85
+		distance 43
+		router 10.69.72.50 metric 10
+		router 10.69.79.76 metric 10
+		router 10.69.78.94 metric 10
+		router 10.69.79.59 metric 10
+		router 10.69.2.10 metric 10
+		router 10.69.2.19 metric 10
+		router 10.69.78.94 metric 100
+		router 10.69.79.76 metric 100
+		router 10.69.2.10 metric 100
+		router 10.69.72.50 metric 100
+		router 10.69.79.59 metric 100
+		router 10.69.73.98 metric 100
+		router 10.69.74.65 metric 100
+		router 10.69.1.74 metric 100
+		router 10.69.2.19 metric 100
+		stubnet 10.69.79.85/32 metric 0
+		stubnet 10.68.79.85/32 metric 0
+		external 10.103.204.64/26 metric 20
+
+	router 10.69.79.86
+		distance 46
+		router 10.69.33.1 metric 10
+		router 10.69.33.1 metric 100
+		stubnet 10.69.79.86/32 metric 0
+		stubnet 10.68.79.86/32 metric 0
+		external 10.103.204.128/26 metric 20
+
+	router 10.69.79.97
+		distance 38
+		router 10.69.1.97 metric 10
+		router 10.69.13.40 metric 10
+		router 10.69.1.97 metric 100
+		router 10.69.70.65 metric 100
+		router 10.69.3.87 metric 100
+		stubnet 10.69.79.97/32 metric 0
+		stubnet 10.68.79.97/32 metric 0
+		external 10.103.207.64/26 metric 20
+
+	router 10.70.71.137
+		distance 61
+		network 10.70.76.0/24 metric 1
+		external 199.167.59.7/32 metric 1
+
+	router 10.70.76.24
+		distance 61
+		network 10.70.76.0/24 metric 10
+		stubnet 10.10.10.123/32 metric 0
+		external 0.0.0.0/0 metric2 10000 via 10.70.76.1
+		external 10.10.10.123/32 metric2 10000
+		external 10.70.76.0/24 metric2 10000
+
+	router 10.70.89.133
+		distance 15
+		router 10.69.14.217 metric 50
+		router 10.69.3.117 metric 15
+		router 10.69.3.129 metric 15
+		router 10.70.251.26 metric 31
+		router 10.70.251.34 metric 15
+		router 10.70.251.22 metric 30
+		router 10.70.253.29 metric 15
+		router 10.70.253.15 metric 15
+		router 10.69.1.35 metric 41
+		network 10.70.89.128/27 metric 1
+		stubnet 10.70.89.32/32 metric 0
+		stubnet 10.70.89.34/32 metric 0
+		stubnet 10.70.89.40/32 metric 0
+		stubnet 10.70.251.25/32 metric 0
+		stubnet 10.70.251.33/32 metric 0
+		stubnet 10.70.251.37/32 metric 0
+		stubnet 10.70.253.16/31 metric 15
+		stubnet 10.70.251.48/30 metric 15
+		stubnet 10.70.251.53/32 metric 0
+		stubnet 10.70.251.21/32 metric 0
+		stubnet 199.170.132.4/32 metric 0
+		stubnet 10.70.253.28/32 metric 0
+		stubnet 10.70.253.14/32 metric 0
+		stubnet 10.70.251.65/32 metric 0
+		stubnet 10.70.251.29/32 metric 0
+		external 10.70.89.32/31 metric 1
+		external 10.70.89.34/31 metric 1
+		external 10.70.89.40/31 metric 1
+		external 10.70.89.42/31 metric 1
+		external 10.70.89.128/27 metric 1
+		external 10.70.92.0/24 metric 1
+		external 10.70.251.20/30 metric 1
+		external 10.70.251.24/30 metric 1
+		external 10.70.251.28/30 metric 1
+		external 10.70.251.32/30 metric 1
+		external 10.70.251.36/30 metric 1
+		external 10.70.251.48/30 metric 1
+		external 10.70.251.52/30 metric 1
+		external 10.70.251.64/30 metric 1
+		external 10.70.253.14/31 metric 1
+		external 10.70.253.16/31 metric 1
+		external 10.70.253.28/31 metric 1
+		external 199.170.132.4/32 metric 1
+
+	router 10.70.90.22
+		distance 26
+		network 10.70.90.0/24 metric 100
+		stubnet 199.170.132.97/32 metric 100
+
+	router 10.70.90.34
+		distance 26
+		network 10.70.90.0/24 metric 10
+		stubnet 199.170.132.38/32 metric 0
+
+	router 10.70.90.87
+		distance 26
+		network 10.70.90.0/24 metric 10
+		stubnet 199.170.132.91/32 metric 10
+
+	router 10.70.90.90
+		distance 26
+		network 10.70.90.0/24 metric 10
+		stubnet 199.170.132.37/32 metric 0
+		external 10.70.90.0/24 metric 1
+		external 199.170.132.37/32 metric 1
+
+	router 10.70.90.98
+		distance 26
+		network 10.70.90.0/24 metric 10
+		stubnet 199.170.132.36/32 metric 0
+		external 10.70.90.0/24 metric 1
+		external 199.170.132.36/32 metric 1
+
+	router 10.70.90.128
+		distance 26
+		network 10.70.90.0/24 metric 10
+		stubnet 208.68.5.21/32 metric 10
+
+	router 10.70.90.175
+		distance 26
+		network 10.70.90.0/24 metric 10
+		external 10.2.3.0/24 metric 1
+
+	router 10.70.102.6
+		distance 33
+		router 10.69.0.10 metric 1
+		stubnet 10.70.102.4/30 metric 1
+		external 0.0.0.0/0 metric 1
+		external 10.70.102.128/25 metric 20
+		external 10.70.103.0/24 metric 20
+		external 10.70.253.47/32 metric 20
+		external 23.158.16.17/32 metric 20
+
+	router 10.70.123.1
+		distance 26
+		network 10.70.90.0/24 metric 10
+		external 10.70.123.0/24 metric 1
+		external 199.167.59.72/32 metric 1
+		external 199.167.59.96/32 metric 1
+		external 199.170.132.34/32 metric 1
+		external 199.170.132.79/32 metric 1
+		external 199.170.132.80/32 metric 1
+		external 199.170.132.83/32 metric 1
+
+	router 10.70.164.1
+		distance 51
+		router 10.69.24.163 metric 10
+		router 10.69.31.75 metric 100
+		router 10.69.2.39 metric 100
+		router 10.69.14.30 metric 100
+		stubnet 10.69.0.19/32 metric 0
+		stubnet 10.68.0.19/32 metric 0
+		external 10.70.164.0/25 metric 20
+		external 10.70.164.128/26 metric 20
+
+	router 10.70.175.1
+		distance 86
+		router 10.69.19.71 metric 10
+		router 10.69.35.31 metric 100
+		router 10.69.14.40 metric 100
+		router 10.69.1.51 metric 100
+		router 10.69.4.90 metric 100
+		router 10.69.2.49 metric 100
+		router 10.69.79.41 metric 100
+		stubnet 10.69.27.92/32 metric 0
+		stubnet 10.68.27.92/32 metric 0
+		external 10.70.175.0/24 metric 20
+
+	router 10.70.176.1
+		distance 91
+		router 10.69.4.7 metric 10
+		router 10.69.4.7 metric 100
+		router 10.69.70.16 metric 100
+		stubnet 10.69.4.65/32 metric 0
+		stubnet 10.68.4.65/32 metric 0
+		external 10.70.176.0/24 metric 20
+
+	router 10.70.177.5
+		distance 37
+		router 10.69.1.77 metric 1
+		stubnet 10.10.10.123/32 metric 0
+		stubnet 10.70.177.5/32 metric 0
+
+	router 10.70.251.22
+		distance 45
+		router 10.69.1.77 metric 10
+		router 10.70.89.133 metric 30
+		stubnet 10.69.1.177/32 metric 10
+		stubnet 10.70.251.22/32 metric 30
+		external 8.8.4.4/32 metric 1
+		external 10.70.251.20/30 metric 1
+		external 100.64.0.0/12 metric 1
+		external 199.167.59.6/32 metric 1
+		external 199.170.132.4/32 metric 1
+		external 199.170.132.6/32 metric 1
+
+	router 10.70.251.26
+		distance 46
+		router 10.69.1.48 metric 10
+		router 10.70.89.133 metric 31
+		stubnet 10.69.1.148/32 metric 10
+		stubnet 10.70.251.26/32 metric 31
+		external 10.70.251.24/30 metric 1
+
+	router 10.70.251.34
+		distance 30
+		router 10.70.89.133 metric 15
+		stubnet 10.70.178.1/32 metric 1
+		stubnet 10.70.251.34/32 metric 15
+		external 10.69.3.91/32 metric 1
+		external 10.70.178.0/28 metric 1
+		external 10.70.251.32/30 metric 1
+
+	router 10.70.253.15
+		distance 0
+		router 10.70.89.133 metric 15
+		stubnet 10.70.253.15/32 metric 0
+		external 10.70.178.32/27 metric2 10000
+
+	router 10.70.253.29
+		distance 30
+		router 10.70.89.133 metric 10
+		stubnet 10.70.253.29/32 metric 0
+		external 10.70.178.16/28 metric2 10000
+
+	router 199.167.59.98
+		distance 51
+		router 10.69.24.163 metric 10
+		router 10.69.3.78 metric 100
+		router 10.69.29.83 metric 100
+		stubnet 10.69.28.14/32 metric 0
+		stubnet 10.68.28.14/32 metric 0
+		external 10.70.170.0/25 metric 20
+		external 10.70.170.128/26 metric 20
+		external 199.167.59.84/32 metric 20
+		external 199.167.59.98/32 metric 20
+
+	network 10.70.76.0/24
+		dr 10.10.10.10
+		distance 61
+		router 10.10.10.10
+		router 10.70.71.137
+		router 10.70.76.24
+		router 10.69.2.27
+
+	network 10.70.89.128/27
+		dr 10.69.7.13
+		distance 16
+		router 10.69.7.13
+		router 10.70.89.133
+
+	network 10.70.90.0/24
+		dr 10.70.123.1
+		distance 26
+		router 10.70.123.1
+		router 10.70.90.128
+		router 10.70.90.34
+		router 10.70.90.98
+		router 10.70.90.90
+		router 10.70.90.87
+		router 10.69.7.13
+		router 10.70.90.175
+		router 10.70.90.22
