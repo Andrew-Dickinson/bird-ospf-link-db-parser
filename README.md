@@ -1,12 +1,73 @@
 
 # Bird OSFP Link Database Parser
 
-
+Parses the output of the BIRD Routing Daemon's `ospf link state` command into a machine-readable JSON string.
 
 ```sh
-> ...
-
-```
+> birdc show ospf link state all > parse-bird-link-dbparse-bird-link-db -
+{
+  "areas": {
+    "0.0.0.0": {
+      "routers": {
+        "10.68.29.50": {
+          "links": {
+            "router": [
+              {
+                "id": "10.69.7.31",
+                "metric": 10
+              }
+            ],
+            "stubnet": [
+              {
+                "id": "10.69.29.50/32",
+                "metric": 0
+              },
+              {
+                "id": "10.68.29.50/32",
+                "metric": 0
+              }
+            ],
+            "external": [
+              {
+                "id": "10.70.174.0/24",
+                "metric": 20
+              }
+            ]
+          }
+        },
+        "10.68.73.125": {
+          "links": {
+            "router": [
+              {
+                "id": "10.69.73.25",
+                "metric": 10
+              },
+              {
+                "id": "10.69.52.83",
+                "metric": 30
+              },
+              {
+                "id": "10.69.73.25",
+                "metric": 30
+              }
+            ],
+            "stubnet": [
+              {
+                "id": "10.69.73.125/32",
+                "metric": 0
+              },
+              {
+                "id": "10.68.73.125/32",
+                "metric": 0
+              }
+            ]
+          }
+        },
+        ...
+      }
+    }
+  }
+}```
 
 
 ## Usage
@@ -30,7 +91,7 @@ nano .env
 
 then invoke the tool with the CLI command:
 ```sh
-
+birdc show ospf link state all > parse-bird-link-dbparse-bird-link-db -
 ```
 
 ## Running the unit tests
