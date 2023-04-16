@@ -42,8 +42,8 @@ def parse_ospf_state_all(ospf_state_str: str):
             current_item = {"links": {}} if current_item_type == "router" else {}
             current_item_id = line_parts[1]
         elif indentation_level == 2:
-            if line_parts[0] == "distance":
-                # Ignore distance from our local perspective as it's not meaningful to
+            if line_parts[0] == "distance" or line_parts[0] == "unreachable":
+                # Ignore distance/reachability from our local perspective as it's not meaningful to
                 # understanding the global state of the system
                 continue
 
