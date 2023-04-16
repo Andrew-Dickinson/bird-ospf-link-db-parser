@@ -1,8 +1,7 @@
 import json
-
-from src.bird_parser.parse_bird_output import parse_ospf_state_all
-
 import sys
+
+from bird_parser.parse_bird_output import parse_ospf_state_all
 
 
 def main():

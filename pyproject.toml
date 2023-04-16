@@ -1,5 +1,5 @@
 [project]
-name = "BirdOSPFLinkDBApi"
+name = "bird-ospf-parse-link-db"
 version = "1.0"
 dependencies = [
     "python-dotenv",
