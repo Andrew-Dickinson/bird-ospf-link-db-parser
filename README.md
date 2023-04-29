@@ -1,10 +1,10 @@
 
 # Bird OSFP Link Database Parser
 
-Parses the output of the BIRD Routing Daemon's `ospf link state` command into a machine-readable JSON string.
+Parses the output of the BIRD Routing Daemon's `birdc show ospf state` command into a machine-readable JSON string.
 
 ```sh
-> birdc show ospf link state all > parse-bird-link-dbparse-bird-link-db -
+> birdc show ospf state all | parse-bird-link-db - | jq | less
 {
   "areas": {
     "0.0.0.0": {
@@ -74,8 +74,27 @@ Parses the output of the BIRD Routing Daemon's `ospf link state` command into a 
 
 The output format is detailed using [JSON Schema](https://json-schema.org/) in `src/bird_parser/output_schema.json`
 
-
 ## Usage
+
+Pre-requisites: `python3` available via the shell
+
+First, install the CLI via pip:
+```shell
+pip install bird-ospf-link-db-parser
+```
+
+then invoke the tool with the CLI command:
+```shell
+birdc show ospf state all | parse-bird-link-db -
+```
+
+But you probably want to use `jq` and `less` to make this output a bit more managable:
+```shell
+sudo apt update && sudo apt install jq less
+birdc show ospf state all | parse-bird-link-db - | jq | less
+```
+
+## Dev Setup
 
 Pre-requisites: `python3` available via the shell
 
@@ -90,12 +109,12 @@ pip install -e .
 
 then invoke the tool with the CLI command:
 ```sh
-birdc show ospf link state all > parse-bird-link-dbparse-bird-link-db -
+birdc show ospf link state all > parse-bird-link-db -
 ```
 
 ## Running the unit tests
 
-Follow the instructions under "Usage" above, to clone a local copy of this application and activate
+Follow the instructions under "Dev Setup" above, to clone a local copy of this application and activate
 the virtual environment. Then installing the test dependencies with:
 ```sh
 pip install -e ".[test,dev]"
