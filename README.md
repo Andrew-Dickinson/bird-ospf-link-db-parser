@@ -4,7 +4,7 @@
 Parses the output of the BIRD Routing Daemon's `birdc show ospf state` command into a machine-readable JSON string.
 
 ```sh
-> birdc show ospf state all | parse-bird-link-db - | jq | less
+> birdc show ospf state | parse-bird-link-db - | jq | less
 {
   "areas": {
     "0.0.0.0": {
@@ -85,13 +85,13 @@ pip install bird-ospf-link-db-parser
 
 then invoke the tool with the CLI command:
 ```shell
-birdc show ospf state all | parse-bird-link-db -
+birdc show ospf state | parse-bird-link-db -
 ```
 
 But you probably want to use `jq` and `less` to make this output a bit more manageable:
 ```shell
 sudo apt update && sudo apt install jq less
-birdc show ospf state all | parse-bird-link-db - | jq | less
+birdc show ospf state | parse-bird-link-db - | jq | less
 ```
 
 ## Dev Setup
@@ -109,7 +109,7 @@ pip install -e .
 
 then invoke the tool with the CLI command:
 ```sh
-birdc show ospf link state all > parse-bird-link-db -
+birdc show ospf link state > parse-bird-link-db -
 ```
 
 ## Running the unit tests
