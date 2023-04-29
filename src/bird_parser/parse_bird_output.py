@@ -1,58 +1,41 @@
 import re
-from typing import List
+
+from bird_parser.utils import (
+    OutputDict,
+    parse_router_link,
+    get_default_value_for_resource,
+)
 
 
 def get_indentation_level(line: str):
     return len(line) - len(line.lstrip("\t"))
 
 
-def create_key_from_path(dictionary: dict, path: List[str]):
-    nested_dict = dictionary
-    for item in path:
-        if item not in nested_dict:
-            nested_dict[item] = {}
-        nested_dict = nested_dict[item]
-
-
-def set_value_by_path(dictionary: dict, path: List[str], value=None):
-    nested_dict = dictionary
-    for item in path[:-1]:
-        nested_dict = nested_dict[item]
-
-    nested_dict[path[-1]] = value
-
-
-def get_value_by_path(dictionary: dict, path: List[str]):
-    nested_dict = dictionary
-    for item in path:
-        nested_dict = nested_dict[item]
-
-    return nested_dict
-
-
-def parse_router_link(line_parts: List[str]):
-    assert line_parts[2] in ["metric", "metric2"]
-    link = {"id": line_parts[1], line_parts[2]: int(line_parts[3])}
-
-    if len(line_parts) == 6:
-        assert line_parts[4] == "via"
-        link["via"] = line_parts[5]
-
-    return link
-
-
 def parse_ospf_state_all(ospf_state_str: str):
-    lines = [line.rstrip() for line in ospf_state_str.split("\n") if len(line) > 0]
-    lines.append("")
+    parser = StackParser(ospf_state_str)
+    return parser.parse()
 
-    assert re.match(r"BIRD.+ready\.", lines[0])
 
-    output = {}
+class StackParser:
+    def __init__(self, ospf_state_str: str):
+        self.output = OutputDict({})
+        self.previous_indentation_level = 0
+        self.path_stack = ["", ""]
 
-    previous_indentation_level = -1
-    path_stack = []
+        self.lines = [
+            line.rstrip() for line in ospf_state_str.split("\n") if len(line) > 0
+        ]
+        self.lines.append("")
 
-    for line in lines[1:]:
+    def parse(self):
+        assert re.match(r"BIRD.+ready\.", self.lines[0])
+
+        for line in self.lines[1:]:
+            self.parse_line(line)
+
+        return self.output
+
+    def parse_line(self, line: str):
         line_parts = line.split()
         indentation_level = get_indentation_level(line)
 
@@ -61,78 +44,68 @@ def parse_ospf_state_all(ospf_state_str: str):
         ):
             # Ignore distance/reachability from our local perspective as it's not meaningful to
             # understanding the global state of the system
-            continue
+            return
 
-        level_diff = indentation_level - previous_indentation_level
+        level_diff = indentation_level - self.previous_indentation_level
         if level_diff > 0:
             assert (
                 level_diff == 1
             ), "Indenting by more than one tab at a time is not supported"
-            create_key_from_path(output, path_stack)
-            if indentation_level == 1:
-                create_key_from_path(output, path_stack + ["networks"])
-                create_key_from_path(output, path_stack + ["routers"])
-            if indentation_level == 2:
-                if path_stack[2] == "routers":
-                    default_object = {
-                        "links": {
-                            "network": [],
-                            "external": [],
-                            "router": [],
-                            "stubnet": [],
-                        }
-                    }
-                elif path_stack[2] == "networks":
-                    default_object = {
-                        "dr": "",
-                        "routers": [],
-                    }
-                else:
-                    raise ValueError(f"Invalid object: '{path_stack[2]}' found!")
-
-                set_value_by_path(
-                    output,
-                    path_stack,
-                    default_object,
-                )
+            self.handle_enter_resource(self.path_stack[-2][:-1])
         else:
             if level_diff < 0:
-                if previous_indentation_level == 2:
-                    if path_stack[2] == "routers":
-                        link_lists = get_value_by_path(
-                            output, path_stack[:-2] + ["links"]
-                        )
-                        lists_to_remove = [
-                            link_type
-                            for link_type, links in link_lists.items()
-                            if len(links) == 0
-                        ]
-                        for link_type in lists_to_remove:
-                            del link_lists[link_type]
-            for i in range(max(-level_diff, 0) + 1):
-                path_stack.pop()
-                path_stack.pop()
+                self.handle_exit_resource(self.path_stack[2][:-1])
+
+                # Account for the un-indent
+                for i in range(abs(level_diff)):
+                    self.path_stack.pop()
+                    self.path_stack.pop()
+
+            # Remove the previous "current level", since it will be replaced below
+            self.path_stack.pop()
+            self.path_stack.pop()
 
         if line_parts:
-            path_stack.append(line_parts[0] + "s")
-            path_stack.append(line_parts[1])
+            self.path_stack.append(line_parts[0] + "s")
+            self.path_stack.append(line_parts[1])
 
-            if indentation_level == 2:
-                if path_stack[2] == "routers":
-                    link_type = line_parts[0]
-                    link_list_for_type = get_value_by_path(
-                        output, path_stack[:-2] + ["links", link_type]
-                    )
-                    link_list_for_type.append(parse_router_link(line_parts))
-                elif path_stack[2] == "networks":
-                    network = get_value_by_path(output, path_stack[:-2])
-                    if line_parts[0] == "dr":
-                        network["dr"] = line_parts[1]
-                    elif line_parts[0] == "router":
-                        network["routers"].append(line_parts[1])
-                    else:
-                        raise ValueError(f"Invalid line: {line}")
+            current_container_name = (
+                self.path_stack[-4][:-1] if len(self.path_stack) > 2 else None
+            )
+            if current_container_name == "router":
+                link_type = line_parts[0]
+                link_list_for_type = self.output.get_value_by_path(
+                    self.path_stack[:-2] + ["links", link_type]
+                )
+                link_list_for_type.append(parse_router_link(line_parts))
+            elif current_container_name == "network":
+                network = self.output.get_value_by_path(self.path_stack[:-2])
+                if line_parts[0] == "dr":
+                    network["dr"] = line_parts[1]
+                elif line_parts[0] == "router":
+                    network["routers"].append(line_parts[1])
+                else:
+                    raise ValueError(f"Invalid line: {line}")
 
-        previous_indentation_level = indentation_level
+        self.previous_indentation_level = indentation_level
 
-    return output
+    def handle_enter_resource(self, resource_name: str):
+        # Create an output key to track the new deeper indentation level
+        self.output.create_key_from_path(self.path_stack)
+
+        # If we are entering an area, router, or network, create the appropriate default containers
+        if resource_name in ["area", "router", "network"]:
+            self.output.set_value_by_path(
+                self.path_stack,
+                get_default_value_for_resource(resource_name),
+            )
+
+    def handle_exit_resource(self, resource_name: str):
+        # If we are exiting a router, clean up the empty link lists so they don't appear in the output
+        if resource_name == "router":
+            link_lists = self.output.get_value_by_path(self.path_stack[:-2] + ["links"])
+            lists_to_remove = [
+                link_type for link_type, links in link_lists.items() if len(links) == 0
+            ]
+            for link_type in lists_to_remove:
+                del link_lists[link_type]
