@@ -70,6 +70,10 @@ Parses the output of the BIRD Routing Daemon's `ospf link state` command into a 
 }
 ```
 
+## Output Format
+
+The output format is detailed using [JSON Schema](https://json-schema.org/) in `src/bird_parser/output_schema.json`
+
 
 ## Usage
 
@@ -94,12 +98,24 @@ birdc show ospf link state all > parse-bird-link-dbparse-bird-link-db -
 Follow the instructions under "Usage" above, to clone a local copy of this application and activate
 the virtual environment. Then installing the test dependencies with:
 ```sh
-pip install -e ".[test]"
+pip install -e ".[test,dev]"
 ```
 
 Finally, invoke the test suite using pytest:
 ```
 pytest test/
+```
+
+## Building to PyPi
+
+Follow the instructions above to clone a local copy of this application, activate
+the virtual environment, and run the tests.
+
+Then, build & upload the application with
+```
+rm -rf dist/*
+python -m build .
+twine upload dist/*
 ```
 
 ## License
