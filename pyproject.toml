@@ -1,6 +1,6 @@
 [project]
 name = "bird-ospf-parse-link-db"
-version = "1.1"
+version = "1.1.0"
 dependencies = [
     "python-dotenv",
     "pytz",
