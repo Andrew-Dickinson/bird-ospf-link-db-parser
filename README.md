@@ -88,7 +88,7 @@ then invoke the tool with the CLI command:
 birdc show ospf state all | parse-bird-link-db -
 ```
 
-But you probably want to use `jq` and `less` to make this output a bit more managable:
+But you probably want to use `jq` and `less` to make this output a bit more manageable:
 ```shell
 sudo apt update && sudo apt install jq less
 birdc show ospf state all | parse-bird-link-db - | jq | less
