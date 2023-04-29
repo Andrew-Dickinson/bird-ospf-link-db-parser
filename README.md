@@ -67,7 +67,8 @@ Parses the output of the BIRD Routing Daemon's `ospf link state` command into a 
       }
     }
   }
-}```
+}
+```
 
 
 ## Usage
@@ -81,12 +82,6 @@ cd bird-ospf-link-db-parser
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -e .
-```
-
-Next, create a `.env` file and fill out the variables
-```sh
-cp .env_example .env
-nano .env
 ```
 
 then invoke the tool with the CLI command:
